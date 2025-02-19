@@ -1,0 +1,493 @@
+日期：2012年7月13日
+修改人：胡正权
+修改原因：
+	核心版本客户管理代码优化
+	1、优化俱乐部会员及会员卡查询BusiModel；
+	2、优化查询BusiModel。
+	3、新增俱乐部管理相关功能；
+代码清单：
+    A         config/com/asiainfo/crm/cm/inner/customer/web
+    A         config/com/asiainfo/crm/cm/inner/customer/web/SETCmIndivCustomer.set
+    A         config/com/asiainfo/crm/cm/model/web/SETAccountProfile.set
+    A         config/com/asiainfo/crm/cm/web/club
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClub.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubAction.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubActionRec.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubMember.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubMemberCard.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubService.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubServiceAdjust.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubServiceCycle.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubServiceRec.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubServiceVdoing.set
+    A         config/com/asiainfo/crm/cm/web/club/SETCmClubServiceVdoingDetail.set
+    A         config/com/asiainfo/crm/cm/web/evaluation
+    A         config/com/asiainfo/crm/cm/web/evaluation/SETCmSpecialList.set
+    U         html/crm/cm/club/CmClubMgnt.js
+    U         html/crm/cm/club/CmClubMgnt.jsp
+    A         html/crm/cm/club/CmClubMgntAdd.js
+    A         html/crm/cm/club/CmClubMgntDel.js
+    A         html/crm/cm/club/CmClubMgntMod.js
+    A         html/crm/cm/club/CmClubMgntQry.js
+    A         html/crm/cm/club/CmCommonBtn.js
+    A         html/crm/cm/club/CmQueryCustVip.jsp
+    A         html/crm/cm/club/activity/CmClubAction.js
+    A         html/crm/cm/club/activity/CmClubAction.jsp
+    A         html/crm/cm/club/activity/CmClubActionAdd.js
+    A         html/crm/cm/club/activity/CmClubActionDel.js
+    A         html/crm/cm/club/activity/CmClubActionMod.js
+    A         html/crm/cm/club/activity/CmClubActionQry.js
+    A         html/crm/cm/club/member/CmClubActionRec.js
+    A         html/crm/cm/club/member/CmClubActionRec.jsp
+    A         html/crm/cm/club/member/CmClubActionRecAdd.js
+    A         html/crm/cm/club/member/CmClubActionRecDel.js
+    A         html/crm/cm/club/member/CmClubActionRecMod.js
+    A         html/crm/cm/club/member/CmClubMember.js
+    A         html/crm/cm/club/member/CmClubMember.jsp
+    A         html/crm/cm/club/member/CmClubMemberAdd.js
+    A         html/crm/cm/club/member/CmClubMemberCard.js
+    A         html/crm/cm/club/member/CmClubMemberCard.jsp
+    A         html/crm/cm/club/member/CmClubMemberCardAdd.js
+    A         html/crm/cm/club/member/CmClubMemberCardDel.js
+    A         html/crm/cm/club/member/CmClubMemberCardMod.js
+    A         html/crm/cm/club/member/CmClubMemberMain.js
+    A         html/crm/cm/club/member/CmClubMemberMain.jsp
+    A         html/crm/cm/club/member/CmClubMemberMod.js
+    A         html/crm/cm/club/member/CmClubMemberViewFrame.js
+    A         html/crm/cm/club/member/CmClubMemberViewFrame.jsp
+    A         html/crm/cm/club/member/CmClubServiceAdjust.js
+    A         html/crm/cm/club/member/CmClubServiceAdjust.jsp
+    A         html/crm/cm/club/member/CmClubServiceAdjustAdd.js
+    A         html/crm/cm/club/member/CmClubServiceAdjustDel.js
+    A         html/crm/cm/club/member/CmClubServiceAdjustMod.js
+    A         html/crm/cm/club/member/CmClubServiceRec.js
+    A         html/crm/cm/club/member/CmClubServiceRec.jsp
+    A         html/crm/cm/club/member/CmClubServiceRecAdd.js
+    A         html/crm/cm/club/member/CmClubServiceRecDel.js
+    A         html/crm/cm/club/member/CmClubServiceRecMod.js
+    A         html/crm/cm/club/service/CmClubService.js
+    A         html/crm/cm/club/service/CmClubService.jsp
+    A         html/crm/cm/club/service/CmClubServiceAdd.js
+    A         html/crm/cm/club/service/CmClubServiceCycle.js
+    A         html/crm/cm/club/service/CmClubServiceCycle.jsp
+    A         html/crm/cm/club/service/CmClubServiceCycleAdd.js
+    A         html/crm/cm/club/service/CmClubServiceCycleDel.js
+    A         html/crm/cm/club/service/CmClubServiceCycleMod.js
+    A         html/crm/cm/club/service/CmClubServiceMain.js
+    A         html/crm/cm/club/service/CmClubServiceMain.jsp
+    A         html/crm/cm/club/service/CmClubServiceMod.js
+    A         html/crm/cm/club/service/CmClubServiceVdoing.js
+    A         html/crm/cm/club/service/CmClubServiceVdoing.jsp
+    A         html/crm/cm/club/service/CmClubServiceVdoingAdd.js
+    A         html/crm/cm/club/service/CmClubServiceVdoingDel.js
+    A         html/crm/cm/club/service/CmClubServiceVdoingDetail.js
+    A         html/crm/cm/club/service/CmClubServiceVdoingDetail.jsp
+    A         html/crm/cm/club/service/CmClubServiceVdoingDetailAdd.js
+    A         html/crm/cm/club/service/CmClubServiceVdoingDetailDel.js
+    A         html/crm/cm/club/service/CmClubServiceVdoingDetailMod.js
+    A         html/crm/cm/club/service/CmClubServiceVdoingMod.js
+    A         html/crm/cm/club/service/CmClubServiceViewFrame.js
+    A         html/crm/cm/club/service/CmClubServiceViewFrame.jsp
+    U         html/crm/cm/common/CmCommonUtil.js
+    U         html/crm/cm/common/attach/CmAttachManage.js
+    U         html/crm/cm/common/attach/CmAttachManage.jsp
+    U         html/crm/cm/customer/group/CmGroupConstractQuery.jsp
+    U         html/crm/cm/evaluation/speciallist/CmQuerySpecialList.js
+    U         html/crm/cm/evaluation/speciallist/CmQuerySpecialList.jsp
+    U         src/com/asiainfo/crm/cm/busimodel/IQueryCountBusiModel.java
+    U         src/com/asiainfo/crm/cm/busimodel/IQueryDataBusiModel.java
+    U         src/com/asiainfo/crm/cm/busimodel/common/ParamUtil.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAccountProfileQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAccountQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAcctAndPaymentQueryDealModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAcctBillCustmizeQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAcctHisQueryDealModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAcctPaymentQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubActionQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubActionRecQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubAdjustDealModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubMemberCardQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubMemberQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceAdjustQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceCycleQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceDealBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceRecQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceVdoingDetailQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceVdoingQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/common/AbstractQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractAcctContactQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractCustContactQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustManagerQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustOrganizeQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustRelQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustomerQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAccountProfileQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAccountQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctAndPaymentQueryDealModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctBillCustmizeQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctContactQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctHisQueryDealModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctPaymentQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceAdjustQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceCycleQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceDealBusiModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceVdoingDetailQueryModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceVdoingQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustContactQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustOrganizeQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustRelQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustomerQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultManagerQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultOrganizeQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultPartyContactQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultPartyQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultSpecialListQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/evaluation/AbstractSpecialListQueryModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/manager/AbstractManagerQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/manager/AbstractOrganizeQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyContactQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyQueryBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/common/CmObjectWrapperFactory.java
+    A         src/com/asiainfo/crm/cm/custview/web/CmClubMemberViewTreeDataModel.java
+    A         src/com/asiainfo/crm/cm/custview/web/CmClubServiceViewTreeDataModel.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmAccountSVImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmClubActivitySVImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmClubMemberSVImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmClubSVImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmClubServiceSVImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmManagerSVImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmPartySVImpl.java
+    U         src/com/asiainfo/crm/cm/service/interfaces/ICmClubMemberSV.java
+    U         src/com/asiainfo/crm/cm/service/interfaces/ICmClubServiceSV.java
+    U         src/com/asiainfo/crm/cm/service/interfaces/ICmManagerSV.java
+    U         src/com/asiainfo/crm/cm/teaminvoke/out/service/impl/CustMgntFSVImpl.java
+    A         src/com/asiainfo/crm/cm/web/club
+    A         src/com/asiainfo/crm/cm/web/club/CmClubAction.java
+    A         src/com/asiainfo/crm/cm/web/club/CmClubActivityAction.java
+    A         src/com/asiainfo/crm/cm/web/club/CmClubMemberAction.java
+    A         src/com/asiainfo/crm/cm/web/club/CmClubServiceAction.java
+    A         src/com/asiainfo/crm/cm/busimodel/IBusiLogDealBusiModel.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultBusiLogDealBusiModelImpl.java
+    A         src/com/asiainfo/crm/cm/busimodel/impl/log/AbstractBusiLogDealBusiModelImpl.java
+    U         src/com/asiainfo/crm/cm/service/impl/CmCustomerSVImpl.java
+
+
+日期：2012年7月8日
+修改人：胡正权
+修改原因：
+	核心版本客户管理代码优化
+	1、优化俱乐部会员及会员卡查询BusiModel；
+	2、将BusiModel不提供给外部调用的方法使用protected限制，避免出现误调用。
+	3、将集团合同纳入核心版本管理；
+代码清单：
+A        config/com/asiainfo/crm/cm/inner/customer/bo/BOCmGroupContract.bo
+U        config/com/asiainfo/crm/cm/web/account/SETAcctBillCycle.set
+U        config/com/asiainfo/crm/cm/web/account/SETCmAccount.set
+U        config/com/asiainfo/crm/cm/web/account/SETCmAcctPayment.set
+U        config/com/asiainfo/crm/cm/web/account/SETCmBillCustomize.set
+A        config/com/asiainfo/crm/cm/web/customer/SETCmGroupContract.set
+A        html/crm/cm/customer/group/CmGroupConstractForm.js
+A        html/crm/cm/customer/group/CmGroupConstractForm.jsp
+A        html/crm/cm/customer/group/CmGroupConstractQuery.js
+A        html/crm/cm/customer/group/CmGroupConstractQuery.jsp
+U        html/crm/cm/support/bce/CmSinglePageEntry.js
+U        src/com/asiainfo/crm/cm/busimodel/common/Parameter.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubActionDealModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubActionQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubActionRecQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubDealModelImpl.java
+A        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubMemberCardQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubMemberDealModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubMemberQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceRecQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/common/AbstractEntityAttrDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractAcctContactDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractAcctContactQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractCustContactDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractCustContactQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustManagerQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustOrganizeQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustRelQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustomerDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustomerQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctContactDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultAcctContactQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubActionDealModelImpl.java
+A        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubMemberCardQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubMemberDealModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubMemberQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustContactDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustContactQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustManagerQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustOrganizeQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustRelQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustomerDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultCustomerQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultEntityAttrDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultManagerQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultOrganizeQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultPartyContactQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultPartyDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultPartyQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultSpecialListDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultSpecialListQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/evaluation/AbstractSpecialListDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/evaluation/AbstractSpecialListQueryModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/log/AbstractBusiLogDealModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/manager/AbstractManagerQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/manager/AbstractOrganizeQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyContactQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyDealBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyQueryBusiModelImpl.java
+U        src/com/asiainfo/crm/cm/common/CmServiceFactory.java
+U        src/com/asiainfo/crm/cm/common/web/CmAttachAction.java
+A        src/com/asiainfo/crm/cm/inner/customer/bo/BOCmGroupContractBean.java
+A        src/com/asiainfo/crm/cm/inner/customer/bo/BOCmGroupContractEngine.java
+A        src/com/asiainfo/crm/cm/inner/customer/ivalues/IBOCmGroupContractValue.java
+U        src/com/asiainfo/crm/cm/service/impl/CmClubMemberSVImpl.java
+A        src/com/asiainfo/crm/cm/service/impl/CmGroupContractSVImpl.java
+A        src/com/asiainfo/crm/cm/service/interfaces/ICmGroupContractSV.java
+U        src/com/asiainfo/crm/cm/support/bce/service/impl/CmAccountBceDealSVImpl.java
+A        src/com/asiainfo/crm/cm/support/bce/service/impl/CmBceDataParserImpl.java
+U        src/com/asiainfo/crm/cm/teaminvoke/out/service/impl/CustMgntFSVImpl.java
+A        src/com/asiainfo/crm/cm/web/customer/CmGroupContractAction.java
+A        src/com/asiainfo/crm/cm/web/customer/CmGroupContractTreeModelImpl.java
+数据库变更：
+	http://10.11.20.110/svn/DOC-CRM-COREV2.0/trunk/03设计文档/01数据模型/开发小组PDM集合/Customer Management.pdm（增加集团合同信息表）
+
+日期：2012年7月4日
+修改人：胡正权
+修改原因：
+	1、提供账户信息修改和查询功能；
+代码清单：
+	config/com/asiainfo/crm/cm/inner/account/web/SETCmAccount.set
+	config/com/asiainfo/crm/cm/inner/account/web/SETCmAcctPayment.set
+	config/com/asiainfo/crm/cm/inner/account/web/SETCmBillCustomize.set
+	html/crm/cm/account/AccountDetail.js
+	html/crm/cm/account/AccountDetail.jsp
+	html/crm/cm/busilog/CmLogUtil.js
+	html/crm/cm/busilog/ReasonInput.js
+	html/crm/cm/busilog/ReasonInput.jsp
+	html/crm/cm/customer/group/CmGroupCustomerForm.js
+	html/crm/cm/customer/group/CmGroupCustomerFormTmpl.jsp
+	html/crm/cm/support/bce/CmInfoMain.jsp
+	html/crm/cm/support/bce/CmSinglePageEntry.js
+	src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyDealBusiModelImpl.java
+	src/com/asiainfo/crm/cm/common/util/CmBusiLogUtil.java
+	src/com/asiainfo/crm/cm/service/impl/CmAccountSVImpl.java
+	src/com/asiainfo/crm/cm/service/interfaces/ICmAccountSV.java
+	src/com/asiainfo/crm/cm/support/bce/service/impl/CmAccountBceDealSVImpl.java
+	src/com/asiainfo/crm/cm/support/bce/service/impl/CmGroupCustomerBceDealSVImpl.java
+	src/com/asiainfo/crm/cm/support/bce/service/impl/CmIndivCustomerBceDealSVImpl.java
+	src/com/asiainfo/crm/cm/support/bce/service/interfaces/ICmAccountBceDealSV.java
+	src/com/asiainfo/crm/cm/support/bce/service/interfaces/ICmIndivCustomerBceDealSV.java
+	src/com/asiainfo/crm/cm/support/bce/util/CmBceSupportConstants.java
+	src/com/asiainfo/crm/cm/teaminvoke/out/service/impl/CustMgntFSVImpl.java
+	src/com/asiainfo/crm/common/mask/BOMaskHelper.java
+
+
+日期：2012年7月4日
+修改人：胡正权
+修改原因：
+	1、提供账户信息修改和查询功能；
+代码清单：
+	config/com/asiainfo/crm/cm/web/account/SETAcctBillCycle.set
+	config/com/asiainfo/crm/cm/web/account/SETCmAccount.set
+	config/com/asiainfo/crm/cm/web/account/SETCmAcctPayment.set
+	config/com/asiainfo/crm/cm/web/account/SETCmBillCustomize.set
+	html/crm/cm/account/AccountDetail.js
+	html/crm/cm/account/AccountDetail.jsp
+
+日期：2012年7月4日
+修改人：胡正权
+修改原因：
+	1、提供个人客户信息修改和查询功能；
+代码清单：
+	html/crm/cm/customer/individual/CmIndivCustomerView.js
+	html/crm/cm/customer/individual/CmIndivCustomerView.jsp
+	html/crm/cm/support/bce/CmSinglePageEntry.js
+
+日期：2012年7月4日
+修改人：胡正权
+修改原因：
+	1、优化客户管理部分代码；
+	2、完善部分国际化资源未实现的代码。
+代码清单：
+	src/com/asiainfo/crm/cm/batch/dao/impl/CmCommonBatchDAOImpl.java
+	src/com/asiainfo/crm/cm/batch/dao/interfaces/ICmCommonBatchDAO.java
+	src/com/asiainfo/crm/cm/batch/service/impl/CmBatchCommomSVImpl.java
+	src/com/asiainfo/crm/cm/batch/util/CmBatchUtil.java
+	src/com/asiainfo/crm/cm/busimodel/common/ParamUtil.java
+	src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAcctAndPaymentQueryDealModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAcctHisQueryDealModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubServiceQueryModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/common/AbstractMaskBusiModel.java
+	src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractCustContactDealBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustManagerQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustRelQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustomerDealBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyDealBusiModelImpl.java
+	src/com/asiainfo/crm/cm/client/CustMgntClient.java
+	src/com/asiainfo/crm/cm/common/CmServiceFactory.java
+	src/com/asiainfo/crm/cm/common/config/bean/CmIdGenerator.java
+	src/com/asiainfo/crm/cm/common/service/impl/CmCommonSVImpl.java
+	src/com/asiainfo/crm/cm/exe/batch/CmCommonBp.java
+	src/com/asiainfo/crm/cm/inner/account/service/impl/CmAccountInnerSVImpl.java
+	src/com/asiainfo/crm/cm/model/bean/VOAccountBean.java
+	src/com/asiainfo/crm/cm/service/impl/CmBusiLogSVImpl.java
+	src/com/asiainfo/crm/cm/service/impl/CmManagerSVImpl.java
+	src/com/asiainfo/crm/cm/service/interfaces/ICmManagerSV.java
+	src/com/asiainfo/crm/cm/support/bce/service/impl/CmGroupCustomerBceDealSVImpl.java
+	src/com/asiainfo/crm/cm/teaminvoke/out/service/impl/CustMgntFSVImpl.java
+	src/com/asiainfo/crm/cm/teaminvoke/out/service/interfaces/ICustMgntFSV.java
+	src/com/asiainfo/crm/cm/web/CmClubServiceAction.java
+	html/crm/cm/batch/CmBatchbusiMgnt.jsp
+	html/crm/cm/club/CmClubMgnt.js
+	html/crm/cm/common/CmVarifyCertificate.js
+
+
+
+日期：2012年7月4日
+修改人：胡正权
+修改原因：
+	1、完善模糊化功能，对模糊化进行重构（保持接口的定义不变的前提下）。
+代码清单：
+	src/com/asiainfo/crm/common/mask/AbstractBankAccountMaskImpl.java
+	src/com/asiainfo/crm/common/mask/BOMaskConst.java
+	src/com/asiainfo/crm/common/mask/impl/BankAccountMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/BankAccountNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/BirthdayMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CharacterDescMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContEmailMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContMobileMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustCertAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustCertCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/HobbyMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/HomeTelMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/JobCompanyMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/MarryStatusMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/OccupationMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/OfficePhoneMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/PartyCertCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/util/CrmDataStoreHelper.java
+
+
+
+日期：2012年7月3日
+修改人：胡正权
+修改原因：
+	1、完善模糊化功能，对模糊化进行重构（保持接口的定义不变的前提下）。
+	2、客户管理代码集成模糊化功能。
+代码清单：
+	src/com/asiainfo/crm/common/mask/AbstractAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/AbstractBOMaskImpl.java
+	src/com/asiainfo/crm/common/mask/AbstractCertCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/AbstractCustNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/AbstractEmailMaskImpl.java
+	src/com/asiainfo/crm/common/mask/AbstractFullMaskImpl.java
+	src/com/asiainfo/crm/common/mask/AbstractPhoneNumberMaskImpl.java
+	src/com/asiainfo/crm/common/mask/BOMaskConst.java
+	src/com/asiainfo/crm/common/mask/BOMaskEntityCacheImpl.java
+	src/com/asiainfo/crm/common/mask/BOMaskHelper.java
+	src/com/asiainfo/crm/common/mask/BOMaskOrgCacheImpl.java
+	src/com/asiainfo/crm/common/mask/CrmAdvanceDataStoreImpl.java
+	src/com/asiainfo/crm/common/mask/TmpAdvanceDataStoreImpl.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsBoMaskEntityBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsBoMaskEntityEngine.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsBoMaskOrgBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsBoMaskOrgEngine.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskEntity.bo
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskEntityBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskEntityEngine.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskOrg.bo
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskOrgBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskOrgEngine.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskRestrictBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskRestrictEngine.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskRestrictLogBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOBsMaskRestrictLogEngine.java
+	src/com/asiainfo/crm/common/mask/bo/BOSecFunctionHide.bo
+	src/com/asiainfo/crm/common/mask/bo/BOSecFunctionHideBean.java
+	src/com/asiainfo/crm/common/mask/bo/BOSecFunctionHideEngine.java
+	src/com/asiainfo/crm/common/mask/cache
+	src/com/asiainfo/crm/common/mask/cache/BOMaskEntityCacheImpl.java
+	src/com/asiainfo/crm/common/mask/cache/BOMaskOrgCacheImpl.java
+	src/com/asiainfo/crm/common/mask/dao/impl/BOMaskDAOImpl.java
+	src/com/asiainfo/crm/common/mask/dao/interfaces/IBOMaskDAO.java
+	src/com/asiainfo/crm/common/mask/impl/BankCertCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/BankCertNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/BirthdayMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CharachorDescMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContEmailMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContMobileMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContPhoneFirstMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContPhoneMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/ContPhoneSecondMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustCertAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustCertCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/CustNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/HolderPhoneNoMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/HomePhoneMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/IdCardCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/JobCompanyAddressMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/JobCompanyMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/MaritalStatusMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/OccupationMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/OfficePhoneMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/OtherContMediumMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/OtherHobbyMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/PartyCertCodeMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/PhoneMaskImpl.java
+	src/com/asiainfo/crm/common/mask/impl/RealNameMaskImpl.java
+	src/com/asiainfo/crm/common/mask/ivalues/IBOBsBoMaskEntityValue.java
+	src/com/asiainfo/crm/common/mask/ivalues/IBOBsBoMaskOrgValue.java
+	src/com/asiainfo/crm/common/mask/ivalues/IBOBsMaskRestrictLogValue.java
+	src/com/asiainfo/crm/common/mask/ivalues/IBOBsMaskRestrictValue.java
+	src/com/asiainfo/crm/common/mask/service/impl/BOMaskSVImpl.java
+	src/com/asiainfo/crm/common/mask/service/interfaces/IBOMaskSV.java
+	src/com/asiainfo/crm/common/mask/util
+	src/com/asiainfo/crm/common/mask/util/CrmDataStoreHelper.java
+	src/com/asiainfo/crm/common/mask/util/IDCardValidator.java
+	src/com/asiainfo/crm/cm/busimodel/IMaskBusiModel.java
+	src/com/asiainfo/crm/cm/busimodel/impl/account/AbstractAccountDealModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/club/AbstractClubMemberQueryModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/common/AbstractMaskBusiModel.java
+	src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractAcctContactQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/contact/AbstractCustContactQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustomerDealBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/customer/AbstractCustomerQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/defaults/DefaultClubServiceBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/evaluation/AbstractSpecialListQueryModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyContactQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyDealBusiModelImpl.java
+	src/com/asiainfo/crm/cm/busimodel/impl/party/AbstractPartyQueryBusiModelImpl.java
+	src/com/asiainfo/crm/cm/common/bomaskimpl/CmCertCodeBOMaskImpl.java
+	src/com/asiainfo/crm/cm/custview/service/impl/CmCustViewSVImpl.java
+	src/com/asiainfo/crm/cm/service/impl/CmAccountSVImpl.java
+	src/com/asiainfo/crm/cm/service/interfaces/ICmAccountSV.java
+	src/com/asiainfo/crm/cm/teaminvoke/in/web/InsAccRelForAcctTreeModelImpl.java
+	src/com/asiainfo/crm/cm/teaminvoke/in/web/InsAccRelForUserTreeModelImpl.java
+	src/com/asiainfo/crm/cm/teaminvoke/out/service/impl/CustMgntFSVImpl.java
+	src/com/asiainfo/crm/cm/teaminvoke/out/service/interfaces/ICustMgntFSV.java
+	config/com/asiainfo/crm/common/mask
+	config/com/asiainfo/crm/common/mask/bo
+	config/com/asiainfo/crm/common/mask/bo/BOBsBoMaskEntity.bo
+	config/com/asiainfo/crm/common/mask/bo/BOBsBoMaskOrg.bo
+	config/com/asiainfo/crm/common/mask/bo/BOBsMaskRestrict.bo
+	config/com/asiainfo/crm/common/mask/bo/BOBsMaskRestrictLog.bo
+	config/AIConfig.xml
+	config/system/cache/cache.xml
