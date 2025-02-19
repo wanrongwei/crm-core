@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOTownTypeCount" mainattr="LOCATION_CLASS">
+    <mapingenty type="query">select t1.location_class,count(t1.location_class) AS location_class_class from (select t.* from CM_MAP_REGION_TREE t where t.location_type=4 and t.location_class is not null and t.state='U' START WITH t.parent_location_id =:location_id  CONNECT BY PRIOR location_id = parent_location_id) t1 group by t1.location_class order by location_class</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="LOCATION_CLASS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LOCATION_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOCATION_CLASS_CLASS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LOCATION_CLASS_CLASS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

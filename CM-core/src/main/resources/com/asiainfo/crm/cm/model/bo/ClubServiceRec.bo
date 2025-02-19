@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="ClubServiceRec" mainattr="RECORD_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RECORD_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="记录会员服务记录标识。" />
+      <attr floatlength="0" name="MEMBER_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="记录会员ID。" />
+      <attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="SERVICE_CONTENT" maxlength="255" datatype="String" type="VIRTUAL" remark="记录会员服务的内容说明。" />
+      <attr floatlength="0" name="SERVICE_SOURCE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="记录会员服务来源。" />
+      <attr floatlength="0" name="SERVICE_PLACE" maxlength="255" datatype="String" type="VIRTUAL" remark="记录会员服务场所。" />
+      <attr floatlength="0" name="ROAM_FLAG" maxlength="2" datatype="Integer" type="VIRTUAL" remark="标记会员服务是否异地服务。" />
+      <attr floatlength="0" name="PROVINCE_CODE" maxlength="30" datatype="String" type="VIRTUAL" remark="记录会员服务的发起省编码。" />
+      <attr floatlength="0" name="SERVICE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="记录发生服务的时间。" />
+      <attr floatlength="0" name="VALUE_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="等价消费品类型" />
+      <attr floatlength="0" name="VALUE_AMOUNT" maxlength="9" datatype="Long" type="VIRTUAL" remark="等价消费品数量" />
+      <attr floatlength="0" name="OPT_SEQ" maxlength="8" datatype="Long" type="VIRTUAL" remark="业务序号，用来配合积分业务记录，对于同一个业务，业务记录相同，需要不同的业务序号来标识不同的记录行" />
+      <attr floatlength="0" name="PAYMENT_ID" maxlength="25" datatype="String" type="VIRTUAL" remark="业务记录标识，批量操作中，同一个批次的流水号一样，为了区分不同的记录行，通过OPT_SEQ 来区分" />
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态" />
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理操作员" />
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理组织单元" />
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+      <attr floatlength="0" name="SUITE_AMOUNT" maxlength="6" datatype="Long" type="COL" remark="随员人数" />
+      <attr floatlength="0" name="SERVICE_TYPE" maxlength="4" datatype="Integer" type="COL" remark="服务类型" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupCustScore" mainattr="YEAR">
+    <mapingenty type="table">{CM_GROUP_CUST_SCORE}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="YEAR" maxlength="4" datatype="Integer" type="PK" remark="年">
+        <mapingcol datatype="NUMBER">YEAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUARTER" maxlength="1" datatype="Integer" type="PK" remark="季度">
+        <mapingcol datatype="NUMBER">QUARTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="12" datatype="Long" type="PK" remark="集团客户编号">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CONSUMPTION_FEE" maxlength="10" datatype="Long" type="COL" remark="集团消费费用">
+        <mapingcol datatype="NUMBER">GROUP_CONSUMPTION_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CONSUMPTION_SCORE" maxlength="2" datatype="Integer" type="COL" remark="话费收入在500元以下的不得分，501－1000元得1分， 1001－2000元得2分，2001－5000元得4分，5001－10000元得6分，10001－20000元得8分，20000－－40000元得12分，40001以上得15分 ,信息化收入在200元以下不得分，201－500元得3分，501－1000元得6分，1001－2000元得8分，2001－5000元得12分，5000元以上得15分">
+        <mapingcol datatype="NUMBER">GROUP_CONSUMPTION_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIP_NUM" maxlength="8" datatype="Long" type="COL" remark="个人大客户数量">
+        <mapingcol datatype="NUMBER">VIP_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIP_NUM_SCORE" maxlength="2" datatype="Integer" type="COL" remark="1～3个为1分，4～8个为2分，8～15个为4分，15～30个为6，30～50为8分，50个以上为10分
+
+每季最后一个月　（以系统中市场部提供为准）">
+        <mapingcol datatype="NUMBER">VIP_NUM_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_USER_NUM" maxlength="6" datatype="Integer" type="COL" remark="移动用户数量">
+        <mapingcol datatype="NUMBER">CMCC_USER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_USER_NUM_SCORE" maxlength="2" datatype="Integer" type="COL" remark="1－10部为1分，11－30部为3分，31－50部为6分，51－100部为8分，101－500部为10分，501－1000部为12分，1001部以上为15分
+
+集团里实际使用移动的用户数
+每季最后一月
+">
+        <mapingcol datatype="NUMBER">CMCC_USER_NUM_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_SCALE_RANK" maxlength="8" datatype="Long" type="COL" remark="行业内规模排名">
+        <mapingcol datatype="NUMBER">TRADE_SCALE_RANK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_SCALE_RANK_SCORE" maxlength="2" datatype="Integer" type="COL" remark="在所属行业中排名前20名得10分，在21－50名得8分，在51－200名得5分，在201－500名得3分，在501－1000名得1分，在1001名以下不得分
+
+指该由分公司自行取得的单位在所属县市分公司名下属于的行业类型中税收或者营业收入的排名以集团属于生产型、商贸型、贸易型、事业型下属机构企业为行业类型，如无法取得该方面的资料，则在测算是该项全部记做０
+写排名，自行算分数
+">
+        <mapingcol datatype="NUMBER">TRADE_SCALE_RANK_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AREA_SCALE_RANK" maxlength="8" datatype="Long" type="COL" remark="地区内规模排名">
+        <mapingcol datatype="NUMBER">AREA_SCALE_RANK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AREA_SCALE_RANK_RANK" maxlength="6" datatype="Integer" type="COL" remark="县市前50名得10分，51－300名得8分，301－800名得5分，801－1500名得3分，1501－3000名得1分，3001名以下不得分
+
+指分公司自行取得的在统计局或工商部门中获得的固定资产在所属县市分公司名下的集团排名，如无法取得该方面的资料，则在测算是该项全部记做０">
+        <mapingcol datatype="NUMBER">AREA_SCALE_RANK_RANK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPLOYEE_NUM" maxlength="8" datatype="Long" type="COL" remark="集团员工数">
+        <mapingcol datatype="NUMBER">EMPLOYEE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPLOYEE_NUM_SCORE" maxlength="2" datatype="Integer" type="COL" remark="1－100人为1分，101－200人为2分，201－300人为3分，301-400人为4分，401人以上为5分
+
+">
+        <mapingcol datatype="NUMBER">EMPLOYEE_NUM_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_ADD_FLAG" maxlength="2" datatype="Integer" type="COL" remark="集团行业加分标志">
+        <mapingcol datatype="NUMBER">TRADE_ADD_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_ADD_SCORE" maxlength="2" datatype="Integer" type="COL" remark="1、当地一级部委办局（主要为权利机构）2、重要非生产型行业：教育、交通、医疗
+
+如果符合计算方法的就直接记得２0分，
+增加两个选项，是否加分
+">
+        <mapingcol datatype="NUMBER">TRADE_ADD_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_SCORE" maxlength="3" datatype="Integer" type="COL" remark="总积分">
+        <mapingcol datatype="NUMBER">TOTAL_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUR_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="当前级别
+0  A+类客户
+1  A1类客户
+2  B1类客户
+3  A2类客户
+4  B2类客户
+5  C1类客户
+6  C2类客户
+7  D类客户
+99  未定级别
+
+每个区前5％设A类，5％－20％算B类">
+        <mapingcol datatype="NUMBER">CUR_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADVICE_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="0    未定级别
+1    A类客户
+2    B类客户
+3    C类客户
+
+
+每个区前5％设A类，5％－20％算B类">
+        <mapingcol datatype="NUMBER">ADVICE_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCORE_FLAG" maxlength="2" datatype="Integer" type="COL" remark="评分标志">
+        <mapingcol datatype="NUMBER">SCORE_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRADE_FLAG" maxlength="2" datatype="Integer" type="COL" remark="GRADE_FLAG">
+        <mapingcol datatype="NUMBER">GRADE_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_MEM_FEE" maxlength="10" datatype="Long" type="COL" remark="话费收入在500元以下的不得分，501－1000元得1分， 1001－2000元得2分，2001－5000元得4分，5001－10000元得6分，10001－20000元得8分，  20000－－40000元得12分，40001以上得15分">
+        <mapingcol datatype="NUMBER">GROUP_MEM_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_INFO_FEE" maxlength="10" datatype="Long" type="COL" remark="信息化收入在200元以下不得分，201－500元得3分，501－1000元得6分，1001－2000元得8分，2001－5000元得12分，5000元以上得15分">
+        <mapingcol datatype="NUMBER">GROUP_INFO_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_UPAY_FEE" maxlength="10" datatype="Long" type="COL" remark="统一付费收入在300元以下不得分，301－800元得2分，801－1500元得4分，1501－2500元得6分，2501－5000元得8分，5000元以上得10分">
+        <mapingcol datatype="NUMBER">GROUP_UPAY_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_MEM_FEE_SCORE" maxlength="2" datatype="Integer" type="COL" remark="话费收入在500元以下的不得分，501－1000元得1分， 1001－2000元得2分，2001－5000元得4分，5001－10000元得6分，10001－20000元得8分，  20000－－40000元得12分，40001以上得15分">
+        <mapingcol datatype="NUMBER">GROUP_MEM_FEE_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_INFO_FEE_SCORE" maxlength="2" datatype="Integer" type="COL" remark="信息化收入在200元以下不得分，201－500元得3分，501－1000元得6分，1001－2000元得8分，2001－5000元得12分，5000元以上得15分">
+        <mapingcol datatype="NUMBER">GROUP_INFO_FEE_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_UPAY_FEE_SCORE" maxlength="2" datatype="Integer" type="COL" remark="统一付费收入在300元以下不得分，301－800元得2分，801－1500元得4分，1501－2500元得6分，2501－5000元得8分，5000元以上得10分">
+        <mapingcol datatype="NUMBER">GROUP_UPAY_FEE_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PLAN_NUM" maxlength="10" datatype="Long" type="COL" remark="集团产品3项以上为1分，2项为0.5分，否则为0分">
+        <mapingcol datatype="NUMBER">PLAN_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PLAN_NUM_SCORE" maxlength="2" datatype="Integer" type="COL" remark="集团产品3项以上为1分，2项为0.5分，否则为0分">
+        <mapingcol datatype="NUMBER">PLAN_NUM_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SIGN_YEAR" maxlength="4" datatype="Integer" type="COL" remark="2002年及前为6分，2003年为4分，2004年为3分，2005年为2分，2006年为1分，当年建立为0">
+        <mapingcol datatype="NUMBER">SIGN_YEAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SIGN_YEAR_SCORE" maxlength="4" datatype="Integer" type="COL" remark="2002年及前为6分，2003年为4分，2004年为3分，2005年为2分，2006年为1分，当年建立为0">
+        <mapingcol datatype="NUMBER">SIGN_YEAR_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEV_RATE" maxlength="3" datatype="Integer" type="COL" remark="离网率">
+        <mapingcol datatype="NUMBER">LEV_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEV_RATE_SCORE" maxlength="2" datatype="Integer" type="COL" remark="离网率得分">
+        <mapingcol datatype="NUMBER">LEV_RATE_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADJUST_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="固网业务消费(固话、宽带、电路、IDC托管),每次集团价值评估前由客户经理输入">
+        <mapingcol datatype="NUMBER">ADJUST_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GW_FEE" maxlength="10" datatype="Long" type="COL" remark="固网业务消费">
+        <mapingcol datatype="NUMBER">GW_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

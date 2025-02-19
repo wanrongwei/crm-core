@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmOperViewDefine" mainattr="VIEW_REL_ID">
+    <mapingenty type="query">SELECT T1.VIEW_REL_ID,
+       T1.OPER_ID,
+       T1.VIEW_ID,
+       T1.SORT,
+       T1.STATE       AS REL_STATE,
+       T1.REMARKS     AS REL_REMARKS,
+       T2.VIEW_CODE,
+       T2.VIEW_TITLE,
+       T2.VIEW_URL,
+       T2.VIEW_TYPE,
+       T2.CUST_TYPE,
+       T2.CHANNEL_TYPE,
+       T2.PARENT_VIEW_ID,
+       T2.VIEW_LEVEL,
+       T2.VIEW_SORT_ID,
+       T2.STATE       AS VIEW_STATE,
+       T2.REMARKS     AS VIEW_REMARKS,
+       T2.BUSINESS_ID,
+       T2.IS_LEAF,
+       T2.VIEW_ICON_URL,
+       T2.IS_CUSTOM_IMPL,
+       T2.CUSTOM_IMPL_CLASS
+  FROM CM_OPER_TAB_REL T1, CM_CFG_VIEW_DEFINE T2
+ WHERE T1.VIEW_ID = T2.VIEW_ID
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="VIEW_REL_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VIEW_REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OPER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VIEW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_VIEW_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_VIEW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">REL_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REL_REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TITLE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_URL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TYPE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CHANNEL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_LEVEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VIEW_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_SORT_ID" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VIEW_SORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">VIEW_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BUSINESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_LEAF" maxlength="2" datatype="Integer" type="COL" remark="视图排序序号">
+        <mapingcol datatype="NUMBER">IS_LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_ICON_URL" maxlength="255" datatype="String" type="COL" remark="访问视图的地址">
+        <mapingcol datatype="VARCHAR2">VIEW_ICON_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_CUSTOM_IMPL" maxlength="2" datatype="Integer" type="COL" remark="是否动态获取子节点
+		1：是；
+		0/null：否；">
+        <mapingcol datatype="NUMBER">IS_CUSTOM_IMPL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUSTOM_IMPL_CLASS" maxlength="255" datatype="String" type="COL" remark="子节点获取实现类">
+        <mapingcol datatype="VARCHAR2">CUSTOM_IMPL_CLASS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

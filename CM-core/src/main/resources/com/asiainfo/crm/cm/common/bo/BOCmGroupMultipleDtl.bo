@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupMultipleDtl" mainattr="GROUP_MTP_ID">
+    <mapingenty type="table">CM_GROUP_MULTIPLE_DTL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="GROUP_MTP_ID" maxlength="12" datatype="String" type="PK" remark="集团客户编号">
+        <mapingcol datatype="VARCHAR2">GROUP_MTP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="8" datatype="Long" type="PK" remark="地市代码">
+        <mapingcol datatype="NUMBER">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINK_NAME" maxlength="50" datatype="String" type="COL" remark="本市联系人">
+        <mapingcol datatype="VARCHAR2">LINK_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINK_PHONE" maxlength="50" datatype="String" type="COL" remark="本市联系人电话">
+        <mapingcol datatype="VARCHAR2">LINK_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_NUM" maxlength="12" datatype="Long" type="COL" remark="移动客户数">
+        <mapingcol datatype="NUMBER">CMCC_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CU_NUM" maxlength="12" datatype="Long" type="COL" remark="联通客户数">
+        <mapingcol datatype="NUMBER">CU_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_NUM" maxlength="12" datatype="Long" type="COL" remark="电信客户数">
+        <mapingcol datatype="NUMBER">CT_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_GMANAGE" maxlength="2" datatype="Integer" type="COL" remark="是否纳入集团管理">
+        <mapingcol datatype="NUMBER">IS_GMANAGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROV_VNUM" maxlength="8" datatype="Long" type="COL" remark="省级V网数量">
+        <mapingcol datatype="NUMBER">PROV_VNUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_VNUM" maxlength="8" datatype="Long" type="COL" remark="市级V网数量">
+        <mapingcol datatype="NUMBER">REGION_VNUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_ID" maxlength="20" datatype="String" type="COL" remark="市公司首席客户经理">
+        <mapingcol datatype="VARCHAR2">MANAGER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGE_DEPT" maxlength="50" datatype="String" type="COL" remark="责任部门">
+        <mapingcol datatype="VARCHAR2">CHARGE_DEPT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_CHARGER" maxlength="50" datatype="String" type="COL" remark="责任部门负责人">
+        <mapingcol datatype="VARCHAR2">DEPT_CHARGER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGER" maxlength="50" datatype="String" type="COL" remark="责任人">
+        <mapingcol datatype="VARCHAR2">CHARGER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARGER_PHONE" maxlength="50" datatype="String" type="COL" remark="责任人电话">
+        <mapingcol datatype="VARCHAR2">CHARGER_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_CHARGER" maxlength="50" datatype="String" type="COL" remark="其他责任人">
+        <mapingcol datatype="VARCHAR2">OTHER_CHARGER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_PHONE" maxlength="50" datatype="String" type="COL" remark="其他责任人电话">
+        <mapingcol datatype="VARCHAR2">OTHER_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="8" datatype="Long" type="COL" remark="操作员编号">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="8" datatype="Long" type="COL" remark="组织编号">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="1024" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SO_DATE" maxlength="20" datatype="DateTime" type="COL" remark="操作时间">
+        <mapingcol datatype="DATE">SO_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SO_NBR" maxlength="15" datatype="Long" type="COL" remark="操作流水">
+        <mapingcol datatype="NUMBER">SO_NBR</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

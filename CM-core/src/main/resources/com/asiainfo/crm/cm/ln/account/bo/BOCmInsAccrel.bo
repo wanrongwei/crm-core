@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmInsAccrel" mainattr="acct_rela_id">
+    <mapingenty type="table">{CM_INS_ACCREL}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="acct_rela_id" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">acct_rela_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="offer_inst_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">offer_inst_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="user_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">user_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="acct_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">acct_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="old_acct_id" maxlength="21" datatype="Long" type="COL" remark="异地支付前的帐户编号">
+        <mapingcol datatype="bigint">old_acct_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="pay_type" maxlength="21" datatype="Long" type="COL" remark="付费关系类型(code_type=SO_ACCTREL_TYPE)
+            1：默认帐户
+            2：代付关系">
+        <mapingcol datatype="bigint">pay_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="together_flag" maxlength="21" datatype="Long" type="COL" remark="是否统一支付(code_type=SO_YES_NO)
+            0:否1:是">
+        <mapingcol datatype="bigint">together_flag</mapingcol>
+      </attr>
+      <attr floatlength="0" name="pay_user_id" maxlength="21" datatype="Long" type="COL" remark="统付用户编号">
+        <mapingcol datatype="bigint">pay_user_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="item_type" maxlength="21" datatype="Long" type="COL" remark="付费项目类型(code=SO_ACCTREL_ITEM_TYPE)
+            1:普通科目
+            2:科目集合
+            3:产品">
+        <mapingcol datatype="bigint">item_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="item_id" maxlength="21" datatype="Long" type="COL" remark="科目或科目集编号，或者产品编号">
+        <mapingcol datatype="bigint">item_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="pay_mode" maxlength="21" datatype="Long" type="COL" remark="代付付费的方式(code_type=SO_ACCTREL_PAY_MODE)
+            1. 全额
+            2. 限额
+            3. 比例
+            ">
+        <mapingcol datatype="bigint">pay_mode</mapingcol>
+      </attr>
+      <attr floatlength="0" name="pay_value" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">pay_value</mapingcol>
+      </attr>
+      <attr floatlength="0" name="max_pay" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">max_pay</mapingcol>
+      </attr>
+      <attr floatlength="0" name="out_acct_pri" maxlength="21" datatype="Long" type="COL" remark="用户多个账户付费时，指定这些账户代付的优先级。在代付关系设定时指定。">
+        <mapingcol datatype="bigint">out_acct_pri</mapingcol>
+      </attr>
+      <attr floatlength="0" name="acct_region_id" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">acct_region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="user_region_id" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">user_region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="21" datatype="Long" type="COL" remark="状态(code_type=SO_INSTANCE_STATE)
+            1正常
+            2 变更中
+            3 暂停
+            5 被动暂停
+            6 连带暂停
+            7 删除">
+        <mapingcol datatype="bigint">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="PK" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="PK" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date_type" maxlength="21" datatype="Long" type="COL" remark="0系统计算
+            1用户指定">
+        <mapingcol datatype="bigint">effective_date_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date_type" maxlength="21" datatype="Long" type="COL" remark="0系统计算
+            1用户指定">
+        <mapingcol datatype="bigint">expire_date_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+      <attr floatlength="0" name="grp_split_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">grp_split_id</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

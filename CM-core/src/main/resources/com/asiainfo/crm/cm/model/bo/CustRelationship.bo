@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="CustRelationship" mainattr="CUST_REL_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_REL_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="客户关系编号" />
+      <attr floatlength="0" name="RELATION_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="客户关系类型：1、集团父子关系；2：集团客户成员关系；3：家庭客户成员关系；" />
+      <attr floatlength="0" name="REL_TYPE_ID" maxlength="2" datatype="Integer" type="VIRTUAL" remark="家庭成员关系类型：指成员与家长之间的关系。" />
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="集团成员关系类型：包括关键成员客户、普通成员客户、潜在成员客户等" />
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="VIRTUAL" remark="客户编号" />
+      <attr floatlength="0" name="MEMBER_CUST_ID" maxlength="14" datatype="Long" type="VIRTUAL" remark="成员客户编号" />
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="255" datatype="String" type="VIRTUAL" remark="关联客户名称" />
+      <attr floatlength="0" name="MEMBER_POSITION" maxlength="255" datatype="String" type="VIRTUAL" remark="关联客户职位" />
+      <attr floatlength="0" name="MEMBER_ROLE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="客户关系角色" />
+      <attr floatlength="0" name="CUST_REL_LEVEL" maxlength="2" datatype="Integer" type="VIRTUAL" remark="客户关系级别" />
+      <attr floatlength="0" name="CUST_REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="集团客户归属地" />
+      <attr floatlength="0" name="MEMBER_CUST_REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="家庭成员客户归属区域标识" />
+      <attr floatlength="0" name="DEPT_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="集团客户所属组织结构" />
+      <attr floatlength="0" name="MEMBER_STATUS" maxlength="2" datatype="Integer" type="VIRTUAL" remark="成员状态:对成员客户关系状态的描述（有效、离职等）" />
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态" />
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="操作员" />
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="组织单元" />
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+      <attr floatlength="0" name="PROVIDE_ID" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="BRAND" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="USER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_DESC" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="FIRST_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="LAST_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_NAME_QRY" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

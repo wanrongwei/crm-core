@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmKernelClassCfg" mainattr="ID">
+    <mapingenty type="table">CM_KERNEL_CLASS_CFG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINAL_CLASS" maxlength="4" datatype="Integer" type="COL" remark="客户最终级别">
+        <mapingcol datatype="NUMBER">FINAL_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUR_CLASS" maxlength="4" datatype="Integer" type="COL" remark="客户当前个人级别">
+        <mapingcol datatype="NUMBER">CUR_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KERNEL_CLASS" maxlength="4" datatype="Integer" type="COL" remark="集团关键人物级别">
+        <mapingcol datatype="NUMBER">KERNEL_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_GLOBAL" maxlength="4" datatype="Integer" type="COL" remark="是否全球通">
+        <mapingcol datatype="NUMBER">IS_GLOBAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

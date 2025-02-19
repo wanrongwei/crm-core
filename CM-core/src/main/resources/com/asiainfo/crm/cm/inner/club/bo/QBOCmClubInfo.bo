@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmClubInfo" mainattr="USER_ID">
+    <mapingenty type="query">SELECT A.USER_ID, A.MEMBER_ID,A.CLUB_ID,A.CUST_ID,B.CLUB_NAME,A.MEMBER_NAME,A.CERT_TYPE,A.CERT_CODE FROM {CM_CLUB_MEMBER} A,{CM_CLUB} B WHERE A.CLUB_ID=B.CLUB_ID</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="USER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLUB_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CLUB_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLUB_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CLUB_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CERT_CODE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

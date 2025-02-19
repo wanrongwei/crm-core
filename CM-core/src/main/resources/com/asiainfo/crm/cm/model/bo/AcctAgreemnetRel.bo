@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="AcctAgreemnetRel" mainattr="ACCT_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="ACCT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="AGREEMENT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="OPERATOR_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="VALID_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="OPER_TYPE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="COMMIT_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="SO_NBR" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="TENANT_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

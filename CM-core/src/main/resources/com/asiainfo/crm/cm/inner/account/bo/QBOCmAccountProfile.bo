@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmAccountProfile" mainattr="ACCT_ID">
+    <mapingenty type="query">SELECT '' AS BANK_BEHALF_PHONE, A.ACCT_ID, A.CUST_ID, A.ACCT_NAME, A.ACCT_TYPE, A.ACCT_PASSWORD, A.ACCT_STATUS, A.CREDIT_LEVEL, A.CREDIT_VALUE, A.URGE_STOP_FLAG, A.BILL_CYCLE_FLAG, A.ACCT_BEHALF_PHONE,A.INSTALLMENT_FLAG,A.STATE AS ACCT_STATE, A.CREATE_OP_ID AS ACCT_CREATE_OP_ID, A.CREATE_ORG_ID AS ACCT_CREATE_ORG_ID, A.OP_ID AS ACCT_OP_ID, A.ORG_ID AS ACCT_ORG_ID, A.CREATE_DATE AS ACCT_CREATE_DATE, A.DONE_CODE AS ACCT_DONE_CODE, A.DONE_DATE AS ACCT_DONE_DATE, A.EFFECTIVE_DATE AS ACCT_EFFECTIVE_DATE, A.EXPIRE_DATE AS ACCT_EXPIRE_DATE, B.PAYMENT_ID, B.PAY_METHOD, B.PAYMENT_BANK_CODE, B.PAYMENT_ACCOUNT, B.PAYMENT_ACCOUNT_NAME, B.PAYMENT_ACCOUNT_TYPE, B.BANK_CONTRACT, B.PRIORITY, B.STATE AS PAY_STATE, B.CREATE_OP_ID AS PAY_CREATE_OP_ID, B.CREATE_ORG_ID AS PAY_CREATE_ORG_ID, B.OP_ID AS PAY_OP_ID, B.ORG_ID AS PAY_ORG_ID, B.CREATE_DATE AS PAY_CREATE_DATE, B.DONE_CODE AS PAY_DONE_CODE, B.DONE_DATE AS PAY_DONE_DATE, B.EFFECTIVE_DATE AS PAY_EFFECTIVE_DATE, B.EXPIRE_DATE AS PAY_EXPIRE_DATE, B.REGION_ID, B.REMARKS, D.CYCLE_ID, D.CYCLE_TYPE, D.CYCLE_UNIT, D.CYCLE_REASON, D.BILL_DAY, D.STATE AS CYCLE_STATE, D.CREATE_OP_ID AS CYCLE_CREATE_OP_ID, D.CREATE_ORG_ID AS CYCLE_CREATE_ORG_ID, D.OP_ID AS CYCLE_OP_ID, D.ORG_ID AS CYCLE_ORG_ID, D.CREATE_DATE AS CYCLE_CREATE_DATE, D.DONE_CODE AS CYCLE_DONE_CODE, D.DONE_DATE AS CYCLE_DONE_DATE, D.EFFECTIVE_DATE AS CYCLE_EFFECTIVE_DATE, D.EXPIRE_DATE AS CYCLE_EXPIRE_DATE,D.BILL_DUE_DATE FROM {CM_ACCOUNT} A, {CM_ACCT_PAYMENT} B, {CM_ACCT_BILL_CYCLE} D WHERE A.ACCT_ID = B.ACCT_ID AND A.ACCT_ID = D.ACCT_ID</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BANK_BEHALF_PHONE" maxlength="0" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">BANK_BEHALF_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">ACCT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_PASSWORD" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">ACCT_PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_STATUS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_VALUE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CREDIT_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="URGE_STOP_FLAG" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">URGE_STOP_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_CYCLE_FLAG" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">BILL_CYCLE_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_BEHALF_PHONE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">ACCT_BEHALF_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INSTALLMENT_FLAG" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">INSTALLMENT_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">ACCT_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_CREATE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">ACCT_CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ACCT_DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_DONE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">ACCT_DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_EFFECTIVE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">ACCT_EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_EXPIRE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">ACCT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMENT_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PAYMENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_METHOD" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">PAY_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMENT_BANK_CODE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">PAYMENT_BANK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMENT_ACCOUNT" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">PAYMENT_ACCOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMENT_ACCOUNT_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">PAYMENT_ACCOUNT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMENT_ACCOUNT_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">PAYMENT_ACCOUNT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANK_CONTRACT" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">BANK_CONTRACT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIORITY" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">PRIORITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">PAY_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PAY_CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PAY_CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PAY_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PAY_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_CREATE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">PAY_CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PAY_DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_DONE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">PAY_DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_EFFECTIVE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">PAY_EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_EXPIRE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">PAY_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_UNIT" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_UNIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_REASON" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CYCLE_REASON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_DAY" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">BILL_DAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CYCLE_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_CREATE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CYCLE_CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CYCLE_DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_DONE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CYCLE_DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_EFFECTIVE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CYCLE_EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CYCLE_EXPIRE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CYCLE_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_DUE_DATE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">BILL_DUE_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

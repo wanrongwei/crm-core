@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustUnionFieldMapping" mainattr="FIELD_TYPE">
+    <mapingenty type="table">CM_CUST_UNION_FIELD_MAPPING</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="FIELD_TYPE" maxlength="2" datatype="Integer" type="COL" remark="标识哪个字段">
+        <mapingcol datatype="NUMBER">FIELD_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_CODE" maxlength="100" datatype="String" type="COL" remark="字段枚举值">
+        <mapingcol datatype="VARCHAR2">FIELD_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_VALUE" maxlength="100" datatype="String" type="COL" remark="字段真实值">
+        <mapingcol datatype="VARCHAR2">FIELD_VALUE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

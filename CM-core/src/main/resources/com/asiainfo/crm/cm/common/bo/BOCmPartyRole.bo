@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmPartyRole" mainattr="PARTY_ROLE_ID">
+    <mapingenty type="table">{CM_PARTY_ROLE}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PARTY_ROLE_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">PARTY_ROLE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROLE_TYPE" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">ROLE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTITY_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ENTITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROLE_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ROLE_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROLE_STATUS" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ROLE_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

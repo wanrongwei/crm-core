@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmVirtualCustomer" mainattr="CUST_ID">
+    <mapingenty type="table">CM_VIRTUAL_CUSTOMER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="PK" remark="客户编号
+
+所有类型客户的客户编号是唯一的。">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_ID" maxlength="12" datatype="Long" type="COL" remark="参与人编号
+
+表示一个参与人的唯一标识，由系统生成的全局唯一的序列号。">
+        <mapingcol datatype="NUMBER">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_CUST_ID" maxlength="14" datatype="Long" type="COL" remark="上级集团">
+        <mapingcol datatype="NUMBER">PARENT_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_SERVICE_ID" maxlength="50" datatype="String" type="COL" remark="客户服务编号
+
+客户服务编号是系统按照一定规则生成的序列号，当客户被创建后告知客户，方便以后客户可以通过提供这个编号直接办理业务等。">
+        <mapingcol datatype="VARCHAR2">CUST_SERVICE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL" remark="客户名称：
+对于集团客户的客户名称是唯一的。">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHORT_NAME" maxlength="255" datatype="String" type="COL" remark="集团简称">
+        <mapingcol datatype="VARCHAR2">SHORT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_STATUS" maxlength="2" datatype="Integer" type="COL" remark="客户状态
+
+1  潜在
+2  在网
+3  离网
+4  销户
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_STATUS&apos;;
+">
+        <mapingcol datatype="NUMBER">CUST_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ZIPCODE" maxlength="6" datatype="String" type="COL" remark="客户的邮政编码">
+        <mapingcol datatype="VARCHAR2">CUST_ZIPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ADDRESS" maxlength="256" datatype="String" type="COL" remark="客户地址">
+        <mapingcol datatype="VARCHAR2">CUST_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_TYPE" maxlength="2" datatype="Integer" type="COL" remark="证件类型
+1  身份证
+2  护照
+3  军官证
+4  武装警察身份证
+5  港澳居民往来内地通行证
+6  台湾居民往来大陆通行证
+7  户口薄（未满16周岁客户）
+8  文职官员证
+9  士兵证
+10  人民警察证
+11  营业执照
+99  其它证件
+
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_CERT_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">CUST_CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_CODE" maxlength="50" datatype="String" type="COL" remark="证件号码">
+        <mapingcol datatype="VARCHAR2">CUST_CERT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_ADDRESS" maxlength="256" datatype="String" type="COL" remark="证件地址">
+        <mapingcol datatype="VARCHAR2">CUST_CERT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_EFFDATE" maxlength="20" datatype="DateTime" type="COL" remark="证件签发日期">
+        <mapingcol datatype="DATE">CUST_CERT_EFFDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_EXPIRE" maxlength="20" datatype="DateTime" type="COL" remark="证件有效期">
+        <mapingcol datatype="DATE">CUST_CERT_EXPIRE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_LANGUAGE" maxlength="25" datatype="String" type="COL" remark="客户默认语言">
+        <mapingcol datatype="VARCHAR2">CUST_LANGUAGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_PASSWORD" maxlength="50" datatype="String" type="COL" remark="客户密码">
+        <mapingcol datatype="VARCHAR2">CUST_PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_SERVICE_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="集团级别
+
+0  A+类客户
+1  A1类客户
+2  B1类客户
+3  A2类客户
+4  B2类客户
+5  C1类客户
+6  C2类客户
+7  D类客户
+99  未定级别
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_CUST_LEVEL&apos;;">
+        <mapingcol datatype="NUMBER">CUST_SERVICE_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="账户信用等级">
+        <mapingcol datatype="NUMBER">CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_VALUE" maxlength="10" datatype="Long" type="COL" remark="账户信用额度">
+        <mapingcol datatype="NUMBER">CREDIT_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGAL_CUST_ID" maxlength="12" datatype="Long" type="COL" remark="法人客户标识">
+        <mapingcol datatype="NUMBER">LEGAL_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEGAL_CUST_NAME" maxlength="50" datatype="String" type="COL" remark="法人代表">
+        <mapingcol datatype="VARCHAR2">LEGAL_CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIRTUAL_CUST_TYPE" maxlength="6" datatype="Integer" type="COL" remark="虚拟客户类型
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_VIRTUAL_CUST_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">VIRTUAL_CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NATIONALITY" maxlength="10" datatype="String" type="COL" remark="国家">
+        <mapingcol datatype="VARCHAR2">NATIONALITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCE_ID" maxlength="10" datatype="String" type="COL" remark="省份">
+        <mapingcol datatype="VARCHAR2">PROVINCE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="10" datatype="String" type="COL" remark="地市">
+        <mapingcol datatype="VARCHAR2">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_ID" maxlength="10" datatype="String" type="COL" remark="区县">
+        <mapingcol datatype="VARCHAR2">COUNTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_TYPE" maxlength="10" datatype="String" type="COL" remark="区域类型
+">
+        <mapingcol datatype="VARCHAR2">REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUB_REGION_TYPE" maxlength="10" datatype="String" type="COL" remark="区域子类型
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_SUB_GROUP_REGION_TYPE&apos; AND T.EXTERN_CODE_TYPE = :GROUP_REGION_TYPE;">
+        <mapingcol datatype="VARCHAR2">SUB_REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEVELOP_TYPE" maxlength="2" datatype="Integer" type="COL" remark="发展类型
+code_type=10044
+
+0  直销
+1  产品代理
+2  关系代理
+3  关系产品代理">
+        <mapingcol datatype="NUMBER">DEVELOP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

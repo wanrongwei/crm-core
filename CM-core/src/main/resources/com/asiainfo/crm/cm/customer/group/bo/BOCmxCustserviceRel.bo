@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxCustserviceRel" mainattr="CITY_CODE">
+    <mapingenty type="table">CMX_CUSTSERVICE_REL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CITY_CODE" maxlength="6" datatype="String" type="COL" remark="地市编码">
+        <mapingcol datatype="VARCHAR2">CITY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_NAME" maxlength="50" datatype="String" type="COL" remark="县市名称">
+        <mapingcol datatype="VARCHAR2">COUNTY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MANAGER_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

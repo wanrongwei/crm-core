@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="QBOGroupMulArchives" mainattr="GROUP_SEQ">
+    <mapingenty type="query">SELECT GA.*, GR.IS_REGION_ORG ,gm.group_mtp_id
+  FROM CM_GROUP_MTPARCH_RELA GR, CM_GROUP_ARCHIVES GA , CM_GROUP_MULTIPLE gm 
+ WHERE GR.GROUP_SEQ = GA.GROUP_SEQ AND gm.group_mtp_id =  gr.group_mtp_id</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="GROUP_SEQ" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TRADE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BIG_TRADE_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BIG_TRADE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_TRADE_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_TRADE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SMALL_TRADE_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SMALL_TRADE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ADDRESS_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_PROVINCE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_PROVINCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CITY" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_DETAIL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REGION_DETAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_NAME" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_NAME" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_DETAIL_NAME" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_DETAIL_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ADDRESS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AREA_NUM" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AREA_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINK_PHONE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LINK_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_LINK_PHONE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OTHER_LINK_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPLOYEE_NUM" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EMPLOYEE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNIT_NUM" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UNIT_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ECONOMY_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ECONOMY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRACTICE1" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PRACTICE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRACTICE2" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PRACTICE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTROL_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONTROL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WORK_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="YEAR_TURNOVER" maxlength="4" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">YEAR_TURNOVER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ASSET" maxlength="4" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ASSET</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_REL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_REL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">WORK_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUILD_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BUILD_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMPARE_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">COMPARE_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEVELOP_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DEVELOP_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREAT_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREAT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_GROUP_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UP_GROUP_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_EMPLOYEE_NUM" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UP_EMPLOYEE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_GROUP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">UP_GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXAM_GROUP_FLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXAM_GROUP_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_GROUP_SEQ" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARENT_GROUP_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATA_SOURCE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DATA_SOURCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GEOGRAPHY_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GEOGRAPHY_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SOURCE_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SOURCE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_REGION_ORG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">IS_REGION_ORG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_MTP_ID" maxlength="12" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_MTP_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

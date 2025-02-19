@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustomerQuitGroup" mainattr="ID">
+    <mapingenty type="table">{CM_CUSTOMER_QUIT_GROUP}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUSTOMER_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CUSTOMER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATUS" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUIT_MODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">QUIT_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_1" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT_1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_2" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT_2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_3" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT_3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_4" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT_4</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

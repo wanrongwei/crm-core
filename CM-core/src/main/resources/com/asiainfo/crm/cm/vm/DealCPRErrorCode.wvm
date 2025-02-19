@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<workflow label="DealCPRErrorCode" tasktype="workflow" tasktag="src.main.config.com.asiainfo.crm.cm.vm.DealCPRErrorCode">
+  <vars name="_TASK_JUGE_RESULT" datatype="java.lang.String" inouttype="inner" description="judge"/>
+  <vars name="errorCode" datatype="java.lang.String" inouttype="in" description="errorCode"/>
+  <vars name="cprId" datatype="long" inouttype="in" description="cprId"/>
+  <vars name="errorMsg" datatype="java.lang.String" inouttype="in" description="errorMsg"/>
+  <vars name="custId" datatype="long" inouttype="in" description="custId"/>
+  <vars name="taskType" datatype="long" defaultvalue="1" inouttype="in" description="taskType"/>
+  <vars name="opId" datatype="java.lang.String" inouttype="in" description="opId"/>
+  <vars name="orgId" datatype="java.lang.String" inouttype="in" description="orgId"/>
+  <vars name="suspendString" datatype="java.lang.String" inouttype="in" description="suspendString"/>
+  <vars name="preTerminateString" datatype="java.lang.String" inouttype="in" description="preTerminateString"/>
+  <getuserinfodeal>
+    <runtype>service</runtype>
+    <servicename>com.asiainfo.crm.cm.common.service.interfaces.ICmCommonSV</servicename>
+    <runclassname>com.asiainfo.crm.cm.common.service.interfaces.ICmCommonSV</runclassname>
+    <runfunctionname>getDefaultUser</runfunctionname>
+    <vars name="return" datatype="com.ai.appframe2.privilege.UserInfoInterface" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+  </getuserinfodeal>
+  <task id="1" label="start" tasktype="start" isstart="true">
+    <uiinfo>9,149,32,32</uiinfo>
+    <gotoitem goto="15"/>
+    <autodeal>
+      <runtype/>
+      <servicename/>
+      <runclassname/>
+      <runfunctionname/>
+    </autodeal>
+  </task>
+  <task id="8" label="TroubleTicket" tasktype="auto" tasktag="auto">
+    <uiinfo>717,31,32,32</uiinfo>
+    <gotoitem goto="12"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>saveTroubleTicket</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="P_1" datatype="java.lang.String" contextvarName="errorCode" defaultvalue="" inouttype="in" description="errorCode"/>
+      <vars name="P_2" datatype="java.lang.String" contextvarName="errorMsg" defaultvalue="" inouttype="in" description="errorMsg"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="12" label="end" tasktype="finish">
+    <uiinfo>936,214,32,32</uiinfo>
+    <autodeal>
+      <runtype/>
+      <servicename/>
+      <runclassname/>
+      <runfunctionname/>
+    </autodeal>
+  </task>
+  <task id="14" label="isCustomer" tasktype="decision">
+    <uiinfo>178,149,32,32</uiinfo>
+    <gotoitem condition="false" goto="8"/>
+    <gotoitem condition="true" goto="16"/>
+    <condition>custId&gt;0</condition>
+  </task>
+  <task id="15" label="queryCustIdByPNR" tasktype="auto" tasktag="auto">
+    <uiinfo>89,150,32,32</uiinfo>
+    <gotoitem goto="14"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmIndivCustomerSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmIndivCustomerSV</runclassname>
+      <runfunctionname>queryCustIdByPNR</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="cprId" defaultvalue="" inouttype="in" description="cprId"/>
+      <vars name="return" datatype="long" contextvarName="custId" defaultvalue="" inouttype="return" description="custId"/>
+    </autodeal>
+  </task>
+  <task id="16" label="installmentAccount" tasktype="autodecision" tasktag="autodecision">
+    <uiinfo>302,149,32,32</uiinfo>
+    <gotoitem condition="false" goto="8"/>
+    <gotoitem condition="true" goto="17"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>ifCustomerHasInstallAccount</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="boolean" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="17" label="customerStatusActiveSuspend" tasktype="autodecision" tasktag="autodecision">
+    <uiinfo>301,247,32,32</uiinfo>
+    <gotoitem condition="false" goto="19"/>
+    <gotoitem condition="true" goto="21"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>ifCustStatusActiveOrSuspend</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="boolean" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="19" label="former" tasktype="autodecision" tasktag="autodecision">
+    <uiinfo>454,148,32,32</uiinfo>
+    <gotoitem condition="true" goto="8"/>
+    <gotoitem condition="false" goto="12"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>ifCustStatusInactive</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="boolean" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="21" label="SetAccountCredit" tasktype="auto" tasktag="auto">
+    <uiinfo>429,247,32,32</uiinfo>
+    <gotoitem goto="22"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>resetAcctCreditLimit</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="22" label="isMobile" tasktype="autodecision" tasktag="autodecision">
+    <uiinfo>495,248,32,32</uiinfo>
+    <gotoitem condition="false" goto="8"/>
+    <gotoitem condition="true" goto="23"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>ifCustHasMobile</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="boolean" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="23" label="sms" tasktype="auto" tasktag="auto">
+    <uiinfo>499,331,32,32</uiinfo>
+    <gotoitem goto="25"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>sendMsg</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <task id="25" label="isAddressUpdate" tasktype="user" tasktag="user">
+    <uiinfo>585,330,32,32</uiinfo>
+    <gotoitem condition="true" goto="12"/>
+    <gotoitem condition="false" goto="30"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>dealIfUpdateAddress</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" defaultvalue="" inouttype="in" description="taskId"/>
+      <vars name="P_2" datatype="long" contextvarName="taskType" defaultvalue="" inouttype="in" description="taskType"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+    <user taskusertype="staff" organizeid=":orgId" taskuserid=":opId"/>
+  </task>
+  <task id="27" label="FuturePreTermination" tasktype="auto" tasktag="auto">
+    <uiinfo>841,281,32,32</uiinfo>
+    <gotoitem goto="12"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>preTerminationUser</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="java.lang.String" contextvarName="preTerminateString" defaultvalue="" inouttype="return" description="preTerminateString"/>
+    </autodeal>
+  </task>
+  <task id="28" label="isAddressUpdate" tasktype="user" tasktag="user">
+    <uiinfo>757,332,32,32</uiinfo>
+    <gotoitem condition="false" goto="27"/>
+    <gotoitem condition="true" goto="31"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>dealIfUpdateAddress</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="P_1" datatype="java.lang.String" contextvarName="$TASK_ID" defaultvalue="" inouttype="in" description="taskId"/>
+      <vars name="P_2" datatype="long" contextvarName="taskType" defaultvalue="" inouttype="in" description="taskType"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+    <user taskusertype="staff" organizeid=":orgId" taskuserid=":opId"/>
+  </task>
+  <task id="30" label="suspend" tasktype="auto" tasktag="auto">
+    <uiinfo>673,333,32,32</uiinfo>
+    <gotoitem goto="28"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>suspendUser</runfunctionname>
+      <vars name="P_0" datatype="long" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="return" datatype="java.lang.String" contextvarName="suspendString" defaultvalue="" inouttype="return" description="suspendString"/>
+    </autodeal>
+  </task>
+  <task id="31" label="ResumeFromSuspend" tasktype="auto" tasktag="auto">
+    <uiinfo>936,332,32,32</uiinfo>
+    <gotoitem goto="12"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmCprErrorWkSV</runclassname>
+      <runfunctionname>startUser</runfunctionname>
+      <vars name="P_0" datatype="java.lang.String" contextvarName="suspendString" defaultvalue="" inouttype="in" description="suspendString"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+  </task>
+  <join taska="8" taskb="12">
+    <uiinfo>10.0,10.0,500,500,733,47,936,230</uiinfo>
+  </join>
+  <join label="false" taska="14" taskb="8">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,194,165,717,47</uiinfo>
+  </join>
+  <join taska="15" taskb="14">
+    <uiinfo>10.0,10.0,500,500,105,166,178,165</uiinfo>
+  </join>
+  <join taska="1" taskb="15">
+    <uiinfo>10.0,10.0,500,500,25,165,89,166</uiinfo>
+  </join>
+  <join label="true" taska="14" taskb="16">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,194,165,302,165</uiinfo>
+  </join>
+  <join label="false" taska="16" taskb="8">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,318,165,717,47</uiinfo>
+  </join>
+  <join label="true" taska="16" taskb="17">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,318,165,317,247</uiinfo>
+  </join>
+  <join label="false" taska="17" taskb="19">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,317,263,454,164</uiinfo>
+  </join>
+  <join label="true" taska="19" taskb="8">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,470,164,717,47</uiinfo>
+  </join>
+  <join label="false" taska="19" taskb="12">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,470,164,936,230</uiinfo>
+  </join>
+  <join label="true" taska="17" taskb="21">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,317,263,429,263</uiinfo>
+  </join>
+  <join taska="21" taskb="22">
+    <uiinfo>10.0,10.0,500,500,445,263,495,264</uiinfo>
+  </join>
+  <join label="false" taska="22" taskb="8">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,511,264,717,47</uiinfo>
+  </join>
+  <join label="true" taska="22" taskb="23">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,511,264,515,331</uiinfo>
+  </join>
+  <join taska="23" taskb="25">
+    <uiinfo>10.0,10.0,500,500,515,347,585,346</uiinfo>
+  </join>
+  <join label="true" taska="25" taskb="12">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,601,346,936,230</uiinfo>
+  </join>
+  <join label="false" taska="25" taskb="30">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,601,346,673,349</uiinfo>
+  </join>
+  <join taska="31" taskb="12">
+    <uiinfo>10.0,10.0,500,500,952,348,952,246</uiinfo>
+  </join>
+  <join taska="30" taskb="28">
+    <uiinfo>10.0,10.0,500,500,689,349,757,348</uiinfo>
+  </join>
+  <join label="false" taska="28" taskb="27">
+    <condition>false</condition>
+    <uiinfo>10.0,10.0,500,500,773,348,841,297</uiinfo>
+  </join>
+  <join taska="27" taskb="12">
+    <uiinfo>10.0,10.0,500,500,857,297,936,230</uiinfo>
+  </join>
+  <join label="true" taska="28" taskb="31">
+    <condition>true</condition>
+    <uiinfo>10.0,10.0,500,500,773,348,936,348</uiinfo>
+  </join>
+</workflow>

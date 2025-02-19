@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmCustAcctRel" mainattr="ACCT_ID">
+    <mapingenty type="query">SELECT A.ACCT_ID,
+       A.ACCT_STATUS,
+       A.URGE_STOP_FLAG,
+       A.BILL_CYCLE_FLAG,
+       A.DONE_CODE,
+       A.DONE_DATE,
+       A.REMARKS,
+       B.REL_TYPE,
+       A.EFFECTIVE_DATE,
+       A.EXPIRE_DATE,
+       A.CUST_ID,
+       A.ACCT_PASSWORD,
+       A.CREDIT_LEVEL,
+       A.CREATE_OP_ID,
+       A.ORG_ID,
+       A.REGION_ID,
+       A.ACCT_NAME,
+       A.ACCT_TYPE,
+       A.STATE,
+       A.OP_ID,
+       A.CREATE_DATE,
+       B.ACCT_ALIAS_NAME,
+       B.REL_CUST_ID,
+       B.CUST_TYPE,
+       A.CREDIT_VALUE,
+       A.ACCT_BEHALF_PHONE,
+       A.CREATE_ORG_ID
+  FROM {CM_ACCOUNT} A, {CM_CUST_ACCT_REL} B
+ WHERE A.ACCT_ID = B.ACCT_ID
+   AND A.STATE = 'U'
+   AND B.STATE = 'U'
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ACCT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="URGE_STOP_FLAG" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">URGE_STOP_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_CYCLE_FLAG" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BILL_CYCLE_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_PASSWORD" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACCT_PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACCT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ALIAS_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACCT_ALIAS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REL_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_VALUE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREDIT_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_BEHALF_PHONE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACCT_BEHALF_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

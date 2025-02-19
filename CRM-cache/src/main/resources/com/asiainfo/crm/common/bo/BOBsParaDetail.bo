@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsParaDetail" mainattr="REGION_ID">
+    <mapingenty type="table">BS_PARA_DETAIL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="地区唯一标识，X表示全省">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA_TYPE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA_NAME" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA1" maxlength="2048" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA2" maxlength="2048" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA3" maxlength="2048" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA4" maxlength="2048" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA5" maxlength="2048" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARA_DESC" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARA_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="记录状态
+U-正常 E-删除">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">STATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

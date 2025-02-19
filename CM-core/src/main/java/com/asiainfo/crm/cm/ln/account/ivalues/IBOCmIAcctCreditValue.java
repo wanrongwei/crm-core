@@ -1,0 +1,88 @@
+package com.asiainfo.crm.cm.ln.account.ivalues;
+import com.ai.appframe2.common.DataStructInterface;
+import java.sql.Timestamp;
+public interface IBOCmIAcctCreditValue extends DataStructInterface{
+
+  public final static  String S_ServId = "SERV_ID";
+  public final static  String S_UpDate = "UP_DATE";
+  public final static  String S_CountyCode = "COUNTY_CODE";
+  public final static  String S_GroupId = "GROUP_ID";
+  public final static  String S_BusiCode = "BUSI_CODE";
+  public final static  String S_CommitDate = "COMMIT_DATE";
+  public final static  String S_Remark = "REMARK";
+  public final static  String S_OrgId = "ORG_ID";
+  public final static  String S_Sid = "SID";
+  public final static  String S_AcctId = "ACCT_ID";
+  public final static  String S_CustId = "CUST_ID";
+  public final static  String S_UpField = "UP_FIELD";
+  public final static  String S_BusiCredit = "BUSI_CREDIT";
+  public final static  String S_RegionCode = "REGION_CODE";
+  public final static  String S_SoNbr = "SO_NBR";
+  public final static  String S_CreditLevel = "CREDIT_LEVEL";
+
+
+public long getServId();
+
+public Timestamp getUpDate();
+
+public int getCountyCode();
+
+public long getGroupId();
+
+public int getBusiCode();
+
+public Timestamp getCommitDate();
+
+public String getRemark();
+
+public long getOrgId();
+
+public long getSid();
+
+public long getAcctId();
+
+public long getCustId();
+
+public String getUpField();
+
+public long getBusiCredit();
+
+public int getRegionCode();
+
+public long getSoNbr();
+
+public long getCreditLevel();
+
+
+public  void setServId(long value);
+
+public  void setUpDate(Timestamp value);
+
+public  void setCountyCode(int value);
+
+public  void setGroupId(long value);
+
+public  void setBusiCode(int value);
+
+public  void setCommitDate(Timestamp value);
+
+public  void setRemark(String value);
+
+public  void setOrgId(long value);
+
+public  void setSid(long value);
+
+public  void setAcctId(long value);
+
+public  void setCustId(long value);
+
+public  void setUpField(String value);
+
+public  void setBusiCredit(long value);
+
+public  void setRegionCode(int value);
+
+public  void setSoNbr(long value);
+
+public  void setCreditLevel(long value);
+}

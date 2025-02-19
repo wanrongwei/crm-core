@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmGroupMember" mainattr="BILL_ID">
+    <mapingenty type="query">SELECT G.BILL_ID,
+       G.BRAND,
+       G.CREATE_DATE,
+       V.CUST_NAME,
+       G.MEMBER_NAME,
+       V.CUST_ID,
+       V.CUST_SERVICE_ID,
+       V.CUST_SERVICE_LEVEL,
+       V.CITY_ID,
+       V.COUNTY_ID,
+       G.MEMBER_TYPE,
+       G.FIRST_NAME,
+       G.MIDDLE_NAME,
+       G.LAST_NAME,
+       G.FIRST_NAME_QRY,
+       G.MIDDLE_NAME_QRY,
+       G.LAST_NAME_QRY,
+       G.MEMBER_NAME_QRY
+  FROM {CM_GROUP_MEMBER} G, {CM_GROUP_CUSTOMER} V
+ WHERE G.CUST_ID = V.CUST_ID</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BRAND" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BRAND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_SERVICE_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_SERVICE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_SERVICE_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_SERVICE_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_ID" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME_QRY</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

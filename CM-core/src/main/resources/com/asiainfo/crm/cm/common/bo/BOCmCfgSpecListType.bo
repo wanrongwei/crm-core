@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="BOCmCfgSpecListType" mainattr="TYPE_ID">
+		<mapingenty type="table">CM_CFG_SPEC_LIST_TYPE</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="TYPE_ID" maxlength="6" datatype="Integer" type="PK" remark="类型编号">
+				<mapingcol datatype="NUMBER">TYPE_ID</mapingcol>
+			</attr>
+			<attr floatlength="0" name="PARENT_TYPE_ID" maxlength="6" datatype="Integer" type="COL" remark="上级类型编号">
+				<mapingcol datatype="NUMBER">PARENT_TYPE_ID</mapingcol>
+			</attr>
+			<attr floatlength="0" name="TYPE_NAME" maxlength="128" datatype="String" type="COL" remark="类型名称">
+				<mapingcol datatype="VARCHAR2">TYPE_NAME</mapingcol>
+			</attr>
+			<attr floatlength="0" name="TYPE_DESC" maxlength="255" datatype="String" type="COL" remark="类型描述">
+				<mapingcol datatype="VARCHAR2">TYPE_DESC</mapingcol>
+			</attr>
+			<attr floatlength="0" name="TYPE_LEVEL" maxlength="6" datatype="Integer" type="COL" remark="类型级别">
+				<mapingcol datatype="VARCHAR2">TYPE_LEVEL</mapingcol>
+			</attr>
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态 U:有效 E:无效">
+				<mapingcol datatype="VARCHAR2">STATE</mapingcol>
+			</attr>
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+				<mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+			</attr>
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

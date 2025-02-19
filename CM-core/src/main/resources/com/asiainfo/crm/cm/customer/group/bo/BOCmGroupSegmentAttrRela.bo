@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupSegmentAttrRela" mainattr="RELA_ID">
+    <mapingenty type="table">{CM_GROUP_SEGMENTATTR_RELA}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RELA_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">RELA_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEGMENT_ATTR_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">SEGMENT_ATTR_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_INHERITABLE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">IS_INHERITABLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_APPROVABLE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">IS_APPROVABLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEQ" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL" remark="">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL" remark="">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL" remark="">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL" remark="">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL" remark="">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

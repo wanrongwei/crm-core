@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCmAcctContact">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="CONTACT_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CONTACT_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ADDRESS_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EMAIL" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MOBILE_PHONE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EFFECTIVE_WAY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ADDRESS_DETAIL" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="OPERATION" maxlength="20" datatype="String" type="VIRTUAL" />
+	  <attr floatlength="0" name="CONTACT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

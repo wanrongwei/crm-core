@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="zg" name="IRaccOper" mainattr="SO_NBR">
+    <mapingenty type="table">I_RACC_OPER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SO_NBR" maxlength="15" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SO_NBR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SID" maxlength="9" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">SID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_CODE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">BUSI_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="4" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="4" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SERV_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMMIT_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">COMMIT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_FIELD" maxlength="64" datatype="String" type="COL" remark="32位串，每一位代表对应的接口表
+每一位说明:
+1.用户资料
+2.促销信息
+3.产品资料
+4.漫游租机资料
+5.集团信息
+6.集团成员信息
+7.付费关系
+8.程控功能信息
+9.用户关系
+10.设备信息
+11.客户资料
+12.帐户资料
+13.免费资源
+14.帐户限额
+15.小区优惠
+16.所有帐户限额
+17.免费资源规则
+18.网外集团成员信息
+19.代付关系
+20.帐户级促销
+21.分业务停机规则
+22.帐户分业务信用度
+23.用户状态I_USER_STATUS(帐务资料)
+24.集团间优惠信息表
+25:PRM数据业务相关计费参数
+26:受控用户">
+        <mapingcol datatype="VARCHAR2">UP_FIELD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">UP_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,30 @@
+#set($m_fieldTypeSetDB = $fieldTypeSetDB)
+#set($m_formBuilder = $formBuilder)
+#set($m_fieldItemList = $fieldItemList)
+#set($m_colNum = $colNum)
+
+#if($m_fieldItemList.size() > 0)
+	#if($m_colNum > 0)
+		#set($i = 0)
+		<table width="98%" align="center" border="0" cellpadding="0" cellspacing="1">
+			<tr>
+			#foreach($fieldItem in $m_fieldItemList)
+				<td>
+					$m_formBuilder.buildDBFormJs($fieldTypeSetDB.getField($fieldItem.getFieldName()),$fieldItem)
+			        $fieldTypeSetDB.getField($fieldItem.getFieldName()).getTitle()
+		        </td>
+		        #set($i = $i + 1)
+		        #if(($m_fieldItemList.size() != $i) && ( $i % $m_colNum == 0 ))
+		        </tr>
+		        <tr>
+		    	#end
+			#end
+	        <tr>
+		</table>
+	#else
+		#foreach($fieldItem in $m_fieldItemList)
+			$m_formBuilder.buildDBFormJs($fieldTypeSetDB.getField($fieldItem.getFieldName()),$fieldItem)
+	        $fieldTypeSetDB.getField($fieldItem.getFieldName()).getTitle()
+		#end
+	#end
+#end

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCmxUserBingingInfo" mainattr="BILL_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="DONE_CODE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="USER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="PROM_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="PROM_STYLE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="PROM_VALUE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="NOTES" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

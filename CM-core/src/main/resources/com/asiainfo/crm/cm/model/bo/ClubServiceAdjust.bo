@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="ClubServiceAdjust" mainattr="RECORD_ID">
+		<mapingenty type="custom">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="RECORD_ID" maxlength="12" datatype="Long" type="PK" remark="记录编号" />
+			<attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="COL" />
+			<attr floatlength="0" name="MEMBER_ID" maxlength="12" datatype="Long" type="COL" remark="记录会员ID。" />
+			<attr floatlength="0" name="TEMP_VALUE" maxlength="6" datatype="Integer" type="COL" remark="临时调整额度" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织" />
+			<attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员" />
+			<attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

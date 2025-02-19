@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmContactContMediumPojo" mainattr="cont_rela_id">
+    <mapingenty type="table">{CM_CONTACT_CONT_MEDIUM}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="cont_rela_id" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">cont_rela_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_id" maxlength="21" datatype="Long" type="COL" remark="联系人编号
+            ">
+        <mapingcol datatype="bigint">cont_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_med_type_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">cont_med_type_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="postal_code" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="varchar">postal_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="address_id" maxlength="21" datatype="Long" type="COL" remark="标准地址流水编码（标准地址详情表主键）">
+        <mapingcol datatype="bigint">address_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="address_code" maxlength="50" datatype="String" type="COL" remark="第三方机构标准地址业务编号（例如：CPR、KOB包含的地址编号）">
+        <mapingcol datatype="varchar">address_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="address_detail" maxlength="512" datatype="String" type="COL" remark="标准地址详情">
+        <mapingcol datatype="varchar">address_detail</mapingcol>
+      </attr>
+      <attr floatlength="0" name="email_address" maxlength="128" datatype="String" type="COL" remark="关系类型是 电子地址大类的，填写该字段">
+        <mapingcol datatype="varchar">email_address</mapingcol>
+      </attr>
+      <attr floatlength="0" name="fax_number" maxlength="20" datatype="String" type="COL" remark="暂时不启用">
+        <mapingcol datatype="varchar">fax_number</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_number" maxlength="20" datatype="String" type="COL" remark="关系类型是 联系电话大类的，，填写该字典">
+        <mapingcol datatype="varchar">cont_number</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_no_disturbing" maxlength="21" datatype="Long" type="COL" remark="免打扰
+            0:不可打扰
+            1：可打扰">
+        <mapingcol datatype="bigint">is_no_disturbing</mapingcol>
+      </attr>
+      <attr floatlength="0" name="priority" maxlength="21" datatype="Long" type="COL" remark="不同关系类型标准地址优先级顺序（从1到n）">
+        <mapingcol datatype="bigint">priority</mapingcol>
+      </attr>
+      <attr floatlength="0" name="protect_eff_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="date">protect_eff_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="protect_exp_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="date">protect_exp_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL" remark="记录状态
+            
+            U:有效 E:无效">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

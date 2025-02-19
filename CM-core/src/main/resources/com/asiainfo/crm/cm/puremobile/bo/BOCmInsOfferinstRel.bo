@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmInsOfferinstRel" mainattr="CMREL_ID">
+    <mapingenty type="table">{CM_INS_OFFERINST_REL}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CMREL_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">CMREL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_REGION_CODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">USER_REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFER_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OFFER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUB_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">SUB_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFER_INST_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OFFER_INST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRICING_OFFER_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">PRICING_OFFER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

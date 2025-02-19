@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BoGroupArchivesMemberHis" mainattr="GROUP_SEQ">
+    <mapingenty type="table">CM_GA_MEMBER_GROUP_H</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="H_ID" maxlength="12" datatype="Long" type="PK" remark="历史记录编号">
+        <mapingcol datatype="NUMBER">H_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_SEQ" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_PHONE_ID" maxlength="11" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_PHONE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_STS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">USER_STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_DEPT" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WORK_DEPT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONE_TYPE" maxlength="4" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PHONE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NET_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">NET_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_STS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_MEM" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_MEM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPER_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">OPER_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

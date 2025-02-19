@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 特殊的ID生成器配置，如客户、账户等不能直接使用平台获取序列的方法获取，需要使用指定的封装方法来获取，因此需要在此进行配置。其他不需要特别封装就直接是平台的方法获取序列号。 -->
+	<id-generators remarks="特殊对象序列生成器配置">
+		<id-generator id="com.asiainfo.crm.cm.inner.customer.bo.BOCmGroupCustomerBean" remarks="对象编号生成器配置：集团客户">
+			<service modifier="private" remarks="">com.ai.common.util.SNUtil</service>
+			<method name="generatorGroupCustId" isStatic="Y" remarks="">
+				<!-- 数据的来源，可以配置为：session/parameter，默认取parameter -->
+				<parameter name="REGION_ID" dataType="String" source="parameter" />
+			</method>
+		</id-generator>
+		<id-generator id="com.asiainfo.crm.cm.inner.customer.bo.BOCmVirtualCustomerBean" remarks="对象编号生成器配置：虚拟客户">
+			<service modifier="private" remarks="">com.ai.common.util.SNUtil</service>
+			<method name="generatorVpmnCustId" isStatic="Y" remarks="">
+				<!-- 数据的来源，可以配置为：session/parameter，默认取parameter -->
+				<parameter name="REGION_ID" dataType="String" source="parameter" />
+			</method>
+		</id-generator>
+		<id-generator id="com.asiainfo.crm.cm.inner.customer.bo.BOCmIndivCustomerBean" remarks="对象编号生成器配置：个人客户">
+			<service modifier="private" remarks="">com.ai.common.util.SNUtil</service>
+			<method name="generatorPersonCustId" isStatic="Y" remarks="">
+				<!-- 数据的来源，可以配置为：session/parameter，默认取parameter -->
+				<parameter name="REGION_ID" dataType="String" source="parameter" />
+			</method>
+		</id-generator>
+		<id-generator id="com.asiainfo.crm.cm.inner.customer.bo.BOCmFamilyCustomerBean" remarks="对象编号生成器配置：家庭客户">
+			<service modifier="private" remarks="">com.ai.common.util.SNUtil</service>
+			<method name="generatorFamilyCustId" isStatic="Y" remarks="">
+				<!-- 数据的来源，可以配置为：session/parameter，默认取parameter -->
+				<parameter name="REGION_ID" dataType="String" source="parameter" />
+			</method>
+		</id-generator>
+		<id-generator id="com.asiainfo.crm.cm.inner.account.bo.BOCmAccountBean" remarks="对象编号生成器配置：账户">
+			<service modifier="private" remarks="">com.ai.common.util.SNUtil</service>
+			<method name="generatorAcctId" isStatic="Y" remarks="">
+				<!-- 数据的来源，可以配置为：session/parameter，默认取parameter -->
+				<parameter name="REGION_ID" dataType="String" source="parameter" />
+			</method>
+		</id-generator>
+	</id-generators>
+	<!-- 业务模型实现类配置项 -->
+	<busi-models remarks="业务模型实现类">
+		<busi-model id="1" interface="com.asiainfo.crm.cm.teaminvoke.out.busimodel.impl.AbstractVOCustCvtBusiModelImpl" impl-class="com.asiainfo.crm.cm.teaminvoke.out.busimodel.impl.defaults.DefaultVOCustCvtBusiModelImpl"
+			region-id="X" remarks="客户管理提供给业务受理接口参数转换业务model" />
+		<busi-model id="2" interface="com.asiainfo.crm.cm.teaminvoke.out.busimodel.impl.AbstractVOAccountCvtBusiModelImpl" impl-class="com.asiainfo.crm.cm.teaminvoke.out.busimodel.impl.defaults.DefaultVOAccountCvtBusiModelImpl"
+			region-id="X" remarks="客户管理提供给业务受理接口参数转换业务model" />
+			
+		<busi-model id="3" interface="com.asiainfo.crm.cm.busimodel.impl.contact.AbstractCustContactDealBusiModelImpl" impl-class="com.asiainfo.crm.cm.ln.busimodel.contact.CmLnCustContactDealBusiModelImpl"
+			region-id="X" remarks="客户管理联系人处理业务model" />
+		<busi-model id="4" interface="com.asiainfo.crm.cm.busimodel.impl.customer.AbstractCustomerDealBusiModelImpl" impl-class="com.asiainfo.crm.cm.ln.busimodel.customer.CmLnCustDealBusiModelImpl"
+			region-id="X" remarks="客户管理客户信息处理业务model" />
+	</busi-models>
+	<!-- 客户管理调用外部接口服务的本地化实现配置 -->
+	<team-invoke-services remarks="客户管理调用外部接口服务的本地化实现配置">
+		<team-invoke-service id="com.asiainfo.crm.cm.teaminvoke.in.service.interfaces.ICmTeamInvokeInService" impl-service="com.asiainfo.crm.cm.teaminvoke.in.service.impl.CmDefaultTeamInvokeInServiceImpl"
+			type="IN" remarks="客户管理调用外部接口封装服务" />
+	</team-invoke-services>
+	<!-- 获取默认地市编码的服务实现 -->
+	<default-region-getter impl-class="com.asiainfo.crm.cm.common.service.impl.CmDefaultRegionIdGetterImpl" />
+	<!-- 客户管理value对象默认值设置实现类配置 -->
+	<value-object-setters remarks="客户管理value对象默认值设置实现类配置">
+		<value-object-setter bean-class="com.asiainfo.crm.cm.model.bo.CustomerBean" setter-impl-class="" remarks="客户对象默认值设置实现类" />
+		<value-object-setter bean-class="com.asiainfo.crm.cm.model.bo.AccountBean" setter-impl-class="com.asiainfo.crm.cm.common.vocreator.setter.impl.CmAccountDefaultValueSetterImpl"
+			remarks="原子账户对象默认值设置实现类" />
+		<value-object-setter bean-class="com.asiainfo.crm.cm.model.bo.AcctPaymentBean" setter-impl-class="com.asiainfo.crm.cm.common.vocreator.setter.impl.CmAccountPaymentDefalutValueSetterImpl"
+			remarks="账户支付方案对象默认值设置实现类" />
+		<value-object-setter bean-class="com.asiainfo.crm.cm.model.bo.AcctBillCycleBean" setter-impl-class="com.asiainfo.crm.cm.common.vocreator.setter.impl.CmAccountBillCycleDefaultValueSetterImpl"
+			remarks="账户账期对象默认值设置实现类" />
+	</value-object-setters>
+	<!-- 客户管理value对象默认值设置实现类配置 -->
+	<busilog-creators remarks="客户管理value对象业务日志实现类配置">
+		<busilog-creator value-object-type="com.asiainfo.crm.cm.model.bean.VOPartyBean" creator-impl-class="com.asiainfo.crm.cm.busimodel.impl.defaults.CmPartyBusiLogCreatorImpl"
+			remarks="参与人业务日志生成器" />
+		<busilog-creator value-object-type="com.asiainfo.crm.cm.model.bean.VOCustBean" creator-impl-class="com.asiainfo.crm.cm.busimodel.impl.defaults.CmCustomerBusiLogCreatorImpl"
+			remarks="客户业务日志生成器" />
+		<busilog-creator value-object-type="com.asiainfo.crm.cm.model.bean.VOAccountBean" creator-impl-class="com.asiainfo.crm.cm.busimodel.impl.defaults.CmAccountBusiLogCreatorImpl"
+			remarks="账户业务日志生成器" />
+		<busilog-creator value-object-type="com.asiainfo.crm.cm.model.bean.VOClubMemberBean" creator-impl-class="com.asiainfo.crm.cm.busimodel.impl.defaults.CmClubMemberBusiLogCreatorImpl"
+			remarks="俱乐部会员业务日志生成器" />
+		<busilog-creator value-object-type="com.asiainfo.crm.cm.model.bean.VOSpecialListBean" creator-impl-class="com.asiainfo.crm.cm.busimodel.impl.defaults.CmSpecialListBusiLogCreatorImpl"
+			remarks="特殊名单业务日志生成器" />
+		<busilog-creator value-object-type="com.asiainfo.crm.cm.model.bean.VOQueryParamBean" creator-impl-class="com.asiainfo.crm.cm.busimodel.impl.defaults.CmQueryBusiLogCreatorImpl"
+			remarks="查询业务日志生成器" />
+	</busilog-creators>
+	
+	<busiInterfaces remarks="客户管理接口映射关系">
+		<interface busiId="so100001" method="querySpecialList" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询、校验特殊名单信息"/>
+		<interface busiId="so100002" method="queryCustomerValue" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户信息(集团客户,个人客户)"/>
+		<interface busiId="so100003" method="queryClubMember" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV"  remarks="通过custId,userId,billId,memberId查询俱乐部信息"/>
+		<interface busiId="so100004" method="modifyCustomerValue" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="修改客户资料"/>
+		<interface busiId="so100005" method="modifyAccountValue" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="修改账户资料"/>
+		<interface busiId="so100006" method="queryClubServiceFreeTimes" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询VIP的机场、火车站等免费服务信息"/>
+		<interface busiId="so100007" method="actionCmInsCmRel" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="客户用户关系操作(查询,修改,新增)"/>
+		<interface busiId="so100008" method="actionGroupContract" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团客户合同操作(查询,修改,新增)"/>
+		<interface busiId="so100009" method="queryGroupCustValue" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团客户信息"/>
+		<interface busiId="so100010" method="saveAcctPayment" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="提供给外围接口修改银行卡绑定、解绑"/>
+		<interface busiId="so100011" method="queryAcctBillCycle" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据acctId查询出账信息"/>
+		<interface busiId="so100012" method="actionAcctBillCustomize" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据ServiceNum操作用户个人化帐单"/>
+		<interface busiId="so100013" method="userReceipt" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="用户回单"/>
+		<interface busiId="so100014" method="dredgeCreditEnter" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="开通信用等级"/>
+		<interface busiId="so100015" method="queryGrpCustAcctBill" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团帐单寄送信息"/>
+		<interface busiId="so100016" method="queryGrpCustCredirMessage" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团信用信息"/>
+		<interface busiId="so100017" method="modifySpecialCustomer" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="新增黑名单"/>
+		<interface busiId="so100018" method="queryAcctPaymentInfos" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据ServiceNum,UserId,CustId,AcctId查询账户信息"/>
+		<interface busiId="so100019" method="saveAccount4BBoss" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团下发账户新增"/>
+		<interface busiId="so100020" method="queryContact4CBoss" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="外围查询集团联系人接口"/>
+		<interface busiId="so100021" method="queryCmGrpMember" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团成员基本资料"/>
+		<interface busiId="so100022" method="queryCmGrpMemberList" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团成员信息"/>
+		<interface busiId="so100023" method="queryNextAcctBillCycle" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据acctId查询当前账期和未生效账期信息，按生效时间倒排序"/>
+		<interface busiId="so100024" method="checkAirportAndTrainService" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="机场、火车站VIP服务鉴权"/>
+		<interface busiId="so100025" method="recordAirportAndTrainService" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="机场,火车站服务记帐接口"/>
+		<interface busiId="so100026" method="qryVipCardInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="提供给cboss使用的查询vip接口"/>
+		<interface busiId="so100027" method="qrySubordinateGrpCust" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团客户的下级集团"/>
+		<interface busiId="so100028" method="delManagerRel" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="提供给系统管理调用,删除客户经理关系"/>
+		<interface busiId="so100029" method="qryVipCardInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="提供cboss调用,查询钻金银卡信息"/>
+		<interface busiId="so100030" method="queryGroupCustByBillId" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据手机号码查询归属集团信息"/>
+		<interface busiId="so100031" method="queryCmInsCmRelByCds" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户用户关系"/>
+		<interface busiId="so100032" method="saveCmInsCmRelValues" class="com.asiainfo.crm.cm.ln.service.interfaces.ICmLnCommonServiceSV" remarks="保存客戶用戶關係"/>
+		<interface busiId="so100033" method="queryRootGrpCustomers" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="提供给esop根据cust_id查询集团客户根结点"/>
+		<interface busiId="so100034" method="cancelLationOfUser" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="销户调用接口更改用户状态、账户信誉度、集团关键人"/>
+		<interface busiId="so100035" method="queryMPartnerInfo" class="com.asiainfo.crm.cm.cp.service.interfaces.ICmPartnerBusiSV" remarks="多表联合查询销售型SI信息"/>
+	    <interface busiId="so100036" method="querySPartnerInfo" class="com.asiainfo.crm.cm.cp.service.interfaces.ICmPartnerBusiSV" remarks="单表查询销售型SI信息"/>
+	    <interface busiId="so100037" method="querySPartnerInfo" class="com.asiainfo.crm.cm.cp.service.interfaces.ICmPartnerBusiSV" remarks="单表查询销售型SI信息"/>
+		<interface busiId="so100038" method="getGroupPayPlan4BBoss" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团付费计划信息"/>
+		<interface busiId="so100039" method="getGrpCountInfoByMgrId" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据客户经理编码查询新增、删除集团客户、成员数"/>
+		<interface busiId="so100040" method="outPutGrpCustList" class="com.asiainfo.crm.cm.ln.exe.fp.interfaces.ICmOutPutGrpListSV" remarks="批量导出集团客户对象信息"/>
+		<interface busiId="so100041" method="queryCustomerByServiceId" class="com.asiainfo.crm.cm.service.interfaces.ICmCustomerSV" remarks="根据servId查询集团客户"/>
+		<interface busiId="so100042" method="queryContactByContId" class="com.asiainfo.crm.cm.service.interfaces.ICmContactSV" remarks="根据联系人编号查询联系人信息"/>
+		<interface busiId="so100043" method="queryCustContactsByCustId" class="com.asiainfo.crm.cm.service.interfaces.ICmContactSV" remarks="根据客户编号查询联系人信息"/>
+		<interface busiId="so100044" method="qryVipInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据手机号码查询俱乐部会员信息"/>
+		<interface busiId="so100045" method="queryDiffAreaCustInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户信息给CBOSS使用"/>
+		<interface busiId="so100046" method="addGrpCustomer4BBoss" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团下发新增"/>
+		<interface busiId="so100047" method="delVipInfo" class="com.asiainfo.crm.cm.service.interfaces.ICmClubServiceSV" remarks="根据userId删除VIP信息"/>
+		<interface busiId="so100048" method="queryGroupCustByKeyBillId" class="com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV" remarks="根据集团主要联系人手机号码查询集团客户信息"/>
+		<interface busiId="so100049" method="queryAcctDtsByCustId" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="根据客户编号和地市信息查询账户"/>
+		<interface busiId="so100050" method="queryAcctDtsCountByCustId" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="根据客户编号和地市信息查询账户"/>
+		<interface busiId="so100051" method="updateAcctBehalfPhone" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="修改账户代表号码"/>
+		<interface busiId="so100052" method="upGrpCustomerDetailTemp" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="修改集团资料"/>
+		<interface busiId="so100053" method="upGrpChangePwd" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="修改集团密码接口"/>
+		<interface busiId="so100054" method="acceptProdMemTemp" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="产品管理员增加,删除"/>
+		<interface busiId="so100055" method="qryProdMgntMem" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="产品管理员查询"/>
+		<interface busiId="so100056" method="qryGroupContact" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团家属查询"/>
+		<interface busiId="so100057" method="qryGrpMem" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团网内成员信息查询"/>
+		<interface busiId="so100058" method="qryGroupInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团客户信息及扩展信息查询"/>
+		<interface busiId="so100059" method="qryGroupInfos" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据集团成员查询集团客户信息"/>
+		<interface busiId="so100060" method="qryUserInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="用户的VIP和集团成员信息客户经理查询"/>
+		<interface busiId="so100061" method="acceptGrpMemTemp" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="集团成员的批量预增加,删除,接口"/>
+		<interface busiId="so100062" method="modifyClubMember" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="新增俱乐部成员接口"/>
+		<interface busiId="so100063" method="qryVipMangerInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询用户的客户经理信息接口"/>
+		<interface busiId="so100064" method="queryAuditValues" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户经理审核信息接口ESOP和集团门户用"/>
+		<interface busiId="so100065" method="delCustAndAcct" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="删除对应的客户和账户信息"/>
+		<interface busiId="so100066" method="updateCustStatus" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="修改客户状态"/>
+		<interface busiId="so100067" method="queryAuditValuesNew" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户经理审核信息接口集团门户专用"/>
+		<interface busiId="so100068" method="queryAgentPartnerInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据渠道区县、合作伙伴组织编号查询合作伙伴信息"/>
+		<interface busiId="so100069" method="queryAttachValues" class="com.asiainfo.crm.cm.common.service.interfaces.ICmAttachSV" remarks="查询附件信息"/>
+		<interface busiId="so100070" method="queryGMBorContact" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询手机号码是内网成员还是集团家属的信息"/>
+		<interface busiId="so100071" method="queryGroupMemberByCustId" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询集团成员数"/>
+		<interface busiId="so100072" method="queryCustUnionInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询用户扩展信息"/>
+		<interface busiId="so100073" method="getLnCmUserManager" class="com.asiainfo.crm.cm.ln.club.service.interfaces.ICmLnClubMemberSV" remarks="查询大客户经理ID"/>
+		<interface busiId="so100074" method="qryGrpMemByUserId" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据用户编号查询集团网内成员"/>
+		<interface busiId="so100075" method="qryGroupMangerInfoByBillId" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据手机号码，查询所属集团的客户经理"/>
+		
+		
+		<interface busiId="ams200001" method="queryAcctPayment" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="根据BankCode,RegionId查询该银行下所有托收账户"/>
+		<interface busiId="ams200002" method="queryAccount" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="通过custId,acctId,groupId查询账户信息"/>
+		<interface busiId="ams200003" method="queryCreditByServiceNum" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="通过userId,acctId查询账户信息"/>
+		<interface busiId="ams200005" method="queryCustAcctRels" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户账户关系表"/>
+		<interface busiId="ams200006" method="queryCreditLevelByAcctId" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询客户账户关系表"/>
+		<interface busiId="ams200007" method="queryBankAcctPaymentInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="查询账户每次邮政代扣额度"/>
+		<interface busiId="ams200008" method="transferCustScoreAndGrade" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="跨区入网客户积分和等级转入和冲正接口"/>
+		<interface busiId="ams200009" method="queryAcctBankRel" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="查询用户账户签约关系"/>
+		<interface busiId="ams200010" method="queryAcctAndPayments" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="根据银行编号，地市，支付方式查询账户信息"/>
+		<interface busiId="ams200011" method="queryAcctAndPaymentById" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="查询账户和支付方案信息"/>
+		<interface busiId="ams200012" method="signOrfireBank" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="浦东发展银行签约解约接口"/>
+		<interface busiId="ams200013" method="singOrFireBank" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="浦东发展银行签约解约接口"/>
+		<interface busiId="ams200014" method="queryAcctDtsById" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="根据账户编号查询账户详细信息"/>
+		<interface busiId="ams200015" method="queryAcctAndPayments" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="根据银行编号，地市，支付方式查询账户信息"/>
+		<interface busiId="ams200016" method="queryAcctAndPaymentsCount" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="根据银行编号，地市，支付方式查询账户信息数量"/>
+		<interface busiId="ams200017" method="singOrFireMobile" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="手机支付签约解约接口"/>
+		<interface busiId="ams200018" method="isMobilePayUser" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICm2InterFSV" remarks="手机支付签约解约查询接口"/>
+		<interface busiId="ams200019" method="queryAcctAndPayments" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="手机支付签约解约查询接口"/>
+		<interface busiId="ams200020" method="queryAcctAndPaymentsCount" class="com.asiainfo.crm.cm.ln.account.service.interfaces.ICmLnAccountSV" remarks="手机支付签约解约查询接口"/>
+		
+		<interface busiId="int300001" method="queryGroupByKeyBillId" class="com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV" remarks="根据集团主要联系人手机号码查询集团客户信息"/>
+		<interface busiId="int300002" method="queryManagerById" class="com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV" remarks="根据客户经理编号查询客户经理信息"/>
+		<interface busiId="int300003" method="updateCustInfo" class="com.asiainfo.crm.cm.service.interfaces.ICmCustomerSV" remarks="修改客户资料"/>
+		<interface busiId="int300004" method="vipUserFreeService" class="com.asiainfo.crm.cm.service.interfaces.ICmClubServiceSV" remarks="易登机"/>
+		<interface busiId="int300005" method="queryBankAcctsByCustId" class="com.asiainfo.crm.cm.service.interfaces.ICmAccountSV" remarks="集团对公托收查询（即查询集团下面的托收账户信息）"/>
+		<interface busiId="int300006" method="synCustInfo" class="com.asiainfo.crm.cm.teaminvoke.out.service.interfaces.ICmInterfaceSV" remarks="同步客户信息"/>
+		
+	</busiInterfaces>
+</config>

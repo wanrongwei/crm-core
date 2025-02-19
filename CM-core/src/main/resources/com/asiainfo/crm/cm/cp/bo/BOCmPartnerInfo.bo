@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmPartnerInfo" mainattr="PARTNER_ID">
+    <mapingenty type="table">CM_PARTNER_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PARTNER_ID" maxlength="10" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">PARTNER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGANISE_FLAG" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ORGANISE_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGANISE_ID" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORGANISE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_PARTNER_ID" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_PARTNER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_TYPE" maxlength="5" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_TYPE_DTL" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_TYPE_DTL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE_NAME" maxlength="80" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALIAS_NAME" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ALIAS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OTHER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHORT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SHORT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PUBLIC_PHONE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PUBLIC_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_MODE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATUS_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">STATUS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">APPLY_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REJECT_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">REJECT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REJECT_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REJECT_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REJECT_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">REJECT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTER_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">ENTER_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTER_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ENTER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTER_LEVEL" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ENTER_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">LEAVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAVE_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LEAVE_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAVE_TYPE" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LEAVE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROV_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PROV_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ZONE_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ZONE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PART_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PART_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_PROPERTY" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_PROPERTY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COOPERATE_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">COOPERATE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_TEST_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">BUSI_TEST_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MISTAKE_STATUS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">MISTAKE_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD1" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD2" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD3" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD4" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD5" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD6" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD6</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD7" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD7</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD8" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD8</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD9" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD9</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT_FIELD10" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT_FIELD10</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_NO" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCH_FLAG" maxlength="2" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BATCH_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAUSE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">PAUSE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAUSE_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAUSE_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SI_INTRO_NUM" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SI_INTRO_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDITOR" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">AUDITOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COOP_COMPANY" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">COOP_COMPANY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BASE_ACCESS_NO_PROP" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">BASE_ACCESS_NO_PROP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EN_NAME" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EN_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMAIL" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WEB_SITE" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WEB_SITE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PASS_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">PASS_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmRepOnceIncomeIDC" mainattr="ONCE_INCOME_ID">
+    <mapingenty type="table">CM_REP_ONCE_INCOME_IDC</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ONCE_INCOME_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ONCE_INCOME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CONTACT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_CONTACT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CONTACT_TEL" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_CONTACT_TEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CONTACT_ADR" maxlength="120" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_CONTACT_ADR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BUSI_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_ID</mapingcol>
+      </attr>
+      <attr floatlength="2" name="TOTAL_FEE" maxlength="14" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CONTRACT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_BEG_DATE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_BEG_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_END_DATE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_END_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_CYC_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PAY_CYC_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_OWING" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">IS_OWING</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STAT_MONTH" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STAT_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REC_DATE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REC_DATE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="CUR_ADD_REC_FEE" maxlength="14" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">CUR_ADD_REC_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="TOTAL_REC_FEE" maxlength="14" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_REC_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="CUR_PAID_FEE" maxlength="14" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">CUR_PAID_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="TOTAL_PAID_FEE" maxlength="14" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">TOTAL_PAID_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="UNPAY_FEE" maxlength="14" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">UNPAY_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RECEIVING_UNITS" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">RECEIVING_UNITS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATUS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CITY" maxlength="8" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_TYPE" maxlength="8" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmGroupKeyMemberUser" mainattr="KERNEL_ID">
+    <mapingenty type="query">SELECT A.KERNEL_ID,
+       A.CUST_REGION_ID,
+       A.INDIV_CUST_ID,
+       A.GROUP_CUST_ID,
+       A.MEMBER_NAME,
+       B.MEMBER_TYPE,
+       B.MEMBER_LEVEL,
+       A.MEMBER_DESC,
+       A.GENDER,
+       A.MEMBER_POSITION,
+       A.BIRTHDAY,
+       A.LUNAR,
+       A.HOME_PHONE,
+       A.OFFICE_PHONE,
+       A.CONT_EMAIL,
+       A.CONT_ADDRESS,
+       A.CONT_FAX,
+       A.CONT_ZIPCODE,
+       A.WORK_DEPT,
+       A.FAMILY_INFO,
+       A.ALARM_BILL_ID,
+       A.OTHER_HOBBY,
+       A.DEPT_ID,
+       B.KERNEL_TYPE,
+       DECODE(B.VIP_LEVEL, NULL, -1, B.VIP_LEVEL) AS VIP_LEVEL,
+       B.KERNEL_LEVEL,
+       A.CUST_CERT_TYPE,
+       A.CUST_CERT_CODE,
+       A.CUST_CERT_ADDRESS,
+       A.CUST_CERT_EXPIRE,
+       A.IS_MAIN,
+       A.STATE              AS MEMBER_STATE,
+       A.CREATE_OP_ID,
+       A.CREATE_ORG_ID,
+       A.ORG_ID,
+       A.OP_ID,
+       A.DONE_CODE,
+       A.CREATE_DATE,
+       A.DONE_DATE,
+       A.EFFECTIVE_DATE,
+       A.EXPIRE_DATE,
+       A.REGION_ID,
+       A.NOTES,
+       B.MEM_USER_ID,
+       B.USER_ID,
+       B.BILL_ID,
+       B.USER_STATUS,
+       B.STATE              AS USER_STATE,
+       C.CUST_NAME,
+       C.GROUP_STATUS,
+       C.CUST_LEVEL,
+       C.GROUP_ID,
+       C.STATE              AS GROUP_STATE,
+       C.CHNL_CITY_ID,
+       C.CHNL_REGION_DETAIL,
+       C.CHNL_REGION_TYPE
+  FROM CM_GROUP_KEY_MEMBER A, CM_GROUP_KEYMEM_BILL B, CM_GROUP_CUSTOMER C
+ WHERE B.KERNEL_ID = A.KERNEL_ID
+   AND A.GROUP_CUST_ID = C.GROUP_CUST_ID</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="KERNEL_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">KERNEL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDIV_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">INDIV_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_LEVEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GENDER" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">GENDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_POSITION" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_POSITION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BIRTHDAY" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">BIRTHDAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LUNAR" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">LUNAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOME_PHONE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">HOME_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFICE_PHONE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OFFICE_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_EMAIL" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ADDRESS" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_FAX" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ZIPCODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_ZIPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_DEPT" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WORK_DEPT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAMILY_INFO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FAMILY_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALARM_BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ALARM_BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_HOBBY" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OTHER_HOBBY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DEPT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KERNEL_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">KERNEL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIP_LEVEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VIP_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KERNEL_LEVEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">KERNEL_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CUST_CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_CERT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_ADDRESS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_CERT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_EXPIRE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CUST_CERT_EXPIRE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MAIN" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">IS_MAIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEM_USER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEM_USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_STATUS" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USER_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USER_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_STATUS" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_LEVEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CUST_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_CITY_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHNL_CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_REGION_DETAIL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CHNL_REGION_DETAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_REGION_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHNL_REGION_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

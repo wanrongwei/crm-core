@@ -1,0 +1,577 @@
+package com.asiainfo.crm.cm.customer.group.bo;
+
+import java.sql.*;
+import com.ai.appframe2.bo.DataContainer;
+import com.ai.appframe2.common.DataContainerInterface;
+import com.ai.appframe2.common.AIException;
+import com.ai.appframe2.common.ServiceManager;
+import com.ai.appframe2.common.ObjectType;
+import com.ai.appframe2.common.DataType;
+
+import com.asiainfo.crm.cm.customer.group.ivalues.*;
+
+public class BOCmGroupCustMemUserBean extends DataContainer implements DataContainerInterface,IBOCmGroupCustMemUserValue{
+
+  private static String  m_boName = "com.asiainfo.crm.cm.customer.group.bo.BOCmGroupCustMemUser";
+
+
+
+  public final static  String S_IsFromunion = "IS_FROMUNION";
+  public final static  String S_State = "STATE";
+  public final static  String S_UserRegionId = "USER_REGION_ID";
+  public final static  String S_MemUserId = "MEM_USER_ID";
+  public final static  String S_ServiceId = "SERVICE_ID";
+  public final static  String S_AcctId = "ACCT_ID";
+  public final static  String S_CreateOpId = "CREATE_OP_ID";
+  public final static  String S_MemberType = "MEMBER_TYPE";
+  public final static  String S_DoneCode = "DONE_CODE";
+  public final static  String S_CustRelId = "CUST_REL_ID";
+  public final static  String S_Notes = "NOTES";
+  public final static  String S_ExpireDate = "EXPIRE_DATE";
+  public final static  String S_EffectiveDate = "EFFECTIVE_DATE";
+  public final static  String S_OpId = "OP_ID";
+  public final static  String S_UserId = "USER_ID";
+  public final static  String S_GroupCustId = "GROUP_CUST_ID";
+  public final static  String S_MemberAppType = "MEMBER_APP_TYPE";
+  public final static  String S_OrgId = "ORG_ID";
+  public final static  String S_CreateOrgId = "CREATE_ORG_ID";
+  public final static  String S_RegionId = "REGION_ID";
+  public final static  String S_IsHighvalue = "IS_HIGHVALUE";
+  public final static  String S_VipLevel = "VIP_LEVEL";
+  public final static  String S_DoneDate = "DONE_DATE";
+  public final static  String S_OldBillId = "OLD_BILL_ID";
+  public final static  String S_BillId = "BILL_ID";
+  public final static  String S_CreateDate = "CREATE_DATE";
+  public final static  String S_UserStatus = "USER_STATUS";
+  public final static  String S_MemberLevel = "MEMBER_LEVEL";
+
+  public static ObjectType S_TYPE = null;
+  static{
+    try {
+      S_TYPE = ServiceManager.getObjectTypeFactory().getInstance(m_boName);
+    }catch(Exception e){
+      throw new RuntimeException(e);
+    }
+  }
+  public BOCmGroupCustMemUserBean() throws AIException{
+      super(S_TYPE);
+  }
+
+ public static ObjectType getObjectTypeStatic() throws AIException{
+   return S_TYPE;
+ }
+
+ public void setObjectType(ObjectType  value) throws AIException{
+   //此种数据容器不能重置业务对象类型
+   throw new AIException("Cannot reset ObjectType");
+ }
+
+
+  public void initIsFromunion(int value){
+     this.initProperty(S_IsFromunion,new Integer(value));
+  }
+  public  void setIsFromunion(int value){
+     this.set(S_IsFromunion,new Integer(value));
+  }
+  public  void setIsFromunionNull(){
+     this.set(S_IsFromunion,null);
+  }
+
+  public int getIsFromunion(){
+        return DataType.getAsInt(this.get(S_IsFromunion));
+  
+  }
+  public int getIsFromunionInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_IsFromunion));
+      }
+
+  public void initState(String value){
+     this.initProperty(S_State,value);
+  }
+  public  void setState(String value){
+     this.set(S_State,value);
+  }
+  public  void setStateNull(){
+     this.set(S_State,null);
+  }
+
+  public String getState(){
+       return DataType.getAsString(this.get(S_State));
+  
+  }
+  public String getStateInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_State));
+      }
+
+  public void initUserRegionId(String value){
+     this.initProperty(S_UserRegionId,value);
+  }
+  public  void setUserRegionId(String value){
+     this.set(S_UserRegionId,value);
+  }
+  public  void setUserRegionIdNull(){
+     this.set(S_UserRegionId,null);
+  }
+
+  public String getUserRegionId(){
+       return DataType.getAsString(this.get(S_UserRegionId));
+  
+  }
+  public String getUserRegionIdInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_UserRegionId));
+      }
+
+  public void initMemUserId(long value){
+     this.initProperty(S_MemUserId,new Long(value));
+  }
+  public  void setMemUserId(long value){
+     this.set(S_MemUserId,new Long(value));
+  }
+  public  void setMemUserIdNull(){
+     this.set(S_MemUserId,null);
+  }
+
+  public long getMemUserId(){
+        return DataType.getAsLong(this.get(S_MemUserId));
+  
+  }
+  public long getMemUserIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_MemUserId));
+      }
+
+  public void initServiceId(String value){
+     this.initProperty(S_ServiceId,value);
+  }
+  public  void setServiceId(String value){
+     this.set(S_ServiceId,value);
+  }
+  public  void setServiceIdNull(){
+     this.set(S_ServiceId,null);
+  }
+
+  public String getServiceId(){
+       return DataType.getAsString(this.get(S_ServiceId));
+  
+  }
+  public String getServiceIdInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_ServiceId));
+      }
+
+  public void initAcctId(long value){
+     this.initProperty(S_AcctId,new Long(value));
+  }
+  public  void setAcctId(long value){
+     this.set(S_AcctId,new Long(value));
+  }
+  public  void setAcctIdNull(){
+     this.set(S_AcctId,null);
+  }
+
+  public long getAcctId(){
+        return DataType.getAsLong(this.get(S_AcctId));
+  
+  }
+  public long getAcctIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_AcctId));
+      }
+
+  public void initCreateOpId(long value){
+     this.initProperty(S_CreateOpId,new Long(value));
+  }
+  public  void setCreateOpId(long value){
+     this.set(S_CreateOpId,new Long(value));
+  }
+  public  void setCreateOpIdNull(){
+     this.set(S_CreateOpId,null);
+  }
+
+  public long getCreateOpId(){
+        return DataType.getAsLong(this.get(S_CreateOpId));
+  
+  }
+  public long getCreateOpIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_CreateOpId));
+      }
+
+  public void initMemberType(int value){
+     this.initProperty(S_MemberType,new Integer(value));
+  }
+  public  void setMemberType(int value){
+     this.set(S_MemberType,new Integer(value));
+  }
+  public  void setMemberTypeNull(){
+     this.set(S_MemberType,null);
+  }
+
+  public int getMemberType(){
+        return DataType.getAsInt(this.get(S_MemberType));
+  
+  }
+  public int getMemberTypeInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_MemberType));
+      }
+
+  public void initDoneCode(long value){
+     this.initProperty(S_DoneCode,new Long(value));
+  }
+  public  void setDoneCode(long value){
+     this.set(S_DoneCode,new Long(value));
+  }
+  public  void setDoneCodeNull(){
+     this.set(S_DoneCode,null);
+  }
+
+  public long getDoneCode(){
+        return DataType.getAsLong(this.get(S_DoneCode));
+  
+  }
+  public long getDoneCodeInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_DoneCode));
+      }
+
+  public void initCustRelId(long value){
+     this.initProperty(S_CustRelId,new Long(value));
+  }
+  public  void setCustRelId(long value){
+     this.set(S_CustRelId,new Long(value));
+  }
+  public  void setCustRelIdNull(){
+     this.set(S_CustRelId,null);
+  }
+
+  public long getCustRelId(){
+        return DataType.getAsLong(this.get(S_CustRelId));
+  
+  }
+  public long getCustRelIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_CustRelId));
+      }
+
+  public void initNotes(String value){
+     this.initProperty(S_Notes,value);
+  }
+  public  void setNotes(String value){
+     this.set(S_Notes,value);
+  }
+  public  void setNotesNull(){
+     this.set(S_Notes,null);
+  }
+
+  public String getNotes(){
+       return DataType.getAsString(this.get(S_Notes));
+  
+  }
+  public String getNotesInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_Notes));
+      }
+
+  public void initExpireDate(Timestamp value){
+     this.initProperty(S_ExpireDate,value);
+  }
+  public  void setExpireDate(Timestamp value){
+     this.set(S_ExpireDate,value);
+  }
+  public  void setExpireDateNull(){
+     this.set(S_ExpireDate,null);
+  }
+
+  public Timestamp getExpireDate(){
+        return DataType.getAsDateTime(this.get(S_ExpireDate));
+  
+  }
+  public Timestamp getExpireDateInitialValue(){
+        return DataType.getAsDateTime(this.getOldObj(S_ExpireDate));
+      }
+
+  public void initEffectiveDate(Timestamp value){
+     this.initProperty(S_EffectiveDate,value);
+  }
+  public  void setEffectiveDate(Timestamp value){
+     this.set(S_EffectiveDate,value);
+  }
+  public  void setEffectiveDateNull(){
+     this.set(S_EffectiveDate,null);
+  }
+
+  public Timestamp getEffectiveDate(){
+        return DataType.getAsDateTime(this.get(S_EffectiveDate));
+  
+  }
+  public Timestamp getEffectiveDateInitialValue(){
+        return DataType.getAsDateTime(this.getOldObj(S_EffectiveDate));
+      }
+
+  public void initOpId(long value){
+     this.initProperty(S_OpId,new Long(value));
+  }
+  public  void setOpId(long value){
+     this.set(S_OpId,new Long(value));
+  }
+  public  void setOpIdNull(){
+     this.set(S_OpId,null);
+  }
+
+  public long getOpId(){
+        return DataType.getAsLong(this.get(S_OpId));
+  
+  }
+  public long getOpIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_OpId));
+      }
+
+  public void initUserId(long value){
+     this.initProperty(S_UserId,new Long(value));
+  }
+  public  void setUserId(long value){
+     this.set(S_UserId,new Long(value));
+  }
+  public  void setUserIdNull(){
+     this.set(S_UserId,null);
+  }
+
+  public long getUserId(){
+        return DataType.getAsLong(this.get(S_UserId));
+  
+  }
+  public long getUserIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_UserId));
+      }
+
+  public void initGroupCustId(long value){
+     this.initProperty(S_GroupCustId,new Long(value));
+  }
+  public  void setGroupCustId(long value){
+     this.set(S_GroupCustId,new Long(value));
+  }
+  public  void setGroupCustIdNull(){
+     this.set(S_GroupCustId,null);
+  }
+
+  public long getGroupCustId(){
+        return DataType.getAsLong(this.get(S_GroupCustId));
+  
+  }
+  public long getGroupCustIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_GroupCustId));
+      }
+
+  public void initMemberAppType(int value){
+     this.initProperty(S_MemberAppType,new Integer(value));
+  }
+  public  void setMemberAppType(int value){
+     this.set(S_MemberAppType,new Integer(value));
+  }
+  public  void setMemberAppTypeNull(){
+     this.set(S_MemberAppType,null);
+  }
+
+  public int getMemberAppType(){
+        return DataType.getAsInt(this.get(S_MemberAppType));
+  
+  }
+  public int getMemberAppTypeInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_MemberAppType));
+      }
+
+  public void initOrgId(long value){
+     this.initProperty(S_OrgId,new Long(value));
+  }
+  public  void setOrgId(long value){
+     this.set(S_OrgId,new Long(value));
+  }
+  public  void setOrgIdNull(){
+     this.set(S_OrgId,null);
+  }
+
+  public long getOrgId(){
+        return DataType.getAsLong(this.get(S_OrgId));
+  
+  }
+  public long getOrgIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_OrgId));
+      }
+
+  public void initCreateOrgId(long value){
+     this.initProperty(S_CreateOrgId,new Long(value));
+  }
+  public  void setCreateOrgId(long value){
+     this.set(S_CreateOrgId,new Long(value));
+  }
+  public  void setCreateOrgIdNull(){
+     this.set(S_CreateOrgId,null);
+  }
+
+  public long getCreateOrgId(){
+        return DataType.getAsLong(this.get(S_CreateOrgId));
+  
+  }
+  public long getCreateOrgIdInitialValue(){
+        return DataType.getAsLong(this.getOldObj(S_CreateOrgId));
+      }
+
+  public void initRegionId(String value){
+     this.initProperty(S_RegionId,value);
+  }
+  public  void setRegionId(String value){
+     this.set(S_RegionId,value);
+  }
+  public  void setRegionIdNull(){
+     this.set(S_RegionId,null);
+  }
+
+  public String getRegionId(){
+       return DataType.getAsString(this.get(S_RegionId));
+  
+  }
+  public String getRegionIdInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_RegionId));
+      }
+
+  public void initIsHighvalue(int value){
+     this.initProperty(S_IsHighvalue,new Integer(value));
+  }
+  public  void setIsHighvalue(int value){
+     this.set(S_IsHighvalue,new Integer(value));
+  }
+  public  void setIsHighvalueNull(){
+     this.set(S_IsHighvalue,null);
+  }
+
+  public int getIsHighvalue(){
+        return DataType.getAsInt(this.get(S_IsHighvalue));
+  
+  }
+  public int getIsHighvalueInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_IsHighvalue));
+      }
+
+  public void initVipLevel(int value){
+     this.initProperty(S_VipLevel,new Integer(value));
+  }
+  public  void setVipLevel(int value){
+     this.set(S_VipLevel,new Integer(value));
+  }
+  public  void setVipLevelNull(){
+     this.set(S_VipLevel,null);
+  }
+
+  public int getVipLevel(){
+        return DataType.getAsInt(this.get(S_VipLevel));
+  
+  }
+  public int getVipLevelInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_VipLevel));
+      }
+
+  public void initDoneDate(Timestamp value){
+     this.initProperty(S_DoneDate,value);
+  }
+  public  void setDoneDate(Timestamp value){
+     this.set(S_DoneDate,value);
+  }
+  public  void setDoneDateNull(){
+     this.set(S_DoneDate,null);
+  }
+
+  public Timestamp getDoneDate(){
+        return DataType.getAsDateTime(this.get(S_DoneDate));
+  
+  }
+  public Timestamp getDoneDateInitialValue(){
+        return DataType.getAsDateTime(this.getOldObj(S_DoneDate));
+      }
+
+  public void initOldBillId(String value){
+     this.initProperty(S_OldBillId,value);
+  }
+  public  void setOldBillId(String value){
+     this.set(S_OldBillId,value);
+  }
+  public  void setOldBillIdNull(){
+     this.set(S_OldBillId,null);
+  }
+
+  public String getOldBillId(){
+       return DataType.getAsString(this.get(S_OldBillId));
+  
+  }
+  public String getOldBillIdInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_OldBillId));
+      }
+
+  public void initBillId(String value){
+     this.initProperty(S_BillId,value);
+  }
+  public  void setBillId(String value){
+     this.set(S_BillId,value);
+  }
+  public  void setBillIdNull(){
+     this.set(S_BillId,null);
+  }
+
+  public String getBillId(){
+       return DataType.getAsString(this.get(S_BillId));
+  
+  }
+  public String getBillIdInitialValue(){
+        return DataType.getAsString(this.getOldObj(S_BillId));
+      }
+
+  public void initCreateDate(Timestamp value){
+     this.initProperty(S_CreateDate,value);
+  }
+  public  void setCreateDate(Timestamp value){
+     this.set(S_CreateDate,value);
+  }
+  public  void setCreateDateNull(){
+     this.set(S_CreateDate,null);
+  }
+
+  public Timestamp getCreateDate(){
+        return DataType.getAsDateTime(this.get(S_CreateDate));
+  
+  }
+  public Timestamp getCreateDateInitialValue(){
+        return DataType.getAsDateTime(this.getOldObj(S_CreateDate));
+      }
+
+  public void initUserStatus(int value){
+     this.initProperty(S_UserStatus,new Integer(value));
+  }
+  public  void setUserStatus(int value){
+     this.set(S_UserStatus,new Integer(value));
+  }
+  public  void setUserStatusNull(){
+     this.set(S_UserStatus,null);
+  }
+
+  public int getUserStatus(){
+        return DataType.getAsInt(this.get(S_UserStatus));
+  
+  }
+  public int getUserStatusInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_UserStatus));
+      }
+
+  public void initMemberLevel(int value){
+     this.initProperty(S_MemberLevel,new Integer(value));
+  }
+  public  void setMemberLevel(int value){
+     this.set(S_MemberLevel,new Integer(value));
+  }
+  public  void setMemberLevelNull(){
+     this.set(S_MemberLevel,null);
+  }
+
+  public int getMemberLevel(){
+        return DataType.getAsInt(this.get(S_MemberLevel));
+  
+  }
+  public int getMemberLevelInitialValue(){
+        return DataType.getAsInt(this.getOldObj(S_MemberLevel));
+      }
+
+
+ 
+ }
+

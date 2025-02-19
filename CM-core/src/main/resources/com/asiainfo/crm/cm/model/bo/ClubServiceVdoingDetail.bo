@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="ClubServiceVdoingDetail" mainattr="DETAIL_ID">
+		<mapingenty type="custom">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="DETAIL_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="DIMENSION_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="DETAIL_TYPE" maxlength="50" datatype="String" type="VIRTUAL" remark="是对维度的细分，静态数据方式，目前：" />
+			<attr floatlength="0" name="TOTAL_TIMES" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+			<attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理操作员" />
+			<attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理组织单元" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmOperField" mainattr="FIELD_REL_ID">
+    <mapingenty type="query">SELECT t1.field_rel_id,
+       t1.view_id,
+       t1.oper_id,
+       t1.bce_frame_id,
+       t1.bce_form_id,
+       t1.field_name,
+       t1.sort,
+       t1.state        AS field_state,
+       t1.remarks      AS field_remarks,
+       t2.view_code,
+       t2.view_title,
+       t2.view_url,
+       t2.view_type,
+       t2.cust_type,
+       t2.business_id,
+       t2.state        AS view_state,
+       t2.remarks      AS view_remarks
+  FROM cm_oper_field_rel t1, cm_cfg_view_define t2
+ WHERE t1.view_id = t2.view_id
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="FIELD_REL_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FIELD_REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VIEW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OPER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BCE_FRAME_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BCE_FRAME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BCE_FORM_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BCE_FORM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIELD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">FIELD_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIELD_REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TITLE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_URL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TYPE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BUSINESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_STATE" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">VIEW_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIEW_REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

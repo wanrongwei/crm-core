@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCreditMapping" mainattr="REGION_ID">
+    <mapingenty type="table">CM_CREDIT_MAPPING</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_VALUE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREDIT_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CUST_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

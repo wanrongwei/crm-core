@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmRepOnceIncomeBusi" mainattr="STAT_MONTH">
+    <mapingenty type="table">CM_REP_ONCE_INCOME_BUSI</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="STAT_MONTH" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STAT_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CITY" maxlength="8" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_TYPE" maxlength="8" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="11" datatype="Long" type="COL" remark="集团编号">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PLAN_TYPE" maxlength="10" datatype="Long" type="COL" remark="警务通、城管通、企业信息机系统二次开发、移动工商、呼叫中心、固话（需做说明）、
+  互联网专线业务（需做说明）、其他短信业务（需做说明）、其他GRPS业务（需做说明）、
+  其他信息化项目业务（需做说明） (boss_base_type,code_type=99064)">
+        <mapingcol datatype="NUMBER">PLAN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FEE_TYPE" maxlength="10" datatype="Long" type="COL" remark="端口费、租费、通信费、平台建设费、维护费(bboss_base_type,code_type=99065)">
+        <mapingcol datatype="NUMBER">FEE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="TOTAL_FEE" maxlength="14" datatype="Double" type="COL" remark="应收金额（合同总额）">
+        <mapingcol datatype="NUMBER">TOTAL_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="MONTH_APP_INCOME" maxlength="14" datatype="Double" type="COL" remark="本月分摊收入">
+        <mapingcol datatype="NUMBER">MONTH_APP_INCOME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="ACC_APP_INCOME" maxlength="14" datatype="Double" type="COL" remark="累计分摊收入">
+        <mapingcol datatype="NUMBER">ACC_APP_INCOME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="MONTH_REAL_INCOME" maxlength="14" datatype="Double" type="COL" remark="当期实收金额">
+        <mapingcol datatype="NUMBER">MONTH_REAL_INCOME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="ACC_REAL_INCOME" maxlength="14" datatype="Double" type="COL" remark="累计实收金额">
+        <mapingcol datatype="NUMBER">ACC_REAL_INCOME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_DATE" maxlength="20" datatype="DateTime" type="COL" remark="合同录入日期">
+        <mapingcol datatype="DATE">CONTRACT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BEGIN_MONTH" maxlength="6" datatype="String" type="COL" remark="开始收费月份（格式YYYYMM）">
+        <mapingcol datatype="VARCHAR2">BEGIN_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="END_MONTH" maxlength="6" datatype="String" type="COL" remark="截止收费月份（最后收费月YYYYMM）">
+        <mapingcol datatype="VARCHAR2">END_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_ID" maxlength="50" datatype="String" type="COL" remark="合同编号">
+        <mapingcol datatype="VARCHAR2">CONTRACT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_NEW" maxlength="2" datatype="Integer" type="COL" remark="1:新增,2:不是新增">
+        <mapingcol datatype="NUMBER">IS_NEW</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MANAGER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_NAME" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MANAGER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REC_STATUS" maxlength="2" datatype="Integer" type="COL" remark="状态：1.正常,2.合同结束有欠费,3.合同结束无欠费,4.合同异常终止有欠费,5.合同异常终止无欠费(bboss_base_type,code_type=99066)">
+        <mapingcol datatype="NUMBER">REC_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINANCE_ID" maxlength="30" datatype="String" type="COL" remark="财务编号">
+        <mapingcol datatype="VARCHAR2">FINANCE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ONCE_INCOME_ID" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ONCE_INCOME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCESS_NO" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACCESS_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_NAME" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OP_NAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

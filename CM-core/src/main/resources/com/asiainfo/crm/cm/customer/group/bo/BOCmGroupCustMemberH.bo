@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupCustMemberH" mainattr="CUST_REL_ID">
+    <mapingenty type="table">{CM_GROUP_MEMBER_H}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="H_ID" maxlength="12" datatype="Long" type="PK" remark="历史记录编号">
+        <mapingcol datatype="NUMBER">H_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_REL_ID" maxlength="12" datatype="Long" type="COL" remark="成员编号  集团成员编号是指集团客户与成员客户之间的关系编号。">
+        <mapingcol datatype="NUMBER">CUST_REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL" remark="集团客户编号">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_CUST_ID" maxlength="14" datatype="Long" type="COL" remark="成员客户编号">
+        <mapingcol datatype="NUMBER">MEMBER_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_ID" maxlength="12" datatype="Long" type="COL" remark="所属组织结构">
+        <mapingcol datatype="NUMBER">DEPT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="100" datatype="String" type="COL" remark="成员名称">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="2" datatype="Integer" type="COL" remark="客户成员类型  成员类型包括关键成员客户、普通成员客户、潜在成员客户等">
+        <mapingcol datatype="NUMBER">MEMBER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_POSITION" maxlength="255" datatype="String" type="COL" remark="成员职位">
+        <mapingcol datatype="VARCHAR2">MEMBER_POSITION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_STATUS" maxlength="2" datatype="Integer" type="COL" remark="成员状态 对成员客户状态的描述（有效、离职等）">
+        <mapingcol datatype="NUMBER">MEMBER_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_ROLE" maxlength="2" datatype="Integer" type="COL" remark="成员业务角色  客户在集团客户中的角色如：集团业务管理员、集团管理员、普通客户等">
+        <mapingcol datatype="NUMBER">MEMBER_ROLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_REGION_ID" maxlength="6" datatype="String" type="COL" remark="客户归属地">
+        <mapingcol datatype="VARCHAR2">CUST_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态  U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIDE_ID" maxlength="2" datatype="Integer" type="COL" remark="运营商">
+        <mapingcol datatype="NUMBER">PROVIDE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BRAND" maxlength="50" datatype="String" type="COL" remark="品牌">
+        <mapingcol datatype="VARCHAR2">BRAND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="14" datatype="Long" type="COL" remark="用户编号">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL" remark="手机号码">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_DESC" maxlength="200" datatype="String" type="COL" remark="成员说明">
+        <mapingcol datatype="VARCHAR2">MEMBER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

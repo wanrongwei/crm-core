@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmParty" mainattr="PARTY_ID">
+    <mapingenty type="table">{CM_PARTY}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PARTY_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_PARTY_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">PARENT_PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">PARTY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">MIDDLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LAST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">FIRST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">MIDDLE_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LAST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">PARTY_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">PARTY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHORT_NAME" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="varchar">SHORT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENGLISH_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ENGLISH_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CERT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_ADDRESS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CERT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_EFFDATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CUST_CERT_EFFDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CERT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NATIONALITY" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">NATIONALITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCE_ID" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">PROVINCE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_ID" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">COUNTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_TYPE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUB_REGION_TYPE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">SUB_REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PERFER_LANGUAGE" maxlength="21" datatype="Long" type="COL" remark="偏好语言  1.丹麦语 2.匈牙利语 3.英语">
+        <mapingcol datatype="bigint">PERFER_LANGUAGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CPR_ID" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CPR_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

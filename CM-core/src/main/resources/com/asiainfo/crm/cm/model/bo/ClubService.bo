@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="ClubService" mainattr="SERVICE_ID">
+		<mapingenty type="query">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CLUB_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="SERVICE_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="SERVICE_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="TIMES_STRATEGY" maxlength="2" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="VALUE_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="VALUE_AMOUNT" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="IS_CYCLE_LIMITED" maxlength="2" datatype="Integer" type="VIRTUAL" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

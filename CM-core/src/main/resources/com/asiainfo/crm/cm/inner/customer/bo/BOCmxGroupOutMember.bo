@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxGroupOutMember" mainattr="OUT_MEMBER_ID">
+    <mapingenty type="table">CMX_GROUP_OUT_MEMBER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="OUT_MEMBER_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">OUT_MEMBER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GENDER" maxlength="2" datatype="Integer" type="COL" remark="0   男
+1   女">
+        <mapingcol datatype="NUMBER">GENDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SP_TYPE" maxlength="2" datatype="Integer" type="COL" remark="1 联通
+2 小灵通
+3 固定电话">
+        <mapingcol datatype="NUMBER">SP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT4" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXT4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

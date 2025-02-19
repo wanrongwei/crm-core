@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupKeyMemHobby" mainattr="KERNEL_ID">
+    <mapingenty type="table">CM_GROUP_KEY_MEM_HOBBY</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="KERNEL_ID" maxlength="12" datatype="Long" type="PK" remark="关键人物编号">
+        <mapingcol datatype="NUMBER">KERNEL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOBBY_ID" maxlength="3" datatype="Integer" type="PK" remark="爱好
+
+0	娱乐消费
+1	生活资讯
+2	高尔夫网球
+3	文学
+4	艺术
+5	垂钓
+6	休闲购物
+7	电脑音乐
+8	旅游度假
+9	时尚服饰
+10	计算机软硬件
+11	打靶健身
+12	家庭保健
+13	美食烹饪
+14	社交
+15	驾车
+16	其他体育活动
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_INDIV_CUST_HOBBY.HOBBY&apos;;">
+        <mapingcol datatype="NUMBER">HOBBY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOBBY_TYPE" maxlength="2" datatype="Integer" type="PK" remark="爱好类型
+0	兴趣爱好
+1	感兴趣主题俱乐部
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_INDIV_CUST_HOBBY.TYPE&apos;;">
+        <mapingcol datatype="NUMBER">HOBBY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="PK" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

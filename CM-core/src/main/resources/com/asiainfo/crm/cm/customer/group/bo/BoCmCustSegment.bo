@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BoCmCustSegment" mainattr="segment_id">
+    <mapingenty type="table">{CM_CUST_SEGMENT}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SEGMENT_ID" maxlength="21" datatype="Long" type="PK" remark="客户细分属性编号（主键）">
+        <mapingcol datatype="bigint">SEGMENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_SEGMENT_ID" maxlength="21" datatype="Long" type="COL" remark="客户细分属性编号（主键）">
+        <mapingcol datatype="bigint">UP_SEGMENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_ID" maxlength="21" datatype="Long" type="COL" remark="关联ID">
+        <mapingcol datatype="bigint">REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEGMENT_NAME" maxlength="128" datatype="String" type="COL" remark="客户细分名称">
+        <mapingcol datatype="varchar">SEGMENT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALLOW_INHERITABLE" maxlength="21" datatype="Long" type="COL" remark="允许可被继承
+0：不允许可被继承
+1：允许可被继承">
+        <mapingcol datatype="bigint">ALLOW_INHERITABLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALLOW_REVISABLE" maxlength="21" datatype="Long" type="COL" remark="0：不允许
+1：允许">
+        <mapingcol datatype="bigint">ALLOW_REVISABLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALLOW_CREDIT_CALCULATED" maxlength="21" datatype="Long" type="COL" remark="0：不允许可被计算信用度
+1：允许可被计算信用度">
+        <mapingcol datatype="bigint">ALLOW_CREDIT_CALCULATED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALLOW_APPROVABLE" maxlength="21" datatype="Long" type="COL" remark="0：不允许可被审批
+1：允许可被审批">
+        <mapingcol datatype="bigint">ALLOW_APPROVABLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALLOW_MANUAL" maxlength="21" datatype="Long" type="COL" remark="0:不可以
+1：可以">
+        <mapingcol datatype="bigint">ALLOW_MANUAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROCESS_DEF" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="varchar">PROCESS_DEF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTICE_PERIOD" maxlength="21" datatype="Long" type="COL" remark="通知期">
+        <mapingcol datatype="bigint">NOTICE_PERIOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTIFY_TYPE" maxlength="21" datatype="Long" type="COL" remark="1:in,2:out.">
+        <mapingcol datatype="bigint">NOTIFY_TYPE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

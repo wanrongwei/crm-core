@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCmAcctBillFormat" mainattr="BILL_FORMAT">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="BILL_FORMAT" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="DELIVERY_METHOD" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="PRINT_BILL" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="LANGUAGE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="SIDE_PRINTING" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="DUE_DAYS" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EFFECTIVE_METHOD" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EAN" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="EAN_QUALIFICATOR" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OIO_COTACT_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OIO_ORDER_CODE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OIO_ACCOUNT_CODE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OIO_UBL_PROFILE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OIO_UTS_PROFILE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BILLING_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_CHARGE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="SEND_PDF" maxlength="20" datatype="Integer" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

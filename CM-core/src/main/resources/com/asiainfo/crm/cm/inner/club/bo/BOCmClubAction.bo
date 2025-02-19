@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmClubAction" mainattr="ACTION_ID">
+    <mapingenty type="table">{CM_CLUB_ACTION}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ACTION_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ACTION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLUB_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CLUB_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_ACTION_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_ACTION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ACTION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACTION_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION_CODE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACTION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION_CONTENT" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACTION_CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION_DESC" maxlength="2048" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACTION_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BEGIN_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">BEGIN_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="END_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">END_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION_PLACE" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACTION_PLACE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTACT_PERSON" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTACT_PERSON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTACT_PHONE" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTACT_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VALUE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE_AMOUNT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VALUE_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LIMIT_NUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LIMIT_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_NAME_QRY</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

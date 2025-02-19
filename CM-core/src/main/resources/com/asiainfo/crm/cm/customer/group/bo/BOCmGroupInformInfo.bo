@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupInformInfo" mainattr="GROUP_CUST_ID">
+    <mapingenty type="table">CM_GROUP_INFORM_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="12" datatype="Long" type="PK" remark="集团客户编号">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFORM_TYPE_ID" maxlength="6" datatype="Integer" type="PK" remark="信息化类型标识
+目前有：
+1、集团固话
+2、互联网宽带
+3、数字电路
+4、专网/分支机构互联
+5、网站
+6、企业局域网情况
+7、邮件系统
+8、其他信息化需求
+9、OA系统
+10、ERM（ERP之一）
+11、CRM（ERP之一）
+12、SCM（ERP之一）">
+        <mapingcol datatype="NUMBER">INFORM_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAJOR_OPERATOR_LIST" maxlength="2" datatype="Integer" type="COL" remark="主要接入运营商/接入运营商（listbox）:
+1、电信
+2、联通
+3、铁通
+4、移动
+5、其他（注明具体）
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_OPERATOR&apos;&apos;;">
+        <mapingcol datatype="NUMBER">MAJOR_OPERATOR_LIST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAJOR_OPERATOR_TEXT" maxlength="255" datatype="String" type="COL" remark="主要接入运营商/接入运营商（text其他)">
+        <mapingcol datatype="VARCHAR2">MAJOR_OPERATOR_TEXT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_OPERATOR_LIST" maxlength="2" datatype="Integer" type="COL" remark="备用接入运营商（listbox）:
+1、电信
+2、联通
+3、铁通
+4、移动
+5、其他（注明具体）
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_OPERATOR&apos;&apos;;">
+        <mapingcol datatype="NUMBER">SECOND_OPERATOR_LIST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_OPERATOR_TEXT" maxlength="255" datatype="String" type="COL" remark="备用接入运营商（text其他)">
+        <mapingcol datatype="VARCHAR2">SECOND_OPERATOR_TEXT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR" maxlength="100" datatype="String" type="COL" remark="接入运营商（text）">
+        <mapingcol datatype="VARCHAR2">OPERATOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMPL_TYPE_LIST" maxlength="2" datatype="Integer" type="COL" remark="实现方式（listbox）
+集团固话（1.2.3）
+互联网宽带（4.5.6）:
+1、有实体交换机，有总机
+2、无实体交换机、有虚拟
+3、直线
+4、DSL
+5、LAN
+6、光纤
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_IMPL_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">IMPL_TYPE_LIST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMPL_TYPE_TEXT" maxlength="255" datatype="String" type="COL" remark="实现方式（text）">
+        <mapingcol datatype="VARCHAR2">IMPL_TYPE_TEXT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANDWIDTH" maxlength="2" datatype="Integer" type="COL" remark="集团内使用数量/带宽（listbox）:
+1、1M
+2、2M
+3、4M
+4、6M
+5、8M、
+6、10M
+7、100M
+8、其他
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_BANDWIDTH_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">BANDWIDTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COST_TYPE" maxlength="2" datatype="Integer" type="COL" remark="资费方式:
+1、包年
+2、包月
+3、特殊政策
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_COST_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">COST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COST_AVG_MONTH_LIST" maxlength="2" datatype="Integer" type="COL" remark="月平均消费(listbox):
+1、100以下、
+2、100-500、
+3、500-1000、
+4、1000-2000、
+5、2000以上
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_COST_AVG_MONTH_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">COST_AVG_MONTH_LIST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COST_AVG_MONTH_TEXT" maxlength="100" datatype="String" type="COL" remark="月平均消费(text)">
+        <mapingcol datatype="VARCHAR2">COST_AVG_MONTH_TEXT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COST_YEAR" maxlength="255" datatype="String" type="COL" remark="包年资费">
+        <mapingcol datatype="VARCHAR2">COST_YEAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PREFERENTIAL_POLICY" maxlength="255" datatype="String" type="COL" remark="优惠政策">
+        <mapingcol datatype="VARCHAR2">PREFERENTIAL_POLICY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CAB_PROPERTY_OWNER" maxlength="2" datatype="Integer" type="COL" remark="布线产权归属:
+1、产权归电信
+2、产权归用户
+3、产权归其他（物业）
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_CAB_PROPERTY_OWNER_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">CAB_PROPERTY_OWNER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="合同到期时间">
+        <mapingcol datatype="DATE">CONTRACT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAJOR_OWNER_DESC" maxlength="255" datatype="String" type="COL" remark="主要持有人描述">
+        <mapingcol datatype="VARCHAR2">MAJOR_OWNER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_GROUP_INFORMATION" maxlength="512" datatype="String" type="COL" remark="其他信息化需求">
+        <mapingcol datatype="VARCHAR2">OTHER_GROUP_INFORMATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_USERED" maxlength="2" datatype="Integer" type="COL" remark="是否使用:
+1、是
+0、否
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_INFORM_IS_USERED&apos;&apos;;">
+        <mapingcol datatype="NUMBER">IS_USERED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUPPLIER" maxlength="255" datatype="String" type="COL" remark="设备厂商">
+        <mapingcol datatype="VARCHAR2">SUPPLIER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEVICE_NUM" maxlength="6" datatype="Integer" type="COL" remark="设备数量">
+        <mapingcol datatype="NUMBER">DEVICE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAINTAINER_NUM" maxlength="6" datatype="Integer" type="COL" remark="维护人员数量">
+        <mapingcol datatype="NUMBER">MAINTAINER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COSTS" maxlength="14" datatype="Long" type="COL" remark="费用支出">
+        <mapingcol datatype="NUMBER">COSTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINK_SCOPE" maxlength="2" datatype="Integer" type="COL" remark="使用范围:
+1  跨国
+2  跨省
+3  跨地市
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_INFORM_LINK_SCOPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">LINK_SCOPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMAIL_SYS_TYPE" maxlength="2" datatype="Integer" type="COL" remark="邮件系统类型（邮件系统）:
+1  Exchange
+2  Domino
+3  其他
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_INFORM_EMAIL_SYS_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">EMAIL_SYS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROPERTY_TYPE" maxlength="2" datatype="Integer" type="COL" remark="邮件系统产权类型：
+0  自有
+1  委托运营商
+2  公共信箱
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;735064&apos;&apos;;">
+        <mapingcol datatype="NUMBER">PROPERTY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INTERNET_MODE" maxlength="2" datatype="Integer" type="COL" remark="互联网方式（专网/分支机构互联）：
+1  ATM
+2  DDN
+3  FR
+4  SDH出租
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_INFORM_INTERNET_MODE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">INTERNET_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_LOCAL_TYPE" maxlength="2" datatype="Integer" type="COL" remark="主机放置方式（网站）：
+1  托管在运营商
+2  自由机房
+3  其他
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_INFORM_HOST_LOCAL_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">HOST_LOCAL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIN_TYPE" maxlength="2" datatype="Integer" type="COL" remark="维护方式（网站）：
+1  自维
+2  委托第三方
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;&apos;CM_GROUP_INFORM_HOST_ADMIN_TYPE&apos;&apos;;">
+        <mapingcol datatype="NUMBER">ADMIN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

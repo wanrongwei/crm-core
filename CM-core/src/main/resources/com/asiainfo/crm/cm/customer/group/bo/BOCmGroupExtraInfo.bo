@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupExtraInfo" mainattr="GROUP_CUST_ID">
+    <mapingenty type="table">CM_GROUP_EXTRA_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="12" datatype="Long" type="PK" remark="集团客户编号">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VOCATION1" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VOCATION1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VOCATION2" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VOCATION2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VOCATION3" maxlength="5" datatype="Integer" type="COL" remark="行业类别3
+1:公安，2:海关，3:电力，4:石化，5:金融，6:工商，7:税务，8:交通，9:本省其他1，10:本省其他
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_VOCATION3&apos;;">
+        <mapingcol datatype="NUMBER">VOCATION3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_REGION_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_SUB_REGION_TYPE" maxlength="8" datatype="String" type="COL" remark="集团区域子类型
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_SUB_GROUP_REGION_TYPE&apos; AND T.EXTERN_CODE_TYPE = :GROUP_REGION_TYPE;">
+        <mapingcol datatype="VARCHAR2">GROUP_SUB_REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGAN_TYPE" maxlength="10" datatype="String" type="COL" remark="机构类型
+1  国有
+2  集体
+3  私营
+4  股份
+5  外商投资
+6  港澳台投资
+7  其它
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_ORGAN_TYPE&apos;;">
+        <mapingcol datatype="VARCHAR2">ORGAN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_PAY_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_PAY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_GROUP_CLUST_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TRADE_GROUP_CLUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_GROUP_CLUST_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="行业集团级别
+0  一级
+1  二级
+2  三级
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_TRADE_GROUP_CLUST_LEVEL&apos;;">
+        <mapingcol datatype="NUMBER">TRADE_GROUP_CLUST_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_PROV_GRP_MANAGED" maxlength="2" datatype="Integer" type="COL" remark="是否省级客户组维护">
+        <mapingcol datatype="NUMBER">IS_PROV_GRP_MANAGED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="信用级别
+
+1  高
+2  中
+3  低
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_CREDIT_LEVEL&apos;;">
+        <mapingcol datatype="NUMBER">CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_SIGN_TYPE" maxlength="2" datatype="Integer" type="COL" remark="签约集团类型
+
+1  虚拟网签约
+2  信息化签约
+3  服务签约
+4  其它签约
+5  虚拟网签约、信息化签约
+6  虚拟网签约、服务签约
+7  信息化签约、服务签约
+8  虚拟网签约、信息化签约、服务签约
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_SIGN_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">GROUP_SIGN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_TOP100" maxlength="2" datatype="Integer" type="COL" remark="1  是
+">
+        <mapingcol datatype="NUMBER">IS_TOP100</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEFECT_TYPE" maxlength="2" datatype="Integer" type="COL" remark="集团策反类型
+1  无
+2  拓展集团
+3  竞争对手集团
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_DEFECT_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">DEFECT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFOR_FLAG" maxlength="2" datatype="Integer" type="COL" remark="信息化标志
+1  信息化集团
+2  非信息化集团
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFOR_FLAG&apos;;">
+        <mapingcol datatype="NUMBER">INFOR_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QUESTION_TYPE" maxlength="2" datatype="Integer" type="COL" remark="问题类型
+0  0
+1  1
+2  2
+3  3
+4  4
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_QUESTION_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">QUESTION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROV_GROUP_TYPE" maxlength="2" datatype="Integer" type="COL" remark="省级集团">
+        <mapingcol datatype="NUMBER">PROV_GROUP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_GARRISON" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SERVICE_GARRISON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GARRISON_PERIOD" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GARRISON_PERIOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOWN_BUSINESS_HALL" maxlength="255" datatype="String" type="COL" remark="村镇营业厅">
+        <mapingcol datatype="VARCHAR2">TOWN_BUSINESS_HALL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VILLAGE_SVR_POINT" maxlength="255" datatype="String" type="COL" remark="村级服务点">
+        <mapingcol datatype="VARCHAR2">VILLAGE_SVR_POINT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_AGENCY" maxlength="255" datatype="String" type="COL" remark="销售代理人">
+        <mapingcol datatype="VARCHAR2">SALE_AGENCY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STAFF_AMOUNT" maxlength="10" datatype="Long" type="COL" remark="1表示1－100人
+2表示101－500人
+3表示500人以上">
+        <mapingcol datatype="NUMBER">STAFF_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COM_BUDGET" maxlength="12" datatype="Long" type="COL" remark="通讯预算">
+        <mapingcol datatype="NUMBER">COM_BUDGET</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_USER_NUM" maxlength="6" datatype="Integer" type="COL" remark="移动用户数量">
+        <mapingcol datatype="NUMBER">CMCC_USER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNICOM_USER_NUM" maxlength="6" datatype="Integer" type="COL" remark="联通用户数量">
+        <mapingcol datatype="NUMBER">UNICOM_USER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TELECOM_USER_NUM" maxlength="6" datatype="Integer" type="COL" remark="电信用户数量">
+        <mapingcol datatype="NUMBER">TELECOM_USER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_AREA" maxlength="200" datatype="String" type="COL" remark="业务范围">
+        <mapingcol datatype="VARCHAR2">BUSI_AREA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INCOME_CLASS" maxlength="6" datatype="Integer" type="COL" remark="营业收入分类
+
+0  0-3万
+1  3万-5万
+2  5万-8万
+3  8万-10万
+4  10万-20万
+5  20万-50万
+6  50万-80万
+7  80万-100万
+8  100万-200万
+9  200万-300万
+10  300万-400万
+11  300万-400万
+12  400万-500万
+13  500万-1000万
+14  1000万-2000万
+15  2000万-3000万
+16  3000万-4000万
+17  4000万-5000万
+18  5000万-1亿
+19  1亿-5亿
+20  5亿-10亿
+21  10亿-50亿
+22  50亿以上
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_BUSINESS_INCOME&apos;;">
+        <mapingcol datatype="NUMBER">INCOME_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTH_USE_DTL" maxlength="255" datatype="String" type="COL" remark="其他通信产品的使用情况">
+        <mapingcol datatype="VARCHAR2">OTH_USE_DTL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_DATE" maxlength="20" datatype="DateTime" type="COL" remark="集团纪念日">
+        <mapingcol datatype="DATE">GROUP_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MULTI_PROVINCE" maxlength="2" datatype="Integer" type="COL" remark="跨省业务类型
+0  无
+1  牵头省
+2  协作省
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_MULTI_PROVINCE&apos;;">
+        <mapingcol datatype="NUMBER">MULTI_PROVINCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_INTRO" maxlength="255" datatype="String" type="COL" remark="镇/村/企业介绍">
+        <mapingcol datatype="VARCHAR2">GROUP_INTRO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_GLORY" maxlength="255" datatype="String" type="COL" remark="镇/村/企业荣誉">
+        <mapingcol datatype="VARCHAR2">GROUP_GLORY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CULTURE" maxlength="255" datatype="String" type="COL" remark="镇/村/企业文化">
+        <mapingcol datatype="VARCHAR2">GROUP_CULTURE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_INFO" maxlength="255" datatype="String" type="COL" remark="镇/村/企业资料">
+        <mapingcol datatype="VARCHAR2">GROUP_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_FILE_PATH" maxlength="128" datatype="String" type="COL" remark="附件路径">
+        <mapingcol datatype="VARCHAR2">INFO_FILE_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ASSET_CLASS" maxlength="6" datatype="Integer" type="COL" remark="资产分类
+
+1  0-10万
+2  10万-50万
+3  50万-100万
+4  100万-500万
+5  500万-2000万
+6  2000万-5000万
+7  5000万-1亿
+8  1亿-10亿
+9  10亿-50亿
+10  50亿-100亿
+11  100亿-500亿
+12  500亿-1000亿
+13  1000亿-2000亿
+14  2000亿以上
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_ASSET_CLASS&apos;;">
+        <mapingcol datatype="NUMBER">ASSET_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONSULT_WITH_CONT" maxlength="255" datatype="String" type="COL" remark="与联系人接洽">
+        <mapingcol datatype="VARCHAR2">CONSULT_WITH_CONT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGAN_BILLBOARD" maxlength="255" datatype="String" type="COL" remark="组织单元">
+        <mapingcol datatype="VARCHAR2">ORGAN_BILLBOARD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_OFFICE_NETWORK" maxlength="255" datatype="String" type="COL" remark="公司内部办公网络">
+        <mapingcol datatype="VARCHAR2">GROUP_OFFICE_NETWORK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_SERVICE" maxlength="255" datatype="String" type="COL" remark="服务进驻现场服务">
+        <mapingcol datatype="VARCHAR2">FIELD_SERVICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AGENT" maxlength="50" datatype="String" type="COL" remark="代理人">
+        <mapingcol datatype="VARCHAR2">AGENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFORM_DEPT_NAME" maxlength="50" datatype="String" type="COL" remark="信息化部门名称">
+        <mapingcol datatype="VARCHAR2">INFORM_DEPT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_SETUP_ALONE" maxlength="2" datatype="Integer" type="COL" remark="是否单独设立">
+        <mapingcol datatype="NUMBER">IS_SETUP_ALONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_LEADER" maxlength="50" datatype="String" type="COL" remark="部门领导姓名">
+        <mapingcol datatype="VARCHAR2">DEPT_LEADER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_LEADER_JOB" maxlength="255" datatype="String" type="COL" remark="部门领导职务">
+        <mapingcol datatype="VARCHAR2">DEPT_LEADER_JOB</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_LEADER_PHONE" maxlength="30" datatype="String" type="COL" remark="部门领导电话">
+        <mapingcol datatype="VARCHAR2">DEPT_LEADER_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUTDOOR_STAFF_NUM" maxlength="6" datatype="Integer" type="COL" remark="外勤工作人员数量">
+        <mapingcol datatype="NUMBER">OUTDOOR_STAFF_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUTDOOR_STAFF_RATE" maxlength="10" datatype="String" type="COL" remark="占公司比例">
+        <mapingcol datatype="VARCHAR2">OUTDOOR_STAFF_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="JOB_SPEC" maxlength="255" datatype="String" type="COL" remark="工作性质">
+        <mapingcol datatype="VARCHAR2">JOB_SPEC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NEED_CALL_GROUP_DATA" maxlength="2" datatype="Integer" type="COL" remark="是否需要调用公司数据
+
+0  是
+1  否
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_NEED_CALL_GROUP_DATA&apos;;">
+        <mapingcol datatype="NUMBER">NEED_CALL_GROUP_DATA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_INFORM_TRADE" maxlength="50" datatype="String" type="COL" remark="集团信息化建设行业">
+        <mapingcol datatype="VARCHAR2">GROUP_INFORM_TRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEV_CHNL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">DEV_CHNL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_CHNL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SERV_CHNL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HQ_NAME" maxlength="255" datatype="String" type="COL" remark="总部名称">
+        <mapingcol datatype="VARCHAR2">HQ_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOCAL_PARENT_ORGAN" maxlength="255" datatype="String" type="COL" remark="本省上级机构">
+        <mapingcol datatype="VARCHAR2">LOCAL_PARENT_ORGAN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROD_DEV_CHNL" maxlength="6" datatype="Integer" type="COL" remark="集团产品发展渠道
+0  无
+1  客户经理
+2  10086热线
+3  电话客户经理
+4  营业厅
+5  代理商
+6  门户网站
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_PROD_DEV_CHNL&apos;;">
+        <mapingcol datatype="NUMBER">PROD_DEV_CHNL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROD_STATUS" maxlength="2" datatype="Integer" type="COL" remark="集团产品状态
+1  正使用
+2  沉默
+3  停机
+4  已销户
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_PROD_STATUS&apos;;">
+        <mapingcol datatype="NUMBER">PROD_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LONGITUDE" maxlength="30" datatype="String" type="COL" remark="集团地址经度">
+        <mapingcol datatype="VARCHAR2">LONGITUDE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LATITUDE" maxlength="30" datatype="String" type="COL" remark="集团地址纬度">
+        <mapingcol datatype="VARCHAR2">LATITUDE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_BRAND" maxlength="2" datatype="Integer" type="COL" remark="是否服务贴牌">
+        <mapingcol datatype="NUMBER">SERVICE_BRAND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPHASIS_BRAND" maxlength="2" datatype="Integer" type="COL" remark="是否重点单位挂牌">
+        <mapingcol datatype="NUMBER">EMPHASIS_BRAND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EC_CODE" maxlength="50" datatype="String" type="COL" remark="全网集团编号">
+        <mapingcol datatype="VARCHAR2">EC_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VPMN_CUST_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VPMN_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INFO_FILE_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INFO_FILE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_GROUP_CUST_ID" maxlength="12" datatype="Long" type="COL" remark="关联集团ID">
+        <mapingcol datatype="NUMBER">REL_GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOCAL_PARENT_ORGAN_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LOCAL_PARENT_ORGAN_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_PAY_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="集团支付信用度">
+        <mapingcol datatype="NUMBER">CREDIT_PAY_LEVEL</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

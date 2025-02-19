@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxGroupRemainDetail" mainattr="OP_TIME">
+    <mapingenty type="table">CMX_GROUP_REMAIN_DETAIL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="OP_TIME" maxlength="20" datatype="DateTime" type="COL" remark="日期">
+        <mapingcol datatype="DATE">OP_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="6" datatype="String" type="COL" remark="地市">
+        <mapingcol datatype="VARCHAR2">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_ID" maxlength="8" datatype="String" type="COL" remark="县市">
+        <mapingcol datatype="VARCHAR2">COUNTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="12" datatype="Long" type="COL" remark="集团编号">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="160" datatype="String" type="COL" remark="集团名称">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_LEVEL" maxlength="4" datatype="Integer" type="COL" remark="集团级别">
+        <mapingcol datatype="NUMBER">GROUP_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_NAME" maxlength="40" datatype="String" type="COL" remark="客户经理">
+        <mapingcol datatype="VARCHAR2">MANAGER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="2" name="M12_UNION_FEE" maxlength="12" datatype="Double" type="COL" remark="12月统付收入">
+        <mapingcol datatype="NUMBER">M12_UNION_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="M12_MEM_FEE" maxlength="12" datatype="Double" type="COL" remark="12月成员个人付费">
+        <mapingcol datatype="NUMBER">M12_MEM_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="M12_TOTAL_FEE" maxlength="12" datatype="Double" type="COL" remark="12月集团整体收入">
+        <mapingcol datatype="NUMBER">M12_TOTAL_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="M12_MEMBER_COUNTS" maxlength="12" datatype="Long" type="COL" remark="12月成员数">
+        <mapingcol datatype="NUMBER">M12_MEMBER_COUNTS</mapingcol>
+      </attr>
+      <attr floatlength="2" name="CUR_UNION_FEE" maxlength="12" datatype="Double" type="COL" remark="当月统付收入">
+        <mapingcol datatype="NUMBER">CUR_UNION_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="CUR_MEM_FEE" maxlength="12" datatype="Double" type="COL" remark="当月成员个人付费">
+        <mapingcol datatype="NUMBER">CUR_MEM_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="CUR_TOTAL_FEE" maxlength="12" datatype="Double" type="COL" remark="当月集团整体收入">
+        <mapingcol datatype="NUMBER">CUR_TOTAL_FEE</mapingcol>
+      </attr>
+      <attr floatlength="2" name="INCOMING_CHG" maxlength="12" datatype="Double" type="COL" remark="收入变化">
+        <mapingcol datatype="NUMBER">INCOMING_CHG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INCOMING_DOWN_FLAG" maxlength="4" datatype="Integer" type="COL" remark="收入降幅超过50%统计周期数">
+        <mapingcol datatype="NUMBER">INCOMING_DOWN_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_LEFT_COUNTS" maxlength="12" datatype="Long" type="COL" remark="累计离网集团成员数">
+        <mapingcol datatype="NUMBER">TOTAL_LEFT_COUNTS</mapingcol>
+      </attr>
+      <attr floatlength="3" name="TOTAL_LEFT_RATE" maxlength="4" datatype="Double" type="COL" remark="累计离网成员比例">
+        <mapingcol datatype="NUMBER">TOTAL_LEFT_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_LEFT_MONTH" maxlength="4000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">GROUP_LEFT_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="3" name="FEE_TAKE_RATE" maxlength="4" datatype="Double" type="COL" remark="集团收入保有率">
+        <mapingcol datatype="NUMBER">FEE_TAKE_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOTAL_COUNTS" maxlength="12" datatype="Long" type="COL" remark="在网集团成员数">
+        <mapingcol datatype="NUMBER">TOTAL_COUNTS</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MEM_TAKE_RATE" maxlength="4" datatype="Double" type="COL" remark="成员保有率">
+        <mapingcol datatype="NUMBER">MEM_TAKE_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATISTIC_MONTH" maxlength="6" datatype="Integer" type="COL" remark="统计月份">
+        <mapingcol datatype="NUMBER">STATISTIC_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MEM_COVER_RATE" maxlength="4" datatype="Double" type="COL" remark="成员覆盖率">
+        <mapingcol datatype="NUMBER">MEM_COVER_RATE</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MEM_VPMN_RATE" maxlength="4" datatype="Double" type="COL" remark="成员虚拟网渗透率">
+        <mapingcol datatype="NUMBER">MEM_VPMN_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROD_TOTAL_NUM" maxlength="6" datatype="Integer" type="COL" remark="集团及集团成员使用集团产品个数">
+        <mapingcol datatype="NUMBER">PROD_TOTAL_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_VALID" maxlength="1" datatype="Integer" type="COL" remark="是否符合重要集团覆盖达标要求(0: 是；1：否)">
+        <mapingcol datatype="NUMBER">IS_VALID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

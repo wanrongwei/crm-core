@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsSoOrdDepositeCfg" mainattr="CONFIG_ID">
+    <mapingenty type="table">BS_SO_ORD_DEPOSITE_CFG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CONFIG_ID" maxlength="6" datatype="Integer" type="PK" remark="配置编号">
+        <mapingcol datatype="NUMBER">CONFIG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_ID" maxlength="12" datatype="Long" type="COL" remark="业务操作编号">
+        <mapingcol datatype="NUMBER">BUSINESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFER_ID" maxlength="12" datatype="Long" type="COL" remark="策划编号">
+        <mapingcol datatype="NUMBER">OFFER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFER_TYPE" maxlength="30" datatype="String" type="COL" remark="策划类型">
+        <mapingcol datatype="VARCHAR2">OFFER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRODUCT_ID" maxlength="12" datatype="Long" type="COL" remark="产品编号">
+        <mapingcol datatype="NUMBER">PRODUCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRODUCT_TYPE" maxlength="30" datatype="String" type="COL" remark="产品类型(code_type=SO_PRODUCT_TYPE)">
+        <mapingcol datatype="VARCHAR2">PRODUCT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="COL" remark="服务编号">
+        <mapingcol datatype="NUMBER">SERVICE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ATTR_ID" maxlength="12" datatype="Long" type="COL" remark="属性编号">
+        <mapingcol datatype="NUMBER">ATTR_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEAL_SERVICE" maxlength="200" datatype="String" type="COL" remark="处理服务">
+        <mapingcol datatype="VARCHAR2">DEAL_SERVICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="状态(U：正常，E：失效)">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHECK_SERVICE" maxlength="200" datatype="String" type="COL" remark="校验服务">
+        <mapingcol datatype="VARCHAR2">CHECK_SERVICE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

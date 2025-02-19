@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmUser" mainattr="DATA_ID">
+    <mapingenty type="table">CM_USER_DATA</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DATA_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">DATA_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BRAND" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BRAND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VERSION" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VERSION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SYSTEM" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SYSTEM_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCREEN_SIZE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SCREEN_SIZE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MARKET_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">MARKET_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MOBILE_PAY" maxlength="5" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IS_MOBILE_PAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MOBILE_TV_WAP" maxlength="5" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IS_MOBILE_TV_WAP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MOBILE_TV_CLIENT" maxlength="5" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IS_MOBILE_TV_CLIENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DOWNLOAD_METHOD" maxlength="5" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DOWNLOAD_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DOWNLOAD_WAP" maxlength="5" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DOWNLOAD_WAP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MOBILE_SECURITY" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MOBILE_SECURITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MOBILE_EMAIL" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MOBILE_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MMS" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MMS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GPRS" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GPRS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WAP" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">WAP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KJAVA" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">KJAVA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FETION" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FETION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_VEST_DEPARTEMENT" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_VEST_DEPARTEMENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

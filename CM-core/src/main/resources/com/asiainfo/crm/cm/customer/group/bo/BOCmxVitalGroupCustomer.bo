@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxVitalGroupCustomer" mainattr="VGROUP_ID">
+    <mapingenty type="table">CMX_VITAL_GROUP_CUST</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="VGROUP_ID" maxlength="10" datatype="String" type="PK" remark="总部下发目标市场清单中自带的ID">
+        <mapingcol datatype="VARCHAR2">VGROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL" remark="集团编号">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGAN_TYPE" maxlength="4" datatype="String" type="COL" remark="机构类型
+10  企业
+20  事业单位
+30  机关
+40  社会团体
+51  民办非企业单位
+52  基金会
+53  居委会
+54  村委会
+90  其他组织机构
+99  产业活动单位
+">
+        <mapingcol datatype="VARCHAR2">ORGAN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRES_CODE" maxlength="6" datatype="String" type="COL" remark="地址代码">
+        <mapingcol datatype="VARCHAR2">ADDRES_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="20" datatype="String" type="COL" remark="区县">
+        <mapingcol datatype="VARCHAR2">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TOWN_CODE" maxlength="20" datatype="String" type="COL" remark="乡镇">
+        <mapingcol datatype="VARCHAR2">TOWN_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOUSE_NUMBER" maxlength="60" datatype="String" type="COL" remark="门牌">
+        <mapingcol datatype="VARCHAR2">HOUSE_NUMBER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AREA_CODE" maxlength="6" datatype="String" type="COL" remark="区号">
+        <mapingcol datatype="VARCHAR2">AREA_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_PHONE1" maxlength="30" datatype="String" type="COL" remark="电话1">
+        <mapingcol datatype="VARCHAR2">CONT_PHONE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_PHONE2" maxlength="30" datatype="String" type="COL" remark="电话1
+(分机号)">
+        <mapingcol datatype="VARCHAR2">CONT_PHONE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ZIPCODE" maxlength="6" datatype="String" type="COL" remark="邮政编码">
+        <mapingcol datatype="VARCHAR2">ZIPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VOCATION" maxlength="10" datatype="String" type="COL" remark="行业类型">
+        <mapingcol datatype="VARCHAR2">VOCATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STAFF_AMOUNT" maxlength="8" datatype="Long" type="COL" remark="集团客户员工数">
+        <mapingcol datatype="NUMBER">STAFF_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IND_UNIT_NUM" maxlength="8" datatype="Long" type="COL" remark="产业单位数">
+        <mapingcol datatype="NUMBER">IND_UNIT_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ECONOMIC_TYPE" maxlength="6" datatype="String" type="COL" remark="经济类型
+100        内资企业
+
+  110          国有企业
+
+  120          集体企业
+
+  130          股份合作企业
+
+140            联营企业
+
+  141            国有联营企业
+
+  142            集体联营企业
+
+  143            国有与集体联营企业
+
+  149            其他联营企业
+
+150            有限责任公司
+
+  151            国有独资公司
+
+  159            其他有限责任公司
+
+160  160          股份有限公司
+
+170            私营企业
+
+  171            私营独资企业
+
+  172            私营合伙企业
+
+  173            私营有限责任公司
+
+  174            私营股份有限公司
+
+190  190          其他企业
+
+200        港、澳、台商投资企业
+
+  210          合资经营企业（港或澳、台资）
+
+  220          合作经营企业（港或澳、台资）
+
+  230          港、澳、台商独资经营企业
+
+  240          港、澳、台商投资股份有限公司
+
+300        外商投资企业
+
+  310          中外合资经营企业
+
+  320          中外合作经营企业
+
+  330          外资企业
+
+  340          外商投资股份有限公司
+">
+        <mapingcol datatype="VARCHAR2">ECONOMIC_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SETUP_YEAR" maxlength="4" datatype="String" type="COL" remark="开业年份  格式：YYYY">
+        <mapingcol datatype="VARCHAR2">SETUP_YEAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SETUP_MONTH" maxlength="2" datatype="String" type="COL" remark="开业月份  格式：MM">
+        <mapingcol datatype="VARCHAR2">SETUP_MONTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOLDING_TYPE" maxlength="4" datatype="String" type="COL" remark="控股类型
+1  国有
+2  集体
+3  私人
+4  港澳台
+5  外商
+9  其他
+">
+        <mapingcol datatype="VARCHAR2">HOLDING_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_TYPE" maxlength="4" datatype="String" type="COL" remark="集团类型
+
+1  母公司
+2  成员企业
+">
+        <mapingcol datatype="VARCHAR2">GROUP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATE_FORM" maxlength="4" datatype="String" type="COL" remark="经营形式
+1  独立门店
+2  连锁总店
+3  连锁门店
+9  其他
+">
+        <mapingcol datatype="VARCHAR2">OPERATE_FORM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_INCOME_TYPE" maxlength="4" datatype="String" type="COL" remark="营业收入分类
+01  0-3
+02  3-5
+03  5-8
+04  8-10
+05  10-20
+06  20-50
+07  50-80
+08  80-100
+09  100-200
+10  200-300
+11  300-400
+12  400-500
+13  500-1000
+14  1000-2000
+15  2000-3000
+16  3000-4000
+17  4000-5000
+18  5000-1亿
+19  1亿-5亿
+20  5亿-10亿
+21  10亿-50亿
+22  50亿以上
+">
+        <mapingcol datatype="VARCHAR2">BUSI_INCOME_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ASSET_TYPE" maxlength="4" datatype="String" type="COL" remark="资产分类
+01  0-10
+02  10-50
+03  50-100
+04  100-500
+05  500-2000
+06  2000-5000
+07  5000-1亿
+08  1亿-10亿
+09  10亿-50亿
+10  50亿-100亿
+11  100亿-500亿
+12  500亿-1000亿
+13  1000亿-2000亿
+14  2000亿以上
+">
+        <mapingcol datatype="VARCHAR2">ASSET_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VOCATION_CODE" maxlength="4" datatype="String" type="COL" remark="行业分类编码  经分系统行业编码，必填
+">
+        <mapingcol datatype="VARCHAR2">VOCATION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_STATUS" maxlength="4" datatype="String" type="COL" remark="集团客户状态：
+10-潜在
+11-离网
+12-未入网
+20-在网
+30-无效集团
+31-已破产
+32-被兼并
+33-企业迁移外地
+34-已结业
+35-个体户、聚类集团
+36-其他
+
+维值10、30为大类，不能填写，操作界面不允许录入">
+        <mapingcol datatype="VARCHAR2">GROUP_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_IMPORTANT" maxlength="2" datatype="Integer" type="COL" remark="是否重要集团客户">
+        <mapingcol datatype="NUMBER">IS_IMPORTANT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_SOURCE" maxlength="2" datatype="Integer" type="COL" remark="集团客户资料来源
+1-来自总部下发清单集团客户
+2-来自各省除清单集团客户外的新增集团客户
+系统自动填写">
+        <mapingcol datatype="NUMBER">GROUP_SOURCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

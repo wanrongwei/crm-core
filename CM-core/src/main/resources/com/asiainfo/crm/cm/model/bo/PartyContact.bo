@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="PartyContact" mainattr="CONT_ID">
+    <mapingenty type="table">{CM_PARTY_CONTACT}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CONT_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">CONT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIORY_LEVEL" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">PRIORY_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">MIDDLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LAST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">FIRST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">MIDDLE_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LAST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONT_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ADDRESS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOME_TEL" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="varchar">HOME_TEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFICE_TEL" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="varchar">OFFICE_TEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_MOBILE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONT_MOBILE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_DESC" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONT_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_EMAIL" maxlength="256" datatype="String" type="COL" remark="Email">
+        <mapingcol datatype="varchar">CONT_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CODE" maxlength="9" datatype="String" type="COL">
+        <mapingcol datatype="varchar">POST_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_ADDRESS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">POST_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_FAX" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONT_FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DIRECT_MARKETING_PROTECTION" maxlength="21" datatype="Long" type="COL" remark="Ӫ">
+        <mapingcol datatype="bigint">DIRECT_MARKETING_PROTECTION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTECT_EFF_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="date">PROTECT_EFF_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTECT_EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="date">PROTECT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANUAL_COMMERCIAL_PROTECTION" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">MANUAL_COMMERCIAL_PROTECTION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANUAL_PROTECT_EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="date">MANUAL_PROTECT_EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANUAL_PROTECT_EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="date">MANUAL_PROTECT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="100" datatype="String" type="COL" remark="是否受保护">
+        <mapingcol datatype="varchar">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT4" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT5" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT6" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">EXT6</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT7" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">EXT7</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT8" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">EXT8</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT9" maxlength="20" datatype="DateTime" type="COL" remark="PAYER受保护生效时间">
+        <mapingcol datatype="date">EXT9</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT10" maxlength="20" datatype="DateTime" type="COL" remark="PAYER受保护失效时间">
+        <mapingcol datatype="date">EXT10</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="CustManager" mainattr="REL_ID">
+		<mapingenty type="custom">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="REL_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="REL_TYPE" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="REL_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="MANAGER_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="STAFF_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="STAFF_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="SHORT_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="ENGLISH_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="PARENT_STAFF_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CERT_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="CERT_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CERT_CODE" maxlength="50" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CERT_ADDRESS" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CERT_EFFDATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="CERT_EXPIRE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="NATIONALITY" maxlength="10" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="NATIONALITY_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="PROVINCE_ID" maxlength="10" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="PROVINCE_ID_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CITY_ID" maxlength="10" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CITY_ID_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="COUNTY_ID" maxlength="10" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="COUNTY_ID_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="REGION_TYPE" maxlength="10" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="REGION_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="SUB_REGION_TYPE" maxlength="10" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="SUB_REGION_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="HOME_TEL" maxlength="60" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFICE_TEL" maxlength="60" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CONT_FAX" maxlength="60" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CONT_EMAIL" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="WIRELESS_CALL" maxlength="60" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CONT_ADDRESS" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="POSTCODE" maxlength="6" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="BIRTHDAY" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="OPER_TYPE" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="OPER_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="MARRY_STATUS" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="MARRY_STATUS_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="GENDER" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="STAFF_LEVEL" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="STAFF_LEVEL_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="STAFF_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="STAFF_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="BC_MGR" maxlength="20" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="MANAGER_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="MANAGER_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="ORGANIZE_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="ORGANIZE_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="ORGANIZE_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="PARENT_ORGANIZE_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="ORGANIZE_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

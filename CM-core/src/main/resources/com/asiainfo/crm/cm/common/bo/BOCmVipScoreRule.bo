@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmVipScoreRule" mainattr="ID">
+    <mapingenty type="table">CM_VIP_SCORE_RULE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_TYPE" maxlength="4" datatype="Integer" type="COL" remark="服务类型
+1 火车站
+2 机场">
+        <mapingcol datatype="NUMBER">SERVICE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_LEVEL" maxlength="4" datatype="Integer" type="COL" remark="服务类别">
+        <mapingcol datatype="NUMBER">SERVICE_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_VIP" maxlength="4" datatype="Integer" type="COL" remark="是否VIP
+1 是
+0 不是">
+        <mapingcol datatype="NUMBER">IS_VIP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ONLINE_TIME" maxlength="4" datatype="Integer" type="COL" remark="在网时长
+
+如果服务类型为火车站：
+1 25—60个月
+2 61个月及以上
+
+如果是机场：
+1 25-36个月
+2 37-60个月
+3 61-96个月
+4 97-120个月">
+        <mapingcol datatype="NUMBER">ONLINE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NEED_SCORE" maxlength="8" datatype="Long" type="COL" remark="扣减积分">
+        <mapingcol datatype="NUMBER">NEED_SCORE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

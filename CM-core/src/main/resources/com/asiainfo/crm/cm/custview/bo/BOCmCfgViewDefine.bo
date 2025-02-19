@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCfgViewDefine" mainattr="VIEW_ID">
+    <mapingenty type="table">CM_CFG_VIEW_DEFINE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="VIEW_ID" maxlength="12" datatype="Long" type="PK" remark="视图编号">
+        <mapingcol datatype="NUMBER">VIEW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_VIEW_ID" maxlength="12" datatype="Long" type="COL" remark="父级视图编号">
+        <mapingcol datatype="NUMBER">PARENT_VIEW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_CODE" maxlength="50" datatype="String" type="COL" remark="视图编码
+对应于通过tab页打开页面的id属性值">
+        <mapingcol datatype="VARCHAR2">VIEW_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TITLE" maxlength="50" datatype="String" type="COL" remark="tab页的title属性值">
+        <mapingcol datatype="VARCHAR2">VIEW_TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="视图的层级级别">
+        <mapingcol datatype="NUMBER">VIEW_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_URL" maxlength="255" datatype="String" type="COL" remark="访问视图的地址">
+        <mapingcol datatype="VARCHAR2">VIEW_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_TYPE" maxlength="255" datatype="String" type="COL" remark="对应bce中自定义参数Type的值">
+        <mapingcol datatype="VARCHAR2">VIEW_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_SORT_ID" maxlength="2" datatype="Integer" type="COL" remark="视图排序序号">
+        <mapingcol datatype="NUMBER">VIEW_SORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="2" datatype="Integer" type="COL" remark="客户类型
+1  个人客户
+2  家庭客户
+3  集团客户
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_TYPE" maxlength="2" datatype="Integer" type="COL" remark="渠道类型
+
+增加对不同渠道访问时提供的视图差异化配置。
+定义使用统一权限定义。
+
+如果未告诉具体渠道，则展示默认的视图（最低权限视图）。">
+        <mapingcol datatype="NUMBER">CHANNEL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_ID" maxlength="12" datatype="Long" type="COL" remark="业务编码
+
+来自BASE.BS_OPERATION.BUSINESS_ID">
+        <mapingcol datatype="NUMBER">BUSINESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_ICON_URL" maxlength="255" datatype="String" type="COL" remark="视图图标
+
+用于在构造客户层次树等树状结构显示视图时使用。">
+        <mapingcol datatype="VARCHAR2">VIEW_ICON_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_LEAF" maxlength="2" datatype="Integer" type="COL" remark="是否叶子节点">
+        <mapingcol datatype="NUMBER">IS_LEAF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_CUSTOM_IMPL" maxlength="2" datatype="Integer" type="COL" remark="是否动态获取子节点
+
+1：是；
+0/null：否；">
+        <mapingcol datatype="NUMBER">IS_CUSTOM_IMPL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUSTOM_IMPL_CLASS" maxlength="255" datatype="String" type="COL" remark="子节点获取实现类">
+        <mapingcol datatype="VARCHAR2">CUSTOM_IMPL_CLASS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

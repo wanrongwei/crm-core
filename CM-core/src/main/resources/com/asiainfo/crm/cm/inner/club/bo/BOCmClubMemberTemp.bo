@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmClubMemberTemp" mainattr="USER_ID">
+    <mapingenty type="table">CM_CLUB_MEMBER_TEMP</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="USER_ID" maxlength="14" datatype="Long" type="PK" remark="用户编号
+
+">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL" remark="手机号码">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态（处理成功的直接删除）
+
+1：未处理
+2：处理失败">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAIL_REMARKS" maxlength="1024" datatype="String" type="COL" remark="失败原因">
+        <mapingcol datatype="VARCHAR2">FAIL_REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

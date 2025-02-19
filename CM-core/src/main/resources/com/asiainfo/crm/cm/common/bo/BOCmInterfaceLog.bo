@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmInterfaceLog" mainattr="LOG_ID">
+    <mapingenty type="table">{CM_INTERFACE_LOG}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="LOG_ID" maxlength="16" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">LOG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_ID" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BUSI_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METHOD_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">METHOD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="START_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">START_TIME</mapingcol>
+      </attr>
+      <attr floatlength="3" name="EXE_TIME" maxlength="20" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">EXE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXE_PARAM" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXE_PARAM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXE_RESULT" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXE_RESULT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXE_CNT" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXE_CNT</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

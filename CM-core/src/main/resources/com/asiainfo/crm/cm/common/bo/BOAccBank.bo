@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOAccBank" mainattr="PHONE_ID">
+    <mapingenty type="table">ACC_BANK_ACCT_MAIN_PHONE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PHONE_ID" maxlength="50" datatype="String" type="PK" remark="工单号">
+        <mapingcol datatype="VARCHAR2">PHONE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANK_ACCT" maxlength="36" datatype="String" type="COL" remark="银行帐号">
+        <mapingcol datatype="VARCHAR2">BANK_ACCT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SO_NBR" maxlength="15" datatype="Long" type="COL" remark="手机号码">
+        <mapingcol datatype="NUMBER">SO_NBR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="12" datatype="Long" type="COL" remark="帐户编号">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANK_ID" maxlength="8" datatype="Long" type="COL" remark="所属银行">
+        <mapingcol datatype="NUMBER">BANK_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建时间">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="4" datatype="Integer" type="COL" remark="银行所属地市">
+        <mapingcol datatype="NUMBER">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="4" datatype="Integer" type="COL" remark="银行所属县区">
+        <mapingcol datatype="NUMBER">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STS" maxlength="2" datatype="Integer" type="COL" remark="状态">
+        <mapingcol datatype="NUMBER">STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STS_DATE" maxlength="20" datatype="DateTime" type="COL" remark="更新时间">
+        <mapingcol datatype="DATE">STS_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

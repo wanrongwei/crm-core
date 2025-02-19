@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmClubServiceRec" mainattr="RECORD_ID">
+    <mapingenty type="table">{CM_CLUB_SERVICE_REC}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RECORD_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">RECORD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SERVICE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_CONTENT" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SERVICE_CONTENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_SOURCE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SERVICE_SOURCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_PLACE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SERVICE_PLACE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ROAM_FLAG" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ROAM_FLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVINCE_CODE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROVINCE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">SERVICE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">VALUE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE_AMOUNT" maxlength="9" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VALUE_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUITE_AMOUNT" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SUITE_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPT_SEQ" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OPT_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAYMENT_ID" maxlength="25" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PAYMENT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

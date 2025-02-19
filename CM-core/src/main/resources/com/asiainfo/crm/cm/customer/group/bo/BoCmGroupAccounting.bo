@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BoCmGroupAccounting" mainattr="cust_id">
+    <mapingenty type="table">{CM_GROUP_ACCOUNTING}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_ID" maxlength="21" datatype="Long" type="PK" remark="客户编号
+
+所有类型客户的客户编号是唯一的。">
+        <mapingcol datatype="bigint">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LISTED_ON_STOCK_EXCHANGE" maxlength="3" datatype="String" type="COL" remark="’JA’, if yes, otherwise ’nej’">
+        <mapingcol datatype="varchar">LISTED_ON_STOCK_EXCHANGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RATING_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="varchar">RATING_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FISCAL_YEAR" maxlength="5" datatype="String" type="COL" remark="YYYY or YY/YY—财政年份">
+        <mapingcol datatype="varchar">FISCAL_YEAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REVENUE" maxlength="15" datatype="String" type="COL" remark="收入">
+        <mapingcol datatype="varchar">REVENUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_YEAR_EMPLOYEES" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">LAST_YEAR_EMPLOYEES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCOUNT_REMARK" maxlength="1000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="varchar">ACCOUNT_REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROSS_PROFIT" maxlength="15" datatype="String" type="COL" remark="毛利">
+        <mapingcol datatype="varchar">GROSS_PROFIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EARNINGS" maxlength="15" datatype="String" type="COL" remark="收益">
+        <mapingcol datatype="varchar">EARNINGS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NET_PROFIT_YEARLY" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">NET_PROFIT_YEARLY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATUS_BALANCE" maxlength="15" datatype="String" type="COL" remark="平衡状况">
+        <mapingcol datatype="varchar">STATUS_BALANCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIXED_SSETS" maxlength="15" datatype="String" type="COL" remark="固定资产">
+        <mapingcol datatype="varchar">FIXED_SSETS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAND_AND_BUILDINGS" maxlength="15" datatype="String" type="COL" remark="土地及建筑物">
+        <mapingcol datatype="varchar">LAND_AND_BUILDINGS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CURRENT_ASSETS" maxlength="15" datatype="String" type="COL" remark="流动资产">
+        <mapingcol datatype="varchar">CURRENT_ASSETS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EQUITY" maxlength="15" datatype="String" type="COL" remark="股票">
+        <mapingcol datatype="varchar">EQUITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVISIONS" maxlength="15" datatype="String" type="COL" remark="规定">
+        <mapingcol datatype="varchar">PROVISIONS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBORDINARY_LOAN_CAPITAL" maxlength="15" datatype="String" type="COL" remark="关于从属贷款资金">
+        <mapingcol datatype="varchar">SUBORDINARY_LOAN_CAPITAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LONG_TERM_DEBT" maxlength="15" datatype="String" type="COL" remark="长期债务">
+        <mapingcol datatype="varchar">LONG_TERM_DEBT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MORTGAGES" maxlength="15" datatype="String" type="COL" remark="抵押贷款">
+        <mapingcol datatype="varchar">MORTGAGES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SHORT_TERM_DEBT" maxlength="15" datatype="String" type="COL" remark="短期债务">
+        <mapingcol datatype="varchar">SHORT_TERM_DEBT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COVERAGE" maxlength="15" datatype="String" type="COL" remark="覆盖">
+        <mapingcol datatype="varchar">COVERAGE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATING_MARGIN" maxlength="15" datatype="String" type="COL" remark="营业利润率">
+        <mapingcol datatype="varchar">OPERATING_MARGIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RETURN_ON_ASSETS" maxlength="15" datatype="String" type="COL" remark="资产报酬率">
+        <mapingcol datatype="varchar">RETURN_ON_ASSETS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEGREE_OF_LIQUIDITYI" maxlength="15" datatype="String" type="COL" remark="流动性程度1">
+        <mapingcol datatype="varchar">DEGREE_OF_LIQUIDITYI</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEGREE_OF_LIQUIDITY2" maxlength="15" datatype="String" type="COL" remark="流动性程度2">
+        <mapingcol datatype="varchar">DEGREE_OF_LIQUIDITY2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SOLVENCY_ATIO" maxlength="15" datatype="String" type="COL" remark="偿付能力充足率">
+        <mapingcol datatype="varchar">SOLVENCY_ATIO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPRECIATION" maxlength="15" datatype="String" type="COL" remark="折旧">
+        <mapingcol datatype="varchar">DEPRECIATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINANCE_ITEMS" maxlength="15" datatype="String" type="COL" remark="金融项目">
+        <mapingcol datatype="varchar">FINANCE_ITEMS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATING_PROFIT" maxlength="15" datatype="String" type="COL" remark="营业利润">
+        <mapingcol datatype="varchar">OPERATING_PROFIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXTRAORDINARY_ITEMS" maxlength="15" datatype="String" type="COL" remark="特别项目">
+        <mapingcol datatype="varchar">EXTRAORDINARY_ITEMS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROFIT_BEFORE_TAX" maxlength="15" datatype="String" type="COL" remark="税前利润">
+        <mapingcol datatype="varchar">PROFIT_BEFORE_TAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CASH" maxlength="15" datatype="String" type="COL" remark="现金">
+        <mapingcol datatype="varchar">CASH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRADE_CREDITORS" maxlength="15" datatype="String" type="COL" remark="应付账款">
+        <mapingcol datatype="varchar">TRADE_CREDITORS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMPLOYEES" maxlength="15" datatype="String" type="COL" remark="雇员">
+        <mapingcol datatype="varchar">EMPLOYEES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINANCIAL_REVENUE" maxlength="15" datatype="String" type="COL" remark="财政收入">
+        <mapingcol datatype="varchar">FINANCIAL_REVENUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FINANCIAL_EXPENDITURE" maxlength="15" datatype="String" type="COL" remark="财政支出">
+        <mapingcol datatype="varchar">FINANCIAL_EXPENDITURE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMMAT_CONSTRUCTION_ACTIVITIES" maxlength="15" datatype="String" type="COL" remark="精致建筑活动">
+        <mapingcol datatype="varchar">IMMAT_CONSTRUCTION_ACTIVITIES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAT_CONSTRUCTION_ACTIVITIES" maxlength="15" datatype="String" type="COL" remark="粗糙建筑活动">
+        <mapingcol datatype="varchar">MAT_CONSTRUCTION_ACTIVITIES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIM_RES_PER_EMPLOYEE" maxlength="15" datatype="String" type="COL" remark="每个员工的赠品资源">
+        <mapingcol datatype="varchar">PRIM_RES_PER_EMPLOYEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORD_RES_PER_EMPLOYEE" maxlength="15" datatype="String" type="COL" remark="每个员工的订单资源">
+        <mapingcol datatype="varchar">ORD_RES_PER_EMPLOYEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NET_GAINS_PER_EMPLOYEE" maxlength="15" datatype="String" type="COL" remark="每个员工的净利润">
+        <mapingcol datatype="varchar">NET_GAINS_PER_EMPLOYEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIXED_ASSETS_PER_EMPLOYEE" maxlength="15" datatype="String" type="COL" remark="每个员工的固定资产">
+        <mapingcol datatype="varchar">FIXED_ASSETS_PER_EMPLOYEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CAPACITY_GRADE" maxlength="15" datatype="String" type="COL" remark="能力级别">
+        <mapingcol datatype="varchar">CAPACITY_GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ZERO_TURNOVER" maxlength="15" datatype="String" type="COL" remark="零成交">
+        <mapingcol datatype="varchar">ZERO_TURNOVER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SAFETY_MARGIN" maxlength="15" datatype="String" type="COL" remark="安全边际">
+        <mapingcol datatype="varchar">SAFETY_MARGIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ASSETS_TURNOVER_RATE" maxlength="15" datatype="String" type="COL" remark="资产周转率">
+        <mapingcol datatype="varchar">ASSETS_TURNOVER_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_PERIOD_CREDIT" maxlength="15" datatype="String" type="COL" remark="信用期信贷">
+        <mapingcol datatype="varchar">CREDIT_PERIOD_CREDIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIXED_ASSETS_TURNOVER_RATE" maxlength="15" datatype="String" type="COL" remark="固定资产周转率">
+        <mapingcol datatype="varchar">FIXED_ASSETS_TURNOVER_RATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CAPITAL_GRADE" maxlength="15" datatype="String" type="COL" remark="资本等级">
+        <mapingcol datatype="varchar">CAPITAL_GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALERY_GRADE" maxlength="15" datatype="String" type="COL" remark="工资等级">
+        <mapingcol datatype="varchar">SALERY_GRADE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STAFF_COSTS" maxlength="15" datatype="String" type="COL" remark="员工成本">
+        <mapingcol datatype="varchar">STAFF_COSTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_MAX_CURRENCY" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CREDIT_MAX_CURRENCY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_MAX_AMOUNT" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CREDIT_MAX_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RISC_GROUP" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">RISC_GROUP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PUBLICATION_DATE" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">PUBLICATION_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT4" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT5" maxlength="15" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT5</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

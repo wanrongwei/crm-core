@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCmBillFormatDtl" mainattr="ACCT_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="DTL_NO" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_FORMAT_ID" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="MAIL_CODE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="MAIL_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_FORMAT_NAME" maxlength="255" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BILLING_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_CHARGE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_PRIMARY" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="VALID_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="OPER_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACTION" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CONTACT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="ADDRESS_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="EMAIL" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ADDRESS_DESC" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ATT_INVOICE" maxlength="255" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="SEND_PDF" maxlength="20" datatype="Integer" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

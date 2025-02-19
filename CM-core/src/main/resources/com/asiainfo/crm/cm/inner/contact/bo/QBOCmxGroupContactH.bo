@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmxGroupContactH" mainattr="CONT_CLASS">
+    <mapingenty type="query">SELECT A.H_ID,
+       A.CUST_CONT_ID,
+       A.CUST_ID,
+       B.PARTY_ID,
+       A.PRIORY_LEVEL,
+       A.REGION_ID,
+       A.EXPIRE_DATE,
+       A.EFFECTIVE_DATE,
+       A.DONE_DATE,
+       A.CONT_CLASS,
+       A.CONT_LEVEL,
+       A.STATE,
+       A.CONT_TYPE,
+       B.PARTY_NAME,
+       A.OP_ID,
+       B.FIRST_NAME,
+       B.MIDDLE_NAME,
+       B.LAST_NAME,
+       B.FIRST_NAME_QRY,
+       B.MIDDLE_NAME_QRY,
+       B.LAST_NAME_QRY,
+       B.PARTY_NAME_QRY
+  FROM {CM_GROUP_CONTACT_H} A, {CM_PARTY} B
+ WHERE A.PARTY_ID = B.PARTY_ID
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="H_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">H_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CONT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_CONT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIORY_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PRIORY_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_CLASS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_CLASS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARTY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PARTY_NAME_QRY</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

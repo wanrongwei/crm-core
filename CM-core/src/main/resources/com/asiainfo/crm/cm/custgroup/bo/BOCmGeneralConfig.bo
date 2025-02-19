@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGeneralConfig" mainattr="CONFIG_TYPE">
+    <mapingenty type="table">CM_GENERAL_CONFIG</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SRC_TYPE" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="varchar">SRC_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONFIG_TYPE" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="varchar">CONFIG_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONFIG_CODE" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="varchar">CONFIG_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE1" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="varchar">VALUE1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE2" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="varchar">VALUE2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE3" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="varchar">VALUE3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE4" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="varchar">VALUE4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALUE5" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="varchar">VALUE5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONFIG_DESC" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CONFIG_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="记录状态:U-生效,E-失效">
+        <mapingcol datatype="char">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="20" datatype="Long" type="COL">
+        <mapingcol datatype="decimal">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_UPDATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="最近一次修改时间">
+        <mapingcol datatype="datetime">LAST_UPDATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TENANT_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">TENANT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

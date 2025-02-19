@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCfgTabDefine" mainattr="TAB_ID">
+    <mapingenty type="table">CM_CFG_TAB_DEFINE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="TAB_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">TAB_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAB_CODE" maxlength="50" datatype="String" type="COL" remark="即tab页的id属性值">
+        <mapingcol datatype="VARCHAR2">TAB_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAB_TITLE" maxlength="50" datatype="String" type="COL" remark="tab页的title属性值">
+        <mapingcol datatype="VARCHAR2">TAB_TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAB_URL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TAB_URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAB_TYPE" maxlength="50" datatype="String" type="COL" remark="对应bce中自定义参数Type的值">
+        <mapingcol datatype="VARCHAR2">TAB_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="2" datatype="Integer" type="COL" remark="1.个人客户 2.家庭客户 3.集团客户">
+        <mapingcol datatype="NUMBER">CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BUSINESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="U:有效 E:无效">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

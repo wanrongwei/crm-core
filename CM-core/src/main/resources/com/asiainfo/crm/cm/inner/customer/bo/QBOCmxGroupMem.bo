@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmxGroupMem" mainattr="CUST_REL_ID">
+    <mapingenty type="query">select A.cust_rel_id,
+       A.cust_id,
+       A.member_cust_id,
+       A.dept_id,
+       A.member_name,
+       A.member_type,
+       A.member_position,
+       A.member_status,
+       A.member_role,
+       A.cust_region_id,
+       A.state,
+       A.create_op_id,
+       A.create_org_id,
+       A.op_id,
+       A.org_id,
+       A.done_code,
+       A.create_date,
+       A.done_date,
+       A.effective_date,
+       A.expire_date,
+       A.region_id,
+       A.remarks,
+       B.user_id,
+       B.member_level,
+       B.is_fromunion,
+       B.gender,
+       B.acct_id,
+       B.is_highvalue,
+       B.bill_id,
+       B.acct_name,
+       B.vip_level,
+       B.vip_card_no
+  from CM_GROUP_MEMBER A, CMX_GROUP_MEMBER B
+ where A.CUST_REL_ID = B.CUST_REL_ID
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_REL_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DEPT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_POSITION" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MEMBER_POSITION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_ROLE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_ROLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MEMBER_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_FROMUNION" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">IS_FROMUNION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GENDER" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GENDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_HIGHVALUE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">IS_HIGHVALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACCT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIP_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">VIP_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIP_CARD_NO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">VIP_CARD_NO</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

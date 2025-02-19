@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOGroupInfoAudit" mainattr="APPLY_ID">
+    <mapingenty type="table">CM_GROUP_INFO_AUDI</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="APPLY_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">APPLY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_TYPE" maxlength="1" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">APPLY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERA_TYPE" maxlength="1" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">OPERA_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_STATE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">APPLY_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">APPLY_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

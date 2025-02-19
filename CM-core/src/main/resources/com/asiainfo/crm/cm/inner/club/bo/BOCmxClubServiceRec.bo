@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxClubServiceRec" mainattr="RECORD_ID">
+    <mapingenty type="table">CMX_CLUB_SERVICE_REC</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RECORD_ID" maxlength="12" datatype="Long" type="PK" remark="记录会员服务记录标识。">
+        <mapingcol datatype="NUMBER">RECORD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_ID" maxlength="12" datatype="Long" type="COL" remark="记录会员ID。">
+        <mapingcol datatype="NUMBER">MEMBER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SERVICE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TRAIN_AIRPORT_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TRAIN_AIRPORT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BELONG_CITY" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BELONG_CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLASSES_NO" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CLASSES_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

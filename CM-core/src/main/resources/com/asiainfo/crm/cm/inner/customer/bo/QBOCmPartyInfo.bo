@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmContactContMediumInfo" mainattr="cont_rela_id">
+    <mapingenty type="query">SELECT 	t.cont_rela_id, 
+		t.cont_id, 
+		t.cont_med_type_id, 
+		t.postal_code, 
+		t.address_id, 
+		t.address_code, 
+		t.address_detail, 
+		t.email_address, 
+		t.fax_number, 
+		t.cont_number, 
+		t.is_no_disturbing, 
+		t.priority, 
+		t.protect_eff_date, 
+		t.protect_exp_date, 
+		t.state, 
+		t.create_op_id, 
+		t.create_org_id, 
+		t.op_id, t.org_id, 
+		t.done_code, 
+		t.create_date, 
+		t.done_date, 
+		t.effective_date, 
+		t.expire_date, 
+		t.region_id, 
+		t.remarks, 
+		t1.up_cont_med_type_id, 
+		t1.cont_med_type_name,
+		t1.use_type 
+FROM {CM_CONTACT_CONT_MEDIUM} t LEFT JOIN {CM_CUST_CONT_MED_TYPE} t1 ON t.cont_med_type_id = t1.cont_med_type_id</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="cont_rela_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">cont_rela_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">cont_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_med_type_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">cont_med_type_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="postal_code" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">postal_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="address_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">address_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="address_code" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">address_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="address_detail" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">address_detail</mapingcol>
+      </attr>
+      <attr floatlength="0" name="email_address" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">email_address</mapingcol>
+      </attr>
+      <attr floatlength="0" name="fax_number" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">fax_number</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_number" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">cont_number</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_no_disturbing" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">is_no_disturbing</mapingcol>
+      </attr>
+      <attr floatlength="0" name="priority" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">priority</mapingcol>
+      </attr>
+      <attr floatlength="0" name="protect_eff_date" maxlength="10" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">protect_eff_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="protect_exp_date" maxlength="10" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">protect_exp_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">remarks</mapingcol>
+      </attr>
+      <attr floatlength="0" name="up_cont_med_type_id" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">up_cont_med_type_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_med_type_name" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">cont_med_type_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="use_type" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">use_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="UnreleaseProfileSubscriberInformationSYNCService" targetNamespace="http://soa.ailk.telenor.com/wsdl/soa" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://soa.ailk.telenor.com/wsdl/soa" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema targetNamespace="http://soa.ailk.telenor.com/wsdl/soa" xmlns:soa_common_type="http://soa.ailk.telenor.com/schema/soa/common" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://soa.ailk.telenor.com/wsdl/soa" xmlns:tns_busi="http://soa.ailk.telenor.com/wsdl/busi" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://soa.ailk.telenor.com/wsdl/busi" schemaLocation="http://10.1.248.207:8381/TelenorDK/ConsumerAccessServices/3rdParty/ProxyServices/UnreleaseProfile?SCHEMA%2FTelenorDK%2FConsumerAccessServices%2F3rdParty%2FSchemas%2FGetEsimQRbyIccID"/>
+      <xsd:import namespace="http://soa.ailk.telenor.com/schema/soa/common" schemaLocation="http://10.1.248.207:8381/TelenorDK/ConsumerAccessServices/3rdParty/ProxyServices/UnreleaseProfile?SCHEMA%2FTelenorEsb%2FShareResources%2FSchemas%2Fsoa_common_types"/>
+      <xsd:element name="RequestHeader" type="soa_common_type:RequestHeader"/>
+      <xsd:element name="ResponseHeader" type="soa_common_type:ResponseHeader"/>
+      <xsd:element name="UnreleaseProfileRequest" type="tns_busi:UnreleaseProfileRequest"/>
+      <xsd:element name="UnreleaseProfileResponse" type="tns_busi:UnreleaseProfileResponse"/>
+      <xsd:element name="CancelOrderRequest" type="tns_busi:CancelOrderRequest"/>
+      <xsd:element name="CancelOrderResponse" type="tns_busi:CancelOrderResponse"/>
+      <xsd:element name="DownloadOrderRequest" type="tns_busi:DownloadOrderRequest"/>
+      <xsd:element name="DownloadOrderResponse" type="tns_busi:DownloadOrderResponse"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="RequestHeader">
+    <WL5G3N0:part element="WL5G3N1:RequestHeader" name="RequestHeader"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="ResponseHeader">
+    <WL5G3N0:part element="WL5G3N1:ResponseHeader" name="ResponseHeader"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="UnreleaseProfileRequest">
+    <WL5G3N0:part element="WL5G3N1:UnreleaseProfileRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="UnreleaseProfileResponse">
+    <WL5G3N0:part element="WL5G3N1:UnreleaseProfileResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="CancelOrderRequest">
+    <WL5G3N0:part element="WL5G3N1:CancelOrderRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="CancelOrderResponse">
+    <WL5G3N0:part element="WL5G3N1:CancelOrderResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="DownloadOrderRequest">
+    <WL5G3N0:part element="WL5G3N1:DownloadOrderRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="DownloadOrderResponse">
+    <WL5G3N0:part element="WL5G3N1:DownloadOrderResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="UnreleaseProfilePort">
+    <WL5G3N0:operation name="UnreleaseProfile">
+      <WL5G3N0:input message="WL5G3N1:UnreleaseProfileRequest"/>
+      <WL5G3N0:output message="WL5G3N1:UnreleaseProfileResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="CancelOrder">
+      <WL5G3N0:input message="WL5G3N1:CancelOrderRequest"/>
+      <WL5G3N0:output message="WL5G3N1:CancelOrderResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="DownloadOrder">
+      <WL5G3N0:input message="WL5G3N1:DownloadOrderRequest"/>
+      <WL5G3N0:output message="WL5G3N1:DownloadOrderResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="UnreleaseProfilePortBinding" type="WL5G3N1:UnreleaseProfilePort">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="UnreleaseProfile">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+        <WL5G3N2:header message="WL5G3N1:RequestHeader" part="RequestHeader" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+        <WL5G3N2:header message="WL5G3N1:ResponseHeader" part="ResponseHeader" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="CancelOrder">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+        <WL5G3N2:header message="WL5G3N1:RequestHeader" part="RequestHeader" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+        <WL5G3N2:header message="WL5G3N1:ResponseHeader" part="ResponseHeader" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="DownloadOrder">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+        <WL5G3N2:header message="WL5G3N1:RequestHeader" part="RequestHeader" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+        <WL5G3N2:header message="WL5G3N1:ResponseHeader" part="ResponseHeader" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="UnreleaseProfileService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:UnreleaseProfilePortBinding" name="UnreleaseProfilePort">
+      <WL5G3N2:address location="http://10.1.248.207:8381/TelenorDK/ConsumerAccessServices/3rdParty/ProxyServices/UnreleaseProfile"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmBillCustomize" mainattr="CUSTOMIZE_ID">
+    <mapingenty type="table">{CM_BILL_CUSTOMIZE}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUSTOMIZE_ID" maxlength="12" datatype="Long" type="PK" remark="定制标识">
+        <mapingcol datatype="NUMBER">CUSTOMIZE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="COL" remark="账户编号
+
+新账户编号生成规则：2位地市编码+10位序列号。">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL" remark="关联客户编号">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="14" datatype="Long" type="COL" remark="用户标识">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_PATTERN" maxlength="2" datatype="Integer" type="COL" remark="帐单格式
+
+SELECT * FROM base.bs_static_data t WHERE t.code_type like &apos;%BILL_PATTERN%&apos;
+
+
+CM_CUSTOMIZE_BILL_PATTERN	2	标准帐单打印模板
+CM_CUSTOMIZE_BILL_PATTERN	1	无
+
+CM_GROUPACCT_BILL_PATTERN	4	汇总帐单
+CM_GROUPACCT_BILL_PATTERN	5	电子帐单
+CM_GROUPACCT_BILL_PATTERN	3	发票加明细
+CM_GROUPACCT_BILL_PATTERN	1	普通帐单
+CM_GROUPACCT_BILL_PATTERN	2	发票
+">
+        <mapingcol datatype="NUMBER">BILL_PATTERN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_TYPE" maxlength="2" datatype="Integer" type="COL" remark="帐单类型
+
+1	汇总帐单
+2	明细帐单
+
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUSTOMIZE_BILL_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">BILL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAIL_TYPE" maxlength="10" datatype="String" type="COL" remark="帐单投递方式
+1：短信帐单
+2：彩信帐单
+3：Email帐单
+4：邮寄纸质帐单
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUSTOMIZE_MAIL_TYPE&apos;;">
+        <mapingcol datatype="VARCHAR2">MAIL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RECIPIENTS" maxlength="60" datatype="String" type="COL" remark="收件人">
+        <mapingcol datatype="VARCHAR2">RECIPIENTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAIL_DATE" maxlength="2" datatype="Integer" type="COL" remark="寄送日期为 1—31，表示当月的几号寄送">
+        <mapingcol datatype="NUMBER">MAIL_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_FAX" maxlength="20" datatype="String" type="COL" remark="传真">
+        <mapingcol datatype="VARCHAR2">CONT_FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_MOBILE" maxlength="20" datatype="String" type="COL" remark="联系人移动电话">
+        <mapingcol datatype="VARCHAR2">CONT_MOBILE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_EMAIL" maxlength="100" datatype="String" type="COL" remark="Email">
+        <mapingcol datatype="VARCHAR2">CONT_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ADDRESS" maxlength="256" datatype="String" type="COL" remark="联系人地址">
+        <mapingcol datatype="VARCHAR2">CONT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ZIPCODE" maxlength="6" datatype="String" type="COL" remark="邮政编码">
+        <mapingcol datatype="VARCHAR2">CONT_ZIPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAIL_PROJECTS" maxlength="20" datatype="String" type="COL" remark="发送项目
+
+如：账单、语音清单、GPS清单、短信清单。
+使用类似于开通指令的模式，暂定为4为：0000、1000、1111等。">
+        <mapingcol datatype="VARCHAR2">MAIL_PROJECTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

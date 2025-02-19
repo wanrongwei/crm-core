@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="CustOrganize" mainattr="DEPT_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DEPT_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="集团组织机构唯一标识" />
+      <attr floatlength="0" name="PARENT_DEPT_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="上级组织机构标识" />
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="VIRTUAL" remark="集团客户编号" />
+      <attr floatlength="0" name="DEPT_NAME" maxlength="128" datatype="String" type="VIRTUAL" remark="组织机构名称" />
+      <attr floatlength="0" name="DEPT_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="组织机构类型" />
+      <attr floatlength="0" name="DEPT_FUNC" maxlength="50" datatype="String" type="VIRTUAL" remark="组织机构职能" />
+      <attr floatlength="0" name="DEPT_LEVEL" maxlength="2" datatype="Integer" type="VIRTUAL" remark="组织机构级别" />
+      <attr floatlength="0" name="PRINCIPAL" maxlength="60" datatype="String" type="VIRTUAL" remark="组织机构负责人" />
+      <attr floatlength="0" name="PRINCIPAL_TEL" maxlength="20" datatype="String" type="VIRTUAL" remark="负责人联系电话" />
+      <attr floatlength="0" name="HAS_LEAF" maxlength="2" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态" />
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="操作员" />
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="组织单元" />
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+      <attr floatlength="0" name="REL_CUST_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_CONTACT_POINT" maxlength="21" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_HAVE_CONTACT_POINT" maxlength="21" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_REVISABLE" maxlength="21" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_CPE_PROVISIONING_NEEDED" maxlength="2" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="WIFI_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="WIFI_PASSWORD" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

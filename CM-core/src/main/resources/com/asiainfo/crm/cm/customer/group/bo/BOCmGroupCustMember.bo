@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupCustMember" mainattr="CUST_REL_ID">
+    <mapingenty type="table">CM_GROUP_CUST_MEMBER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_REL_ID" maxlength="12" datatype="Long" type="PK" remark="集团客户成员编号">
+        <mapingcol datatype="NUMBER">CUST_REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="12" datatype="Long" type="COL" remark="集团客户编号">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INDIV_CUST_ID" maxlength="12" datatype="Long" type="COL" remark="（成员）个人客户编号">
+        <mapingcol datatype="NUMBER">INDIV_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEPT_ID" maxlength="12" datatype="Long" type="COL" remark="所属组织结构">
+        <mapingcol datatype="NUMBER">DEPT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="20" datatype="String" type="COL" remark="成员名称">
+        <mapingcol datatype="VARCHAR2">MEMBER_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="成员级别  保留">
+        <mapingcol datatype="NUMBER">MEMBER_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_DESC" maxlength="255" datatype="String" type="COL" remark="简单说明成员的特征 部门、婚姻、 教育、收入等">
+        <mapingcol datatype="VARCHAR2">MEMBER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_POSITION" maxlength="255" datatype="String" type="COL" remark="成员职位">
+        <mapingcol datatype="VARCHAR2">MEMBER_POSITION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_TYPE" maxlength="2" datatype="Integer" type="COL" remark="证件类型 1  身份证 2  护照 3  军人证 4  社保卡 5  图书证 6  驾驶证 7  工作证 8  营业执照 9  企业代码证 10  工商登记证 11  学生证 12  回乡证 13  军官证 14  户口本 15  武警警官证 16  士兵证 17  军校学生证 18  残疾证 19  政府执照 20  无证件类型 21  非签约虚拟证件 99  其它证件  SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_CERT_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">CUST_CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_CODE" maxlength="50" datatype="String" type="COL" remark="证件号码">
+        <mapingcol datatype="VARCHAR2">CUST_CERT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_ADDRESS" maxlength="255" datatype="String" type="COL" remark="证件地址">
+        <mapingcol datatype="VARCHAR2">CUST_CERT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CERT_EXPIRE" maxlength="20" datatype="DateTime" type="COL" remark="证件有效期">
+        <mapingcol datatype="DATE">CUST_CERT_EXPIRE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GENDER" maxlength="2" datatype="Integer" type="COL" remark="客户性别 1  男 2  女 3  未知  SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GENDER&apos;;">
+        <mapingcol datatype="NUMBER">GENDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BIRTHDAY" maxlength="20" datatype="DateTime" type="COL" remark="生日  1  男 2  女 3  未知 31008  性别">
+        <mapingcol datatype="DATE">BIRTHDAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LUNAR" maxlength="2" datatype="Integer" type="COL" remark="生日类别 0：阳历（缺省） 1：阴历">
+        <mapingcol datatype="NUMBER">LUNAR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOME_PHONE" maxlength="30" datatype="String" type="COL" remark="家庭电话号码">
+        <mapingcol datatype="VARCHAR2">HOME_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFICE_PHONE" maxlength="30" datatype="String" type="COL" remark="办公电话号码">
+        <mapingcol datatype="VARCHAR2">OFFICE_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_EMAIL" maxlength="100" datatype="String" type="COL" remark="Email">
+        <mapingcol datatype="VARCHAR2">CONT_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_FAX" maxlength="20" datatype="String" type="COL" remark="传真">
+        <mapingcol datatype="VARCHAR2">CONT_FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ADDRESS" maxlength="100" datatype="String" type="COL" remark="联系人地址">
+        <mapingcol datatype="VARCHAR2">CONT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ZIPCODE" maxlength="6" datatype="String" type="COL" remark="邮政编码">
+        <mapingcol datatype="VARCHAR2">CONT_ZIPCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_DEPT" maxlength="255" datatype="String" type="COL" remark="工作部门">
+        <mapingcol datatype="VARCHAR2">WORK_DEPT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAMILY_INFO" maxlength="255" datatype="String" type="COL" remark="亲属信息">
+        <mapingcol datatype="VARCHAR2">FAMILY_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ALARM_BILL_ID" maxlength="30" datatype="String" type="COL" remark="告警转移号码">
+        <mapingcol datatype="VARCHAR2">ALARM_BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_HOBBY" maxlength="255" datatype="String" type="COL" remark="其它爱好">
+        <mapingcol datatype="VARCHAR2">OTHER_HOBBY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_REGION_ID" maxlength="6" datatype="String" type="COL" remark="客户归属地">
+        <mapingcol datatype="VARCHAR2">CUST_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态  U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL" />
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

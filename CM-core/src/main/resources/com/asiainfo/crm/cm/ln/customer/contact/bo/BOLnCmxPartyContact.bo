@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOLnCmxPartyContact" mainattr="CONT_ID">
+    <mapingenty type="table">CMX_PARTY_CONTACT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CONT_ID" maxlength="12" datatype="Long" type="PK" remark="记录参与人联系信息的唯一标识，作为主键。">
+        <mapingcol datatype="NUMBER">CONT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTY_ID" maxlength="12" datatype="Long" type="COL" remark="参与人编号
+
+">
+        <mapingcol datatype="NUMBER">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHARACTER_DESC" maxlength="100" datatype="String" type="COL" remark="性格特点">
+        <mapingcol datatype="VARCHAR2">CHARACTER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_TYPE" maxlength="2" datatype="Integer" type="COL" remark="企业类型
+code_type=10008
+国企 集体企业 私企 合资企业 外商独资 港澳台投资 其它">
+        <mapingcol datatype="NUMBER">GROUP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INCOME_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="收入级别">
+        <mapingcol datatype="NUMBER">INCOME_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_SEND_SMS" maxlength="2" datatype="Integer" type="COL" remark="是否容许发送短信
+0 不允许
+1 允许">
+        <mapingcol datatype="NUMBER">IS_SEND_SMS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_BILL_ID" maxlength="50" datatype="String" type="COL" remark="其他手机号码">
+        <mapingcol datatype="VARCHAR2">OTHER_BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINK_PHONE" maxlength="32" datatype="String" type="COL" remark="相关联系电话">
+        <mapingcol datatype="VARCHAR2">LINK_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CAR_NO" maxlength="30" datatype="String" type="COL" remark="车牌号码">
+        <mapingcol datatype="VARCHAR2">CAR_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONE_TYPE" maxlength="20" datatype="String" type="COL" remark="手机机型">
+        <mapingcol datatype="VARCHAR2">PHONE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECURITY_ID" maxlength="30" datatype="String" type="COL" remark="社保卡号">
+        <mapingcol datatype="VARCHAR2">SECURITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOBBY_ID" maxlength="30" datatype="String" type="COL" remark="兴趣爱好">
+        <mapingcol datatype="VARCHAR2">HOBBY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BIRTHDAY" maxlength="20" datatype="DateTime" type="COL" remark="出生生日">
+        <mapingcol datatype="DATE">BIRTHDAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_CUST_NAME" maxlength="30" datatype="String" type="COL" remark="真实客户姓名">
+        <mapingcol datatype="VARCHAR2">REAL_CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTO_EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="授权协议书失效日期">
+        <mapingcol datatype="DATE">PROTO_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTO_VALID_DATE" maxlength="20" datatype="DateTime" type="COL" remark="授权协议书生效日期">
+        <mapingcol datatype="DATE">PROTO_VALID_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTO_FILE_NAME" maxlength="200" datatype="String" type="COL" remark="授权协议书文件名">
+        <mapingcol datatype="VARCHAR2">PROTO_FILE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID_EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="证件失效日期">
+        <mapingcol datatype="DATE">ID_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID_VALID_DATE" maxlength="20" datatype="DateTime" type="COL" remark="证件生效日期">
+        <mapingcol datatype="DATE">ID_VALID_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID_FILE_NAME" maxlength="200" datatype="String" type="COL" remark="证件文件名">
+        <mapingcol datatype="VARCHAR2">ID_FILE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HAS_PHOTO" maxlength="2" datatype="Integer" type="COL" remark="是否为拍照集团成员">
+        <mapingcol datatype="NUMBER">HAS_PHOTO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POLITI_FEATURE" maxlength="4" datatype="Integer" type="COL" remark="学历">
+        <mapingcol datatype="NUMBER">POLITI_FEATURE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHILD_STS" maxlength="2" datatype="Integer" type="COL" remark="婚姻状况">
+        <mapingcol datatype="NUMBER">CHILD_STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_HOBBY" maxlength="200" datatype="String" type="COL" remark="其它爱好  ">
+        <mapingcol datatype="VARCHAR2">OTHER_HOBBY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LUNAR_BIRTHDAY" maxlength="20" datatype="DateTime" type="COL" remark="农历生日">
+        <mapingcol datatype="DATE">LUNAR_BIRTHDAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAIN_BIRTH_TYPE" maxlength="2" datatype="Integer" type="COL" remark="主要生日的类型  0-公历 1-农历">
+        <mapingcol datatype="NUMBER">MAIN_BIRTH_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_FULL_DATA" maxlength="2" datatype="Integer" type="COL" remark="资料是否完整">
+        <mapingcol datatype="NUMBER">IS_FULL_DATA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_WHITE_NAME" maxlength="2" datatype="Integer" type="COL" remark="是否加入白名单">
+        <mapingcol datatype="NUMBER">IS_WHITE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FETION_NO" maxlength="20" datatype="String" type="COL" remark="飞信号码">
+        <mapingcol datatype="VARCHAR2">FETION_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="QQ_NO" maxlength="20" datatype="String" type="COL" remark="QQ号码">
+        <mapingcol datatype="VARCHAR2">QQ_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOME_TEL" maxlength="20" datatype="String" type="COL" remark="住宅电话">
+        <mapingcol datatype="VARCHAR2">HOME_TEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID_CARD_NO" maxlength="32" datatype="String" type="COL" remark="身份证号码">
+        <mapingcol datatype="VARCHAR2">ID_CARD_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_GROUP_USER" maxlength="8" datatype="Long" type="COL" remark="集团保有用户">
+        <mapingcol datatype="NUMBER">IS_GROUP_USER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMPORT_FAMILY" maxlength="255" datatype="String" type="COL" remark="重要家庭信息">
+        <mapingcol datatype="VARCHAR2">IMPORT_FAMILY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BELIEF" maxlength="2" datatype="Integer" type="COL" remark="信仰">
+        <mapingcol datatype="NUMBER">BELIEF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUTH_CODE" maxlength="32" datatype="String" type="COL" remark="认证密码">
+        <mapingcol datatype="VARCHAR2">AUTH_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DOMAIN_NAME" maxlength="64" datatype="String" type="COL" remark="网站注册名">
+        <mapingcol datatype="VARCHAR2">DOMAIN_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRI_RELATE" maxlength="32" datatype="String" type="COL" remark="优先联系方式">
+        <mapingcol datatype="VARCHAR2">PRI_RELATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUTFLAG" maxlength="2" datatype="Integer" type="COL" remark="异地客户标志">
+        <mapingcol datatype="NUMBER">OUTFLAG</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORKDEPT" maxlength="100" datatype="String" type="COL" remark="工作部门">
+        <mapingcol datatype="VARCHAR2">WORKDEPT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_GENDER" maxlength="2" datatype="Integer" type="COL" remark="真实性别">
+        <mapingcol datatype="NUMBER">REAL_GENDER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_CONTACT_PHONE" maxlength="30" datatype="String" type="COL" remark="真实联系电话">
+        <mapingcol datatype="VARCHAR2">REAL_CONTACT_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_CONTACT_ADD" maxlength="100" datatype="String" type="COL" remark="真实联系地址">
+        <mapingcol datatype="VARCHAR2">REAL_CONTACT_ADD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_ZIPCODE_ADD" maxlength="100" datatype="String" type="COL" remark="真实邮编地址">
+        <mapingcol datatype="VARCHAR2">REAL_ZIPCODE_ADD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_EMAIL" maxlength="50" datatype="String" type="COL" remark="电子邮件">
+        <mapingcol datatype="VARCHAR2">REAL_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_JOB_COMPANY" maxlength="100" datatype="String" type="COL" remark="工作单位名称">
+        <mapingcol datatype="VARCHAR2">REAL_JOB_COMPANY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_OFFICE_PHONE" maxlength="30" datatype="String" type="COL" remark="办公电话">
+        <mapingcol datatype="VARCHAR2">REAL_OFFICE_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENTERPRISE_NATURE" maxlength="50" datatype="String" type="COL" remark="企业性质">
+        <mapingcol datatype="VARCHAR2">ENTERPRISE_NATURE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_THE_OFFICE" maxlength="50" datatype="String" type="COL" remark="任职部门">
+        <mapingcol datatype="VARCHAR2">REAL_THE_OFFICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REAL_POST" maxlength="2" datatype="Integer" type="COL" remark="职务">
+        <mapingcol datatype="NUMBER">REAL_POST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ANNUAL_INCOME" maxlength="50" datatype="String" type="COL" remark="年收入">
+        <mapingcol datatype="VARCHAR2">ANNUAL_INCOME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KEY_PERSON_TYPE" maxlength="2" datatype="Integer" type="COL" remark="关键人物类型">
+        <mapingcol datatype="NUMBER">KEY_PERSON_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_JOB" maxlength="100" datatype="String" type="COL" remark="成员职位">
+        <mapingcol datatype="VARCHAR2">MEMBER_JOB</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="2" datatype="Integer" type="COL" remark="成员类型">
+        <mapingcol datatype="NUMBER">MEMBER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEMBER_DESC" maxlength="200" datatype="String" type="COL" remark="成员说明">
+        <mapingcol datatype="VARCHAR2">MEMBER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WORK_ADDRESS" maxlength="100" datatype="String" type="COL" remark="单位地址">
+        <mapingcol datatype="VARCHAR2">WORK_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OCCUPATION" maxlength="2" datatype="Integer" type="COL" remark="职业">
+        <mapingcol datatype="NUMBER">OCCUPATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POSITION" maxlength="2" datatype="Integer" type="COL" remark="现任职位">
+        <mapingcol datatype="NUMBER">POSITION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VOCATION" maxlength="6" datatype="Integer" type="COL" remark="区分集团所属的行业大类
+11000	A、农、林、牧、渔业
+11100	B、采矿业
+11200	C、制造业
+11300	D、电力、燃气及水的生产和供应业
+11400	E、建筑业
+11500	F、交通运输、仓储和邮政业
+11600	G、信息传输、计算机服务和软件业
+11700	H、批发和零售业
+11800	I、住宿和餐饮业
+11900	J、金融业
+12000	K、房地产业
+12100	L、租赁和商务服务业
+12200	M、科学研究、技术服务和地质勘查业
+12300	N、水利、环境和公共设施管理业
+12400	O、居民服务和其他服务业
+12500	P、教育
+12600	Q、卫生、社会保障和社会福利业
+12700	R、文化、体育和娱乐业
+12800	S、公共管理和社会组织
+12900	T、国际组织
+13000	其它
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_VOCATION1&apos;;
+">
+        <mapingcol datatype="NUMBER">VOCATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUB_VOCATION" maxlength="6" datatype="Integer" type="COL" remark="行业子类型">
+        <mapingcol datatype="NUMBER">SUB_VOCATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROVIDE_ID" maxlength="2" datatype="Integer" type="COL" remark="运营商">
+        <mapingcol datatype="NUMBER">PROVIDE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BRAND" maxlength="50" datatype="String" type="COL" remark="品牌">
+        <mapingcol datatype="VARCHAR2">BRAND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PHONELD" maxlength="50" datatype="String" type="COL" remark="外网手机号码">
+        <mapingcol datatype="VARCHAR2">PHONELD</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

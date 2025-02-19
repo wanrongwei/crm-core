@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxGroupInformInfo" mainattr="CUST_ID">
+    <mapingenty type="table">CMX_GROUP_INFORM_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="PK" remark="闆嗗洟瀹㈡埛缂栧彿">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+        <displaycol cond="CM_GROUP_CUSTOMER.CUST_ID=CMX_GROUP_INFORM_INFO.CUST_ID" fkbo="com.asiainfo.crm.cm.inner.customer.bo.BOCmGroupCustomer">
+          <fkattr name="FK_BOCmxGroupInformInfo_CUST_ID">CUST_ID</fkattr>
+        </displaycol>
+      </attr>
+      <attr floatlength="0" name="INFORM_TYPE_ID" maxlength="6" datatype="Integer" type="PK" remark="淇℃伅鍖栫被鍨嬫爣璇� 鐩墠鏈夛細 PBX锛� Centrex锛� 鐩寸嚎鐢佃瘽锛� 涓撶綉/鍒嗘敮鏈烘瀯浜掕仈锛� 缃戠珯锛� 浼佷笟灞�鍩熺綉鎯呭喌锛� 閭欢绯荤粺锛� 浜掕仈缃戞帴鍏ワ紱 OA绯荤粺锛� ERM锛圗RP涔嬩竴锛夛紱 CRM锛圗RP涔嬩竴锛夛紱 SCM锛圗RP涔嬩竴锛夛紱">
+        <mapingcol datatype="NUMBER">INFORM_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_USERED" maxlength="2" datatype="Integer" type="COL" remark="鏄惁浣跨敤: 鏄紱 鍚︺��">
+        <mapingcol datatype="NUMBER">IS_USERED</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUPPLIER" maxlength="255" datatype="String" type="COL" remark="璁惧鍘傚晢">
+        <mapingcol datatype="VARCHAR2">SUPPLIER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROPERTY_TYPE" maxlength="2" datatype="Integer" type="COL" remark="浜ф潈绫诲瀷">
+        <mapingcol datatype="NUMBER">PROPERTY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEVICE_NUM" maxlength="6" datatype="Integer" type="COL" remark="璁惧鏁伴噺">
+        <mapingcol datatype="NUMBER">DEVICE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MAINTAINER_NUM" maxlength="6" datatype="Integer" type="COL" remark="缁存姢浜哄憳鏁伴噺">
+        <mapingcol datatype="NUMBER">MAINTAINER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR" maxlength="100" datatype="String" type="COL" remark="鎺ュ叆杩愯惀鍟�">
+        <mapingcol datatype="VARCHAR2">OPERATOR</mapingcol>
+      </attr>
+      <attr floatlength="2" name="COSTS" maxlength="14" datatype="Double" type="COL" remark="璐圭敤鏀嚭">
+        <mapingcol datatype="NUMBER">COSTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LINK_SCOPE" maxlength="2" datatype="Integer" type="COL" remark="浣跨敤鑼冨洿: 1  璺ㄥ浗 2  璺ㄧ渷 3  璺ㄥ湴甯� SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFORM_LINK_SCOPE&apos;;">
+        <mapingcol datatype="NUMBER">LINK_SCOPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONN_MODE" maxlength="256" datatype="String" type="COL" remark="鎺ュ叆鏂瑰紡锛堜簰鑱旂綉锛� 1  鍏夌氦 2  ADSL 3  鍗槦瀹藉甫 4  DDN 5  ISDN 6  鍏朵粬 SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFORM_CONN_MODE&apos;;">
+        <mapingcol datatype="VARCHAR2">CONN_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANDWIDTH" maxlength="14" datatype="Long" type="COL" remark="甯﹀锛堜簰鑱旂綉锛�">
+        <mapingcol datatype="NUMBER">BANDWIDTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMAIL_SYS_TYPE" maxlength="2" datatype="Integer" type="COL" remark="閭欢绯荤粺绫诲瀷锛堥偖浠剁郴缁燂級: 1  Exchange 2  Domino 3  鍏朵粬 SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFORM_EMAIL_SYS_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">EMAIL_SYS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INTERNET_MODE" maxlength="2" datatype="Integer" type="COL" remark="浜掕仈缃戞柟寮忥紙涓撶綉/鍒嗘敮鏈烘瀯浜掕仈锛夛細 1  ATM 2  DDN 3  FR 4  SDH鍑虹  SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFORM_INTERNET_MODE&apos;; ">
+        <mapingcol datatype="NUMBER">INTERNET_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOST_LOCAL_TYPE" maxlength="2" datatype="Integer" type="COL" remark="涓绘満鏀剧疆鏂瑰紡锛堢綉绔欙級锛� 1  鎵樼鍦ㄨ繍钀ュ晢 2  鑷敱鏈烘埧 3  鍏朵粬 SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFORM_HOST_LOCAL_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">HOST_LOCAL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADMIN_TYPE" maxlength="2" datatype="Integer" type="COL" remark="缁存姢鏂瑰紡锛堢綉绔欙級锛� 1  鑷淮 2  濮旀墭绗笁鏂�  SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_INFORM_HOST_ADMIN_TYPE&apos;;">
+        <mapingcol datatype="NUMBER">ADMIN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="璁板綍鐘舵��  U:鏈夋晥 E:鏃犳晥">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="鍒涘缓鎿嶄綔鍛�">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="鍒涘缓鎿嶄綔鍛樼粍缁�">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="鎿嶄綔鍛�">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="缁勭粐鍗曞厓">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="褰撳墠涓氬姟鍙楃悊缂栧彿">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="鍒涘缓鏃ユ湡">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="褰撳墠涓氬姟鍙楃悊鏃ユ湡">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="瀹㈡埛鐢熸晥鏃ユ湡">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="瀹㈡埛澶辨晥鏃ユ湡">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="绠＄悊鍖哄煙鏍囪瘑">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="澶囨敞">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

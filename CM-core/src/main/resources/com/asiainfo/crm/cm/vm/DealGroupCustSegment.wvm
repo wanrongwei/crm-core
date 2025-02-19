@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<workflow label="dealCustSegment" tasktype="workflow" tasktag="src.main.config.com.asiainfo.crm.cm.vm.DealGroupCustSegment">
+  <vars name="_TASK_JUGE_RESULT" datatype="java.lang.String" inouttype="inner" description="judge"/>
+  <vars name="custId" datatype="java.lang.String" inouttype="in" description="custId"/>
+  <vars name="currentInfo" datatype="java.lang.String" inouttype="in" description="currentInfo"/>
+  <vars name="changeInfo" datatype="java.lang.String" inouttype="in" description="changeInfo"/>
+  <vars name="resource" datatype="java.lang.String" inouttype="in" description="resource"/>
+  <vars name="psType" datatype="java.lang.String" inouttype="in" description="psType"/>
+  <vars name="firstTSM" datatype="java.lang.String" inouttype="in" description="firstTSM"/>
+  <vars name="secondTSM" datatype="java.lang.String" inouttype="in" description="secondTSM"/>
+  <vars name="opId" datatype="java.lang.String" inouttype="in" description="opId"/>
+  <vars name="orgId" datatype="java.lang.String" inouttype="in" description="orgId"/>
+  <vars name="zipCode" datatype="java.lang.String" inouttype="in" description="zipCode"/>
+  <vars name="rootCustId" datatype="java.lang.String" inouttype="in" description="rootCustId"/>
+  <vars name="remarks" datatype="java.lang.String" inouttype="in" description="remarks"/>
+  <task id="1" label="start" tasktype="start" isstart="true">
+    <uiinfo>260,80,32,32</uiinfo>
+    <gotoitem goto="2"/>
+    <autodeal>
+      <runtype/>
+      <servicename/>
+      <runclassname/>
+      <runfunctionname/>
+    </autodeal>
+  </task>
+  <task id="2" label="dealCustSegment" tasktype="user" tasktag="user">
+    <uiinfo>373,79,32,32</uiinfo>
+    <gotoitem goto="3"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV</runclassname>
+      <runfunctionname>saveGroupApproval</runfunctionname>
+      <vars name="P_0" datatype="java.lang.String" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="P_1" datatype="java.lang.String" contextvarName="currentInfo" defaultvalue="" inouttype="in" description="currentInfo"/>
+      <vars name="P_2" datatype="java.lang.String" contextvarName="changeInfo" defaultvalue="" inouttype="in" description="changeInfo"/>
+      <vars name="P_3" datatype="java.lang.String" contextvarName="resource" defaultvalue="" inouttype="in" description="resource"/>
+      <vars name="P_4" datatype="java.lang.String" contextvarName="psType" defaultvalue="" inouttype="in" description="psType"/>
+      <vars name="P_5" datatype="int" contextvarName="" defaultvalue="1" inouttype="in" description=""/>
+      <vars name="P_6" datatype="java.lang.String" contextvarName="firstTSM" defaultvalue="" inouttype="in" description="firstTSM"/>
+      <vars name="P_7" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" defaultvalue="" inouttype="in" description="workFlowId"/>
+      <vars name="P_8" datatype="java.lang.String" contextvarName="$TASK_ID" defaultvalue="" inouttype="in" description="taskId"/>
+      <vars name="P_9" datatype="java.lang.String" contextvarName="opId" defaultvalue="" inouttype="in" description="opId"/>
+      <vars name="P_10" datatype="java.lang.String" contextvarName="orgId" defaultvalue="" inouttype="in" description="orgId"/>
+      <vars name="P_11" datatype="java.lang.String" contextvarName="zipCode" defaultvalue="" inouttype="in" description="zipCode"/>
+      <vars name="P_12" datatype="java.lang.String" contextvarName="rootCustId" defaultvalue="" inouttype="in" description="rootCustId"/>
+      <vars name="P_13" datatype="java.lang.String" contextvarName="remarks" defaultvalue="" inouttype="in" description="remarks"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+    <user taskusertype="staff" organizeid=":orgId" taskuserid=":opId"/>
+  </task>
+  <task id="3" label="dealCustSegment" tasktype="user" tasktag="user">
+    <uiinfo>501,80,32,32</uiinfo>
+    <gotoitem goto="4"/>
+    <autodeal>
+      <runtype>service</runtype>
+      <servicename>com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV</servicename>
+      <runclassname>com.asiainfo.crm.cm.service.interfaces.ICmGroupCustomerSV</runclassname>
+      <runfunctionname>saveGroupApproval</runfunctionname>
+      <vars name="P_0" datatype="java.lang.String" contextvarName="custId" defaultvalue="" inouttype="in" description="custId"/>
+      <vars name="P_1" datatype="java.lang.String" contextvarName="currentInfo" defaultvalue="" inouttype="in" description="currentInfo"/>
+      <vars name="P_2" datatype="java.lang.String" contextvarName="changeInfo" defaultvalue="" inouttype="in" description="changeInfo"/>
+      <vars name="P_3" datatype="java.lang.String" contextvarName="resource" defaultvalue="" inouttype="in" description="resource"/>
+      <vars name="P_4" datatype="java.lang.String" contextvarName="psType" defaultvalue="" inouttype="in" description="psType"/>
+      <vars name="P_5" datatype="int" contextvarName="" defaultvalue="2" inouttype="in" description=""/>
+      <vars name="P_6" datatype="java.lang.String" contextvarName="secondTSM" defaultvalue="" inouttype="in" description="secondTSM"/>
+      <vars name="P_7" datatype="java.lang.String" contextvarName="$WORKFLOW_ID" defaultvalue="" inouttype="in" description="workFlowId"/>
+      <vars name="P_8" datatype="java.lang.String" contextvarName="$TASK_ID" defaultvalue="" inouttype="in" description="taskId"/>
+      <vars name="P_9" datatype="java.lang.String" contextvarName="opId" defaultvalue="" inouttype="in" description="opId"/>
+      <vars name="P_10" datatype="java.lang.String" contextvarName="orgId" defaultvalue="" inouttype="in" description="orgId"/>
+      <vars name="P_11" datatype="java.lang.String" contextvarName="zipCode" defaultvalue="" inouttype="in" description="zipCode"/>
+      <vars name="P_12" datatype="java.lang.String" contextvarName="rootCustId" defaultvalue="" inouttype="in" description="rootCustId"/>
+      <vars name="P_13" datatype="java.lang.String" contextvarName="remarks" defaultvalue="" inouttype="in" description="remarks"/>
+      <vars name="return" datatype="void" contextvarName="" defaultvalue="" inouttype="return" description=""/>
+    </autodeal>
+    <user taskusertype="staff" organizeid=":orgId" taskuserid=":opId"/>
+  </task>
+  <task id="4" label="end" tasktype="finish">
+    <uiinfo>606,80,32,32</uiinfo>
+    <autodeal>
+      <runtype/>
+      <servicename/>
+      <runclassname/>
+      <runfunctionname/>
+    </autodeal>
+  </task>
+  <join taska="1" taskb="2">
+    <uiinfo>10.0,10.0,500,500,276,96,373,95</uiinfo>
+  </join>
+  <join taska="2" taskb="3">
+    <uiinfo>10.0,10.0,500,500,389,95,501,96</uiinfo>
+  </join>
+  <join taska="3" taskb="4">
+    <uiinfo>10.0,10.0,500,500,517,96,606,96</uiinfo>
+  </join>
+</workflow>

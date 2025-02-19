@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustExcludeMediaFee" mainattr="ID">
+    <mapingenty type="table">CM_CUST_EXCLUDE_MEDIA_FEE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CVR_NUMBER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CVR_NUMBER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPROVAL_NUMBER" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">APPROVAL_NUMBER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME2" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">NAME2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS2" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ADDRESS2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="varchar">POST_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_UPDATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">LAST_UPDATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT3</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

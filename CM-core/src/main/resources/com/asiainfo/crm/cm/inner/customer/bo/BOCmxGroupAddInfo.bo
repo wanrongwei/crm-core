@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxGroupAddInfo" mainattr="CUST_ID">
+    <mapingenty type="table">CMX_GROUP_ADD_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="PK" remark="集团客户编号">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">PAY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_DEGREE" maxlength="2" datatype="Integer" type="COL" remark="sys_static_data中定义
+高
+中
+低
+特殊">
+        <mapingcol datatype="NUMBER">CREDIT_DEGREE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="KERNEL_LEVEL" maxlength="2" datatype="Integer" type="COL" remark="code_type=90115，对应该属性的维护受特殊权限控制
+0  否
+1  市级党政军
+2  新闻媒体
+3  领馆
+4  郊区区政府机构
+5  市区区级政府机构
+6  郊区镇政府机构">
+        <mapingcol datatype="NUMBER">KERNEL_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MOBILE_NUM" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">MOBILE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNION_NUM" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">UNION_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WIRELESS_NUM" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">WIRELESS_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPENSE_TYPE" maxlength="2" datatype="Integer" type="COL" remark="报销以前还未使用，继续保留该信息">
+        <mapingcol datatype="NUMBER">EXPENSE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROD_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PROD_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMPELERE_INFO" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COMPELERE_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTH_USE_DTL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OTH_USE_DTL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VPMN_NUM" maxlength="10" datatype="Long" type="COL" remark="code_type=10032， 负数字表示帐务VPMN群规模不受限制；非负数字，标帐务VPMN群规模大小为该数字，表当前集团的务VPMN总数量不能大于该数字。
+-2  未确认
+-1  特殊
+24  微型
+49  小型
+99  中型
+299  大型
+999  超大型">
+        <mapingcol datatype="NUMBER">VPMN_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_STANDARD" maxlength="2" datatype="Integer" type="COL" remark="0,非标准;1,标准">
+        <mapingcol datatype="NUMBER">IS_STANDARD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TURNOVER" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TURNOVER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMMUNICATION_EXPENSE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">COMMUNICATION_EXPENSE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ARPU" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ARPU</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ESP_VOCATION" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ESP_VOCATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="A_ATTITUDE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">A_ATTITUDE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SPECAIL_IMPORTANT_LEVEL" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SPECAIL_IMPORTANT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLUSTER_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CLUSTER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_CHANNEL" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SERVICE_CHANNEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLUSTER_CUSTOMER_TYPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CLUSTER_CUSTOMER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SINGLE_BUSINESS_SCOPE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">SINGLE_BUSINESS_SCOPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORGAN_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">ORGAN_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_SCOPE" maxlength="600" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SALE_SCOPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_PROVINCE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_PROVINCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CITY" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_ADDRESS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_POSTCODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_POSTCODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAX_ID" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TAX_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_SPECIAL" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">REGION_SPECIAL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROFIT" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PROFIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BRNAME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BRNAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTACT" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTACT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BRIEF" maxlength="1024" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BRIEF</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMAIL" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MSISDN" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MSISDN</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="QBOCmGroupMemberQryCdn" mainattr="AREA_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MATCH_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CITY_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="COUNTY_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="AREA_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MANAGER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="GROUP_STATUS" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="GROUP_LEVEL" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_LEVEL" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="KERNEL_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_KERNEL_MEMBER" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CONT_FAX" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_KEY_MEMBER" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_CONTACT" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_VIP" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="WORK_DEPT" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="QUERY_TYPE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="GROUP_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="SUB_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="SERVICE_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="IS_HIGH_VALUE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="START_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="END_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="START_DATE1" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="END_DATE1" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CONT_EMAIL" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_APP_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_REL_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="INDIV_CUST_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="USER_STATUS" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="MEMBER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="MEM_USER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="USER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmInvitationCode" mainattr="INVITATION_CODE_ID">
+    <mapingenty type="table">{CM_INVITATION_CODE}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INVITATION_CODE_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">INVITATION_CODE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVITATION_CODE" maxlength="14" datatype="String" type="COL">
+        <mapingcol datatype="varchar">INVITATION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGE_STATUS" maxlength="3" datatype="String" type="COL" remark="0:初始 1:在用">
+        <mapingcol datatype="varchar">MANAGE_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="记录状态:U-生效,E-失效">
+        <mapingcol datatype="char">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

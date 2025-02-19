@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmGroupAccount" mainattr="BASE_CUST_ID">
+    <mapingenty type="query">SELECT A.BASE_CUST_ID,
+       A.GROUP_ID,
+       A.GROUP_CUST_ID,
+       A.CUST_NAME,
+       A.CHNL_CITY_ID,
+       A.CHNL_REGION_TYPE,
+       A.CHNL_REGION_DETAIL,
+       B.ACCT_ID,
+       B.ACC_ALIAS_NAME,
+       B.CONT_NAME,
+       B.CONT_MOBILE,
+       B.CONT_CERT_TYPE,
+       B.CONT_CERT_CODE
+  FROM CM_GROUP_CUSTOMER A, CM_GROUP_EXTRA_INFO C, CMX_GROUP_ACCOUNT B
+ WHERE C.GROUP_CUST_ID = A.GROUP_CUST_ID
+   AND A.GROUP_CUST_ID = B.GROUP_CUST_ID
+   AND A.STATE = 'U'
+   AND C.STATE = 'U'
+   AND B.STATE = 'U'</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="BASE_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BASE_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_CITY_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHNL_CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_REGION_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHNL_REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_REGION_DETAIL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CHNL_REGION_DETAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACC_ALIAS_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ACC_ALIAS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_MOBILE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_MOBILE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_CERT_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_CERT_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_CERT_CODE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

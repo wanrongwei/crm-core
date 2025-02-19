@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOSignCoverCount" mainattr="SIGNAL_COVER">
+    <mapingenty type="query"> select t1.signal_cover,count(t1.signal_cover)as signal_cover_count from 
+(select t.*
+  from CM_MAP_REGION_TREE t
+ where t.location_type=:locationType and t.signal_cover is not null and t.state = 'U'
+ START WITH t.parent_location_id =:locationId CONNECT BY PRIOR location_id = parent_location_id) t1
+ group by t1.signal_cover order by t1.signal_cover</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SIGNAL_COVER" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SIGNAL_COVER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SIGNAL_COVER_COUNT" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SIGNAL_COVER_COUNT</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

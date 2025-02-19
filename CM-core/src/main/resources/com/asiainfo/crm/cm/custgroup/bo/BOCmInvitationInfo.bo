@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmInvitationInfo" mainattr="INVITATION_ID">
+    <mapingenty type="table">{CM_INVITATION_INFO}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="INVITATION_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">INVITATION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVITER" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">INVITER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVITE_MODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">INVITE_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="invitee_identity" maxlength="14" datatype="String" type="COL">
+        <mapingcol datatype="varchar">invitee_identity</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATUS" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INVITEE_REF_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">INVITEE_REF_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_SEEN" maxlength="1" datatype="String" type="COL" remark="是否已读">
+        <mapingcol datatype="varchar">IS_SEEN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmPsPublicDealH" mainattr="h_id">
+    <mapingenty type="table">{CM_PS_PUBLIC_DEAL_H}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="h_id" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">h_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="entity_type" maxlength="21" datatype="Long" type="COL" remark="目前只定义了一种角色
+            1：客户
+            2:   使用者
+            3：员工
+            4：联系人">
+        <mapingcol datatype="bigint">entity_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="entity_id" maxlength="21" datatype="Long" type="COL" remark="如果角色是客户则是客户ID
+            如果是联系人则是联系人ID">
+        <mapingcol datatype="bigint">entity_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="party_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">party_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ps_param" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ps_param</mapingcol>
+      </attr>
+      <attr floatlength="0" name="exec_action" maxlength="21" datatype="Long" type="COL" remark="1.公共信息同步。
+            2.AKS订购
+            3.AKS退订
+            4.AKS同步成功">
+        <mapingcol datatype="bigint">exec_action</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL" remark="记录状态
+            
+            U:有效 E:无效">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="4000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RECORD_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">RECORD_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

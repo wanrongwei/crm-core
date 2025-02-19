@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCmPayChannel" mainattr="BANK_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="PAYMENT_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="EXPIRY_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="BANK_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CARD_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CARD_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CVR" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CH_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CARD_EXPIRY_DATE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CARD_TYPE_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="FAST_PAYMENT" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="PBS_STS" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="PBS_EFF_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="CPR" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

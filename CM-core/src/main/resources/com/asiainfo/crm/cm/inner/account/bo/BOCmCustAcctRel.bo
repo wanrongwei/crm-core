@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustAcctRel" mainattr="REL_CUST_ID">
+    <mapingenty type="table">{CM_CUST_ACCT_REL}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="REL_CUST_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">REL_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">REL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CUST_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ALIAS_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ACCT_ALIAS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="acct_name" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">acct_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="installment_flag" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">installment_flag</mapingcol>
+      </attr>
+      <attr floatlength="0" name="pay_method" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">pay_method</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cycle_type" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">cycle_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="bill_day" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">bill_day</mapingcol>
+      </attr>
+      <attr floatlength="0" name="bill_due_date" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">bill_due_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext1" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext2" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext3" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext4" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext5" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

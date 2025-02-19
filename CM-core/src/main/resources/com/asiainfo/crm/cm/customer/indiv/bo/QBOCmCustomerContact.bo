@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmCustomerContact" mainattr="cust_id">
+    <mapingenty type="query">SELECT A.CUST_ID,A.CUST_NAME,B.ADDRESS_ID FROM {CM_INDIV_CUSTOMER} A,{CM_CUST_CONTACT_MEDIUM} B WHERE A.CUST_ID=B.CUST_ID</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ADDRESS_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

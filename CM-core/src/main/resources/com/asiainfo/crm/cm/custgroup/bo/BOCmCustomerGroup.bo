@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustomerGroup" mainattr="GROUP_ID">
+    <mapingenty type="table">{CM_CUSTOMER_GROUP}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="GROUP_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">GROUP_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_STATUS" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">GROUP_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_LEVEL" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">GROUP_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VALID_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">VALID_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT3" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">EXT3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

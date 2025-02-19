@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmQueryContract" mainattr="CONTRACT_ID">
+    <mapingenty type="query">SELECT T4.CUST_NAME,
+       T4.CHNL_CITY_ID,
+       T4.CHNL_REGION_TYPE,
+       T4.CHNL_REGION_DETAIL,
+       T3.CONTRACT_ID,
+       T3.GROUP_CUST_ID,
+       T3.CONTRACT_SEQUENCE_NO,
+       T3.CONTRACT_NAME,
+       T3.FIRST_NAME,
+       T3.CONTRACT_SEQ,
+       T3.CONTRACT_TYPE,
+       T3.SECOND_NAME,
+       T3.FIRST_DEPUTY_TYPE,
+       T3.FIRST_DEPUTY_DUTY,
+       T3.FIRST_DEPUTY_NAME,
+       T3.THIRD_NAME,
+       T3.FIRST_DEPUTY_PHONE,
+       T3.SECOND_DEPUTY_TYPE,
+       T3.SECOND_DEPUTY_NAME,
+       T3.SECOND_DEPUTY_DUTY,
+       T3.SECOND_DEPUTY_PHONE,
+       T3.THIRD_DEPUTY_TYPE,
+       T3.THIRD_DEPUTY_NAME,
+       T3.THIRD_DEPUTY_DUTY,
+       T3.THIRD_DEPUTY_PHONE,
+       T3.SUBSCRIBE_DATE,
+       T3.SUBSCRIBE_PLACE,
+       T3.CONTRACT_VALID_DATE,
+       T3.CONTRACT_EXPIRE_DATE,
+       T3.CONTRACT_SOURCE,
+       T3.BUSI_DESC,
+       T3.DETAIL_FEE_DESC,
+       T3.OTHER_DESC,
+       T3.AFFIXPATH,
+       T3.CONTRACT_STATUS,
+       T3.PARENT_CONTRACT_ID,
+       T3.TEMPLATE_ID,
+       T3.IS_PROTRACT,
+       T3.CONTRACT_DESC,
+       T3.CONTRACT_LEVEL,
+       T3.MANAGER_ID,
+       T3.STATE,
+       T3.CREATE_OP_ID,
+       T3.CREATE_ORG_ID,
+       T3.OP_ID,
+       T3.ORG_ID,
+       T3.DONE_CODE,
+       T3.CREATE_DATE,
+       T3.DONE_DATE,
+       T3.EFFECTIVE_DATE,
+       T3.EXPIRE_DATE,
+       T3.REGION_ID,
+       T3.NOTES,
+       T4.GROUP_ID
+  FROM CM_GROUP_CUST_CONTRACT T3, CM_GROUP_CUSTOMER T4
+ WHERE T4.Group_Cust_Id = T3.GROUP_CUST_ID
+   AND T3.STATE = 'U'
+   AND T4.STATE = 'U'</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_CITY_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHNL_CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_REGION_TYPE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CHNL_REGION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHNL_REGION_DETAIL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CHNL_REGION_DETAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONTRACT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_SEQUENCE_NO" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_SEQUENCE_NO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_SEQ" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_TYPE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_NAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SECOND_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_DEPUTY_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">FIRST_DEPUTY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_DEPUTY_DUTY" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_DEPUTY_DUTY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_DEPUTY_NAME" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_DEPUTY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THIRD_NAME" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">THIRD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_DEPUTY_PHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_DEPUTY_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_DEPUTY_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SECOND_DEPUTY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_DEPUTY_NAME" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SECOND_DEPUTY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_DEPUTY_DUTY" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SECOND_DEPUTY_DUTY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SECOND_DEPUTY_PHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SECOND_DEPUTY_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THIRD_DEPUTY_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">THIRD_DEPUTY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THIRD_DEPUTY_NAME" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">THIRD_DEPUTY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THIRD_DEPUTY_DUTY" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">THIRD_DEPUTY_DUTY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THIRD_DEPUTY_PHONE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">THIRD_DEPUTY_PHONE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBSCRIBE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">SUBSCRIBE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SUBSCRIBE_PLACE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SUBSCRIBE_PLACE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_VALID_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CONTRACT_VALID_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CONTRACT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_SOURCE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONTRACT_SOURCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BUSI_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DETAIL_FEE_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DETAIL_FEE_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTHER_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OTHER_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AFFIXPATH" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AFFIXPATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_STATUS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONTRACT_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARENT_CONTRACT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARENT_CONTRACT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEMPLATE_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TEMPLATE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_PROTRACT" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">IS_PROTRACT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_DESC" maxlength="1000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTRACT_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTRACT_LEVEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONTRACT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MANAGER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmUserHobby" mainattr="DATA_ID">
+    <mapingenty type="table">CM_USER_HOBBY_DATA</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DATA_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">DATA_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MMS" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">MMS</mapingcol>
+      </attr>
+      <attr floatlength="3" name="QUAN_QU" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">QUAN_QU</mapingcol>
+      </attr>
+      <attr floatlength="3" name="SHOPPING" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">SHOPPING</mapingcol>
+      </attr>
+      <attr floatlength="3" name="CRBT" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">CRBT</mapingcol>
+      </attr>
+      <attr floatlength="3" name="SPORT" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">SPORT</mapingcol>
+      </attr>
+      <attr floatlength="3" name="HOT_POINT" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">HOT_POINT</mapingcol>
+      </attr>
+      <attr floatlength="3" name="FETION" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">FETION</mapingcol>
+      </attr>
+      <attr floatlength="3" name="SHOP_CARD" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">SHOP_CARD</mapingcol>
+      </attr>
+      <attr floatlength="3" name="GIFT" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">GIFT</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MOBILE_GOOD_NEWS" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">MOBILE_GOOD_NEWS</mapingcol>
+      </attr>
+      <attr floatlength="3" name="WAP" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">WAP</mapingcol>
+      </attr>
+      <attr floatlength="3" name="DAILY_MARKETING" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">DAILY_MARKETING</mapingcol>
+      </attr>
+      <attr floatlength="3" name="LOTTERY_SALES" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">LOTTERY_SALES</mapingcol>
+      </attr>
+      <attr floatlength="3" name="CATER" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">CATER</mapingcol>
+      </attr>
+      <attr floatlength="3" name="GENERAL_SALES" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">GENERAL_SALES</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MOBILE_EMAIL" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">MOBILE_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="3" name="JOIN_SALES_NUM" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">JOIN_SALES_NUM</mapingcol>
+      </attr>
+      <attr floatlength="3" name="CONSULTING" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">CONSULTING</mapingcol>
+      </attr>
+      <attr floatlength="3" name="RANK_SALES" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">RANK_SALES</mapingcol>
+      </attr>
+      <attr floatlength="3" name="MOVIE" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">MOVIE</mapingcol>
+      </attr>
+      <attr floatlength="3" name="FIRST_GET" maxlength="5" datatype="Double" type="COL">
+        <mapingcol datatype="NUMBER">FIRST_GET</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_VEST_DEPARTEMENT" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_VEST_DEPARTEMENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

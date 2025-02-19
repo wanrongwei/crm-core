@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="ClubServiceCylce" mainattr="CYCLE_ID">
+		<mapingenty type="custom">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="CYCLE_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="SERVICE_ID" maxlength="12" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CYCLE_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="1.年 2.季度 3.月 4.周 5.日" />
+			<attr floatlength="0" name="CYCLE_SORT" maxlength="2" datatype="Integer" type="VIRTUAL" remark="进行周期内使用次数校验时，该字段值越小的越先进行校验" />
+			<attr floatlength="0" name="CYCLE_TIMES" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+			<attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理操作员" />
+			<attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理组织单元" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmGroupGroupPrepayContact" mainattr="CONT_ID">
+    <mapingenty type="query">select A.acct_id,
+       B.cust_name,
+       C.notes,
+       C.region_id,
+       C.expire_date,
+       C.effective_date,
+       C.done_date,
+       C.create_date,
+       C.done_code,
+       C.org_id,
+       C.op_id,
+       C.create_org_id,
+       C.create_op_id,
+       C.state,
+       C.password,
+       C.contact_name,
+       C.user_id,
+       C.busi_code,
+       C.bill_id,
+       B.group_cust_id,
+       C.cont_id
+  from CMX_GROUP_ACCREL_DEAL    A,
+       CM_GROUP_CUSTOMER        B,
+       CMX_GROUP_PREPAY_CONTACT C
+ where A.GROUP_CUST_ID = B.GROUP_CUST_ID
+   AND B.GROUP_CUST_ID = C.GROUP_CUST_ID
+   AND A.STATE = 'U'
+   AND B.STATE = 'U'
+   AND C.STATE = 'U'</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ACCT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_NAME" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PASSWORD" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">PASSWORD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONTACT_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONTACT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BUSI_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

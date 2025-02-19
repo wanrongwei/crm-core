@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="AcctBillCycle" mainattr="PERIOD_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CYCLE_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="账期记录编号" />
+      <attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CYCLE_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="账期类型  1：自然月账期； 2：分散账期；" />
+      <attr floatlength="0" name="CYCLE_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" remark="账期类型  1：自然月账期； 2：分散账期；" />
+      <attr floatlength="0" name="CYCLE_UNIT" maxlength="2" datatype="Integer" type="VIRTUAL" remark="出账周期  1：自然月； 2：自然周； 3：季度；" />
+      <attr floatlength="0" name="BILL_DAY" maxlength="6" datatype="Integer" type="VIRTUAL" remark="结账日" />
+      <attr floatlength="0" name="BILL_DAY_DESC" maxlength="256" datatype="String" type="VIRTUAL" remark="结账日" />
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态  U:有效 E:无效" />
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理操作员" />
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理组织单元" />
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+      <attr floatlength="0" name="CYCLE_REASON" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_DUE_DATE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="Reason" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="MODFLAG" maxlength="20" datatype="Integer" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

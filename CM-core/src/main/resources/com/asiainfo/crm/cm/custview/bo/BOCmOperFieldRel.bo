@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmOperFieldRel" mainattr="FIELD_REL_ID">
+    <mapingenty type="table">CM_OPER_FIELD_REL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="FIELD_REL_ID" maxlength="12" datatype="Long" type="PK" remark="字段关联标识">
+        <mapingcol datatype="NUMBER">FIELD_REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="VIEW_ID" maxlength="12" datatype="Long" type="COL" remark="视图编号">
+        <mapingcol datatype="NUMBER">VIEW_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPER_ID" maxlength="12" datatype="Long" type="COL" remark="操作员标识">
+        <mapingcol datatype="NUMBER">OPER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BCE_FRAME_ID" maxlength="12" datatype="Long" type="COL" remark="bce框架编号
+来自BASE.BCE_FRAME.BCE_FRAME_ID">
+        <mapingcol datatype="NUMBER">BCE_FRAME_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BCE_FORM_ID" maxlength="50" datatype="String" type="COL" remark="bce表单编号
+来自BASE.BCE_FRAME_FORM.BCE_FORM_ID">
+        <mapingcol datatype="VARCHAR2">BCE_FORM_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIELD_NAME" maxlength="50" datatype="String" type="COL" remark="字段名称">
+        <mapingcol datatype="VARCHAR2">FIELD_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SORT" maxlength="2" datatype="Integer" type="COL" remark="排序">
+        <mapingcol datatype="NUMBER">SORT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="1" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="CHAR">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="512" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

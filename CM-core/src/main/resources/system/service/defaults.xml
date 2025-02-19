@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- 全局默认配置信息 -->
+<defaults>
+    <!-- 中心的类型和实现类的对应关系 -->
+    <center>
+        <property name="BillId:KeyNum" value="com.ai.common.center.BillIdCenterImpl"/>
+        <property name="AcctId" value="com.ai.common.center.AcctIdCenterImpl"/>
+        <!--<property name="CustId:CUSTOMER_ID" value="com.ai.common.center.CustIdCenterImpl"/>-->
+        <property name="UserId" value="com.ai.common.center.UserIdCenterImpl"/>
+        <property name="RegionId" value="com.ai.common.center.RegionIdCenterImpl"/>
+        <property name="OrderCode" value="com.ai.common.center.OrderCodeCenterImpl"/>
+        <property name="OrderId" value="com.ai.common.center.OrderIdCenterImpl"/>
+        <property name="VpmnGroupId" value="com.ai.common.center.VpmnGroupIdCenterImpl"/>
+        <property name="PaymentId " value="com.ai.common.center.PaymentIdCenterImpl "/>
+    </center>
+
+    <!-- 默认代理调用方式.默认采用pojo的模式进行调用，采用的实现类为配置的实现类 -->
+    <proxy invoke="pojo" type="primitive">
+        <clazz name="com.ai.appframe2.complex.service.impl.LocalServiceInvokeImpl"/>
+    </proxy>
+
+    <!-- 默认事务信息.默认采用Required的方式进行事务操作，采用的实现类为配置的实现类 -->
+    <transaction type="Required">
+        <clazz name="com.ai.appframe2.complex.transaction.impl.LocalMutilTransactionImpl"/>
+        <!--Omframe事务监听类，用于清除线程变量-->
+        <!--<listener name="com.ai.omframe.util.OmTransactionListenerImpl"/>-->
+
+        <!-- 映射每个服务模块对应的事务数据源，可以具体到类名 -->
+        <mapping>
+            <property name="com.asiainfo.example" value="base" />
+            <property name="com.ai.appframe2.complex.self" value="base" />
+            <property name="com.ai.bce" value="base" />
+            <property name="com.ai.comframe" value="comframe" />
+            <property name="com.ai.comframe.autoform" value="base" />
+            <property name="com.ai.comframe.client" value="base" />
+            <property name="com.ai.comframe.config" value="base" />
+            <property name="com.ai.common" value="base" />
+            <property name="com.ai.common.service.base" value="base" />
+            <property name="com.ai.common.service.party" value="party" />
+            <property name="com.ai.common.service.res" value="res" />
+            <property name="com.ai.omframe" value="base" />
+            <property name="com.ai.omframe.instance" value="ins{CENTER}" />
+            <property name="com.ai.omframe.order" value="ord" />
+            <property name="com.ai.oneframe" value="base" />
+            <property name="com.ai.pce" value="product" />
+            <property name="com.ai.secframe.bsdistrict" value="base" />
+            <property name="com.ai.secframe.common" value="sec" />
+            <property name="com.ai.secframe.extend" value="sec" />
+            <property name="com.ai.secframe.model" value="sec" />
+            <property name="com.ai.secframe.orgmodel" value="sec" />
+            <property name="com.ai.secframe.sync2cmop" value="sec" />
+            <property name="com.ai.secframe.sync2foura" value="sec" />
+            <property name="com.ai.secframe.sysmgr" value="sec" />
+            <property name="com.asiainfo.appframe.ext.exeframe" value="base" />
+            <property name="com.asiainfo.crm" value="ord" />
+            <property name="com.asiainfo.crm.ams" value="ams{CENTER}" />
+            <property name="com.asiainfo.crm.ams.common.base" value="base" />
+            <property name="com.asiainfo.crm.ams.common.party" value="party" />
+            <property name="com.asiainfo.crm.ams.zc" value="zc" />
+            <property name="com.asiainfo.crm.ams.zg" value="zg" />
+            <property name="com.asiainfo.crm.chl" value="ruleeng" />
+            <property name="com.asiainfo.crm.cm" value="party" />
+            <property name="com.asiainfo.crm.cm.zg" value="zg" />
+            <property name="com.asiainfo.crm.common" value="base" />
+            <property name="com.asiainfo.crm.inter" value="base" />
+            <property name="com.asiainfo.crm.inter.outdata" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.inter.outdata.billing" value="ORD" />
+            <property name="com.asiainfo.crm.inter.outdata.common" value="base" />
+            <property name="com.asiainfo.crm.inter.outdata.msg" value="zg" />
+            <property name="com.asiainfo.crm.inter.outdata.process" value="ORD" />
+            <property name="com.asiainfo.crm.inter.outdata.worksheet" value="ORD" />
+            <property name="com.asiainfo.crm.inter.sms" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.oneframe" value="base" />
+            <property name="com.asiainfo.crm.open" value="ORD" />
+            <property name="com.asiainfo.crm.open.base" value="base" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbancboss" value="ORD" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbancboss.dao.remote" value="cboss" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbanzhcx" value="ORD" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbanzhcx.dao.remote" value="kt" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbanzhcx.ktversionthd.dao.remote" value="ktv3" />
+            <property name="com.asiainfo.crm.report.base" value="base" />
+            <property name="com.asiainfo.crm.report.rpt" value="rpt" />
+            <property name="com.asiainfo.crm.report.rptcfg" value="rpt" />
+            <property name="com.asiainfo.crm.res" value="res" />
+            <property name="com.asiainfo.crm.res.avcs" value="res" />
+            <property name="com.asiainfo.crm.res.goods" value="res" />
+            <property name="com.asiainfo.crm.res.invoice" value="res" />
+            <property name="com.asiainfo.crm.res.paycard" value="res" />
+            <property name="com.asiainfo.crm.res.phone" value="res" />
+            <property name="com.asiainfo.crm.res.simcard" value="res" />
+            <property name="com.asiainfo.crm.res.terminal" value="res" />
+            <property name="com.asiainfo.crm.score" value="ams{CENTER}" />
+            <property name="com.asiainfo.crm.score.common.calculate" value="base" />
+            <property name="com.asiainfo.crm.sec" value="sec" />
+            <property name="com.asiainfo.crm.so.ams" value="ams{CENTER}" />
+              <property name="com.asiainfo.crm.so.common" value="ord" />
+            <property name="com.asiainfo.crm.so.common.instance" value="ins{CENTER}" />
+            <property name="com.asiainfo.crm.so.common.base" value="base" />
+            <property name="com.asiainfo.crm.so.common.bboss" value="party" />
+            <property name="com.asiainfo.crm.so.common.party" value="party" />
+            <property name="com.asiainfo.crm.so.common.product" value="product" />
+            <property name="com.asiainfo.crm.so.exe.tf.sms.service" value="kt" />
+            <property name="com.asiainfo.crm.so.instance.dsmp.party" value="party" />
+            <property name="com.asiainfo.crm.so.instance.sms" value="base" />
+            <property name="com.asiainfo.crm.so.order.dsmp.dm" value="party" />
+            <property name="com.asiainfo.crm.so.order" value="ord" />
+            <property name="com.asiainfo.crm.so.teaminvoke.out.instance" value="ins{CENTER}" />
+            <property name="com.asiainfo.crm.so.query.report" value="party" />
+            <property name="com.asiainfo.crm.so.query.instance.service" value="ins{CENTER}" />
+            <property name="com.asiainfo.crm.msm.ftp" value="base" />
+            <property name="com.asiainfo.crm.msm.opportunity.autoform" value="base" />
+            <property name="com.asiainfo.crm.msm" value="ssm" />
+            <property name="com.asiainfo.crm.partner" value="partner" />
+            <property name="com.asiainfo.crm.channel" value="partner" />
+            <!--自服务管理端配置-->
+            <property name="com.asiainfo.selfcare" value="selfcare"/>
+             <!-- CRM-BILL资料同步接口 -->
+    	    <property name="com.asiainfo.crm.bill" value="base"/>
+    		<property name="com.asiainfo.crm.bill.so" value="ORD"/>
+   		  	<property name="com.asiainfo.crm.bill.exe.tf.crm2boss" value="billing"/>
+    		<property name="com.asiainfo.crm.bill.exe.tf.boss2crm" value="ORD"/>
+    		<property name="com.ailk.common" value="base"/>
+            <property name="com.asiainfo.crm.so.shop" value="party"/>
+            <property name="com.asiainfo.crm.so.order.rboss.instance" value="ins{CENTER}"/>
+            <property name="com.asiainfo.crm.so.instance" value="ins{CENTER}"/>
+            
+            <!-- 客户交互 -->
+            <property name="com.asiainfo.crm.ci" value="ci"/> 
+        </mapping>
+    </transaction>
+
+    <!-- 默认数据源信息 -->
+    <datasource>
+        <clazz name="com.ai.appframe2.complex.datasource.impl.LocalMutilDataSourceImpl">
+            <property name="tableName" value="cfg_db_acct"/>
+			<property name="urlTableName" value="cfg_db_url"/>
+            <property name="relatTableName" value="cfg_db_relat"/>
+			
+			<property name="prefetch" value="true"/>
+			<property name="prefetch.driverClassName" value="com.mysql.cj.jdbc.Driver" /> 
+			<property name="prefetch.url" value="jdbc:mysql://10.1.248.209:3306/base?rewriteBatchedStatements=true&amp;cachePrepStmts=false&amp;useServerPrepStmts=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false&amp;useLocalSessionState=true&amp;serverTimezone=Asia/Shanghai"/>
+			<property name="prefetch.username" value="BASE" /> 
+			<property name="prefetch.password" value="{AES}xu780XPA+7xjz8ELKrkxJg=="/>
+			<property name="prefetch.initialSize" value="1"/>
+            <property name="prefetch.maxActive" value="1"/>
+            <property name="prefetch.maxIdle" value="1"/>
+        </clazz>
+
+        <!-- 根据base取数据库配置，然后以本配置中的覆盖除base以外的连接池的配置 -->
+        <!-- 默认 type=dbcp  db=oracle -->
+        <pool name="base" primary="true">        
+					<!-- oracle数据源 
+					<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>-->            
+					<!-- mysql数据源 .start--> 
+					<!-- mysql数据源 .end-->
+					<property name="initialSize" value="0"/>
+					<property name="maxActive" value="10"/>
+					<property name="maxIdle" value="2"/>
+					<!--连接池有效性检查-->
+					<property name="validationQuery" value="select 1 from dual"/>
+					<property name="testWhileIdle" value="true"/>
+					<property name="testOnBorrow" value="false"/>
+					<property name="testOnReturn" value="false"/>
+					<!--最多20秒检查到连接失效-->
+					<property name="timeBetweenEvictionRunsMillis" value="20000"/>
+					<property name="minEvictableIdleTimeMillis" value="-1"/>
+					<property name="softMinEvictableIdleTimeMillis" value="1800000"/>
+					<property name="numTestsPerEvictionRun" value="2"/>
+        </pool>
+
+        <pool name="party" init="true">
+					<property name="initialSize" value="0"/>
+					<property name="maxActive" value="30"/>
+					<property name="maxIdle" value="10"/>
+					<property name="maxWait" value="2000"/>
+					<!--连接池有效性检查-->
+					<property name="validationQuery" value="select 1 from dual"/>
+					<property name="testWhileIdle" value="true"/>
+					<property name="testOnBorrow" value="false"/>
+					<property name="testOnReturn" value="false"/>
+					<!--最多20秒检查到连接失效-->
+					<property name="timeBetweenEvictionRunsMillis" value="20000"/>
+					<property name="minEvictableIdleTimeMillis" value="-1"/>
+					<property name="softMinEvictableIdleTimeMillis" value="1800000"/>
+					<property name="numTestsPerEvictionRun" value="2"/>
+        </pool>
+        <!--映射每个DAO模块对应的操作数据源-->
+        <mapping>
+            <property name="com.ai.appframe2.complex.self" value="base" />
+            <property name="com.ai.bce" value="base" />
+            <property name="com.ai.comframe" value="comframe" />
+            <property name="com.ai.comframe.autoform" value="base" />
+            <property name="com.ai.comframe.client" value="base" />
+            <property name="com.ai.comframe.config" value="base" />
+            <property name="com.ai.common" value="base" />
+            <property name="com.ai.common.dao.base" value="base" />
+            <property name="com.ai.common.service.party" value="party" />
+            <property name="com.ai.common.dao.res" value="res" />
+            <property name="com.ai.omframe" value="base" />
+            <property name="com.ai.omframe.instance" value="ins{CENTER}" />
+            <property name="com.ai.omframe.order" value="ord" />
+            <property name="com.ai.oneframe" value="base" />
+            <property name="com.ai.pce" value="product" />
+            <property name="com.ai.secframe.bsdistrict" value="base" />
+            <property name="com.ai.secframe.common" value="sec" />
+            <property name="com.ai.secframe.extend" value="sec" />
+            <property name="com.ai.secframe.model" value="sec" />
+            <property name="com.ai.secframe.orgmodel" value="sec" />
+            <property name="com.ai.secframe.sync2cmop" value="sec" />
+            <property name="com.ai.secframe.sync2foura" value="sec" />
+            <property name="com.ai.secframe.sysmgr" value="sec" />
+            <property name="com.asiainfo.appframe.ext.exeframe" value="base" />
+            <property name="com.asiainfo.crm" value="ord" />
+            <property name="com.asiainfo.crm.ams" value="ams{CENTER}" />
+            <property name="com.asiainfo.crm.ams.common.base" value="base" />
+            <property name="com.asiainfo.crm.ams.common.party" value="party" />
+            <property name="com.asiainfo.crm.ams.zc" value="zc" />
+            <property name="com.asiainfo.crm.ams.zg" value="zg" />
+            <property name="com.asiainfo.crm.chl" value="ruleeng" />
+            <property name="com.asiainfo.crm.cm" value="party" />
+            <property name="com.asiainfo.crm.cm.zg" value="zg" />
+            <property name="com.asiainfo.crm.common" value="base" />
+            <property name="com.asiainfo.crm.inter" value="base" />
+            <property name="com.asiainfo.crm.inter.outdata" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.inter.outdata.billing" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.inter.outdata.common" value="base" />
+            <property name="com.asiainfo.crm.inter.outdata.msg" value="zg" />
+            <property name="com.asiainfo.crm.inter.outdata.process" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.inter.outdata.worksheet" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.inter.sms" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.oneframe" value="base" />
+            <property name="com.asiainfo.crm.open" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.open.base" value="base" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbancboss" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbancboss.dao.remote" value="cboss" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbanzhcx" value="so{CENTER}" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbanzhcx.dao.remote" value="kt" />
+            <property name="com.asiainfo.crm.open.frame.table.hangbanzhcx.ktversionthd.dao.remote" value="ktv3" />
+            <property name="com.asiainfo.crm.report.base" value="base" />
+            <property name="com.asiainfo.crm.report.rpt" value="rpt" />
+            <property name="com.asiainfo.crm.report.rptcfg" value="rpt" />
+            <property name="com.asiainfo.crm.res" value="res" />
+            <property name="com.asiainfo.crm.res.avcs" value="res" />
+            <property name="com.asiainfo.crm.res.goods" value="res" />
+            <property name="com.asiainfo.crm.res.invoice" value="res" />
+            <property name="com.asiainfo.crm.res.paycard" value="res" />
+            <property name="com.asiainfo.crm.res.phone" value="res" />
+            <property name="com.asiainfo.crm.res.simcard" value="res" />
+            <property name="com.asiainfo.crm.res.terminal" value="res" />
+            <property name="com.asiainfo.crm.score" value="ams{CENTER}" />
+            <property name="com.asiainfo.crm.score.common.calculate" value="base" />
+            <property name="com.asiainfo.crm.sec" value="sec" />
+            <property name="com.asiainfo.crm.so.ams" value="ams{CENTER}" />
+             <property name="com.asiainfo.crm.so.common" value="ord" />
+            <property name="com.asiainfo.crm.so.common.instance" value="ins{CENTER}" />
+            <property name="com.asiainfo.crm.so.common.base" value="base" />
+            <property name="com.asiainfo.crm.so.common.bboss" value="party" />
+            <property name="com.asiainfo.crm.so.common.party" value="party" />
+            <property name="com.asiainfo.crm.so.common.product" value="product" />
+            <property name="com.asiainfo.crm.so.exe.tf.sms.dao" value="kt" />
+            <property name="com.asiainfo.crm.so.instance.dsmp.party" value="party" />
+            <property name="com.asiainfo.crm.so.instance.sms" value="base" />
+            <property name="com.asiainfo.crm.so.order.dsmp.dm" value="party" />
+            <property name="com.asiainfo.crm.so.order" value="ord" />
+            <property name="com.asiainfo.crm.so.query.report" value="party" />
+            <property name="com.asiainfo.crm.so.query.instance" value="ins{CENTER}" />
+            <property name="com.asiainfo.crm.so.shop" value="party"/>
+            <property name="com.asiainfo.crm.msm.ftp" value="base" />
+            <property name="com.asiainfo.crm.msm.opportunity.autoform" value="base" />
+            <property name="com.asiainfo.crm.msm" value="ssm" />
+            <property name="com.asiainfo.crm.partner" value="partner" />
+            <property name="com.asiainfo.crm.channel" value="partner" />
+            <!--自服务管理端配置-->
+            <property name="com.asiainfo.selfcare" value="selfcare"/>
+             <!-- CRM-BILL资料同步接口 -->
+            <property name="com.asiainfo.crm.bill" value="base"/>
+            <property name="com.asiainfo.crm.bill.so" value="ORD"/>
+            <property name="com.asiainfo.crm.bill.exe.tf.crm2boss" value="billing"/>
+            <property name="com.asiainfo.crm.bill.exe.tf.boss2crm" value="ORD"/>
+            <property name="com.ailk.common" value="base"/>
+            <property name="com.asiainfo.example" value="base" />
+            
+            <!-- 客户交互 -->
+            <property name="com.asiainfo.crm.ci" value="ci"/>
+            <property name="com.asiainfo.crm.so.order.rboss.instance" value="ins{CENTER}"/>
+            <property name="com.asiainfo.crm.so.instance" value="ins{CENTER}"/>
+        </mapping>
+    </datasource>
+
+    <!--包含的服务配置文件-->
+    <!--<include type="sv" classpath="com/ai/bce/bce-service.xml"/>-->
+    <!--<include type="sv" classpath="system/service/appframe-service.xml"/>-->
+    <!--<include type="sv" classpath="system/service/omframe-service.xml"/>-->
+    <!--<include type="sv" classpath="system/service/secframe-service.xml"/>-->
+    <!--<include type="sv" classpath="com/asiainfo/crm/open/core/ucmframe-app-service.xml"/>-->
+</defaults>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmxGroupCreditPoint" mainattr="CUST_SERVICE_ID">
+    <mapingenty type="query">SELECT GC.CUST_SERVICE_ID, GC.CITY_ID, GC.REGION_TYPE AS COUNTY,GC.SUB_REGION_TYPE AS AREA,GM.MANAGER_ID AS MANAGER_SEL, GCP.*
+FROM CM_GROUP_CUSTOMER GC, CM_GROUP_MANAGER GM,CMX_GROUP_CREDIT_POINT GCP
+WHERE GC.CUST_ID = GCP.CUST_ID AND GC.CUST_ID = GM.CUST_ID(+) AND GC.STATE = GM.STATE(+) AND GC.STATE = 'U'</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CUST_SERVICE_ID" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CUST_SERVICE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COUNTY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AREA" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AREA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MANAGER_SEL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">MANAGER_SEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REC_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">REC_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POINT_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">POINT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POINTS" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">POINTS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT1" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">EXT1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXT2" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXT2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

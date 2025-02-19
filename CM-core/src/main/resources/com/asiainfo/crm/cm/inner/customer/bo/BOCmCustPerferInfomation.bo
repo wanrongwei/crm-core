@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustPerferInfomation" mainattr="CUST_CONT_RELA_ID">
+    <mapingenty type="query">SELECT T2.PREFER_CHANNEL_ID,
+	   T2.CUST_ID,
+	   T2.CUST_CONT_RELA_ID,
+	   T2.PERFER_TYPE,
+	   T2.PREFER_CHANNEL_NAME,
+	   T2.PRIOR,
+	   T2.STATE AS CHANNEL_STATE,
+	   T2.CREATE_OP_ID AS CHANNEL_CREATE_OP_ID,
+	   T2.CREATE_ORG_ID AS CHANNEL_CREATE_ORG_ID,
+	   T2.OP_ID AS CHANNEL_OP_ID,
+	   T2.ORG_ID AS CHANNEL_ORG_ID,
+	   T2.DONE_CODE AS CHANNEL_DONE_CODE,
+	   T2.CREATE_DATE AS CHANNEL_CREATE_DATE,
+	   T2.DONE_DATE AS CHANNEL_DONE_DATE,
+	   T2.EFFECTIVE_DATE AS CHANNEL_EFFECTIVE_DATE,
+	   T2.EXPIRE_DATE AS CHANNEL_EXPIRE_DATE,
+	   T2.REGION_ID AS CHANNEL_REGION_ID,
+	   T2.REMARKS AS CHANNEL_REMARKS,
+	   T1.CONT_MED_TYPE_ID,
+	   T1.POSTAL_CODE,
+	   T1.ADDRESS_ID,
+	   T1.ADDRESS_CODE,
+	   T1.ADDRESS_DETAIL,
+	   T1.EMAIL_ADDRESS,
+	   T1.FAX_NUMBER,
+	   T1.CONT_NUMBER,
+	   T1.IS_NO_DISTURBING,
+	   T1.PRIORITY,
+	   T1.PROTECT_EFF_DATE,
+	   T1.PROTECT_EXP_DATE,
+	   T1.STATE AS MEDIUM_STATE,
+	   T1.CREATE_OP_ID AS MEDIUM_CREATE_OP_ID,
+	   T1.CREATE_ORG_ID AS MEDIUM_CREATE_ORG_ID,
+	   T1.OP_ID AS MEDIUM_OP_ID,
+	   T1.ORG_ID AS MEDIUM_ORG_ID,
+	   T1.DONE_CODE AS MEDIUM_DONE_CODE,
+	   T1.CREATE_DATE AS MEDIUM_CREATE_DATE,
+	   T1.DONE_DATE AS MEDIUM_DONE_DATE,
+	   T1.EFFECTIVE_DATE AS MEDIUM_EFFECTIVE_DATE,
+	   T1.EXPIRE_DATE AS MEDIUM_EXPIRE_DATE,
+	   T1.REGION_ID AS MEDIUM_REGION_ID,
+	   T1.REMARKS AS MEDIUM_REMARKS
+	   
+FROM {CM_CUST_PREFER_CHANNEL} T2 LEFT JOIN {CM_CUST_CONTACT_MEDIUM} T1 
+ON T2.CUST_CONT_RELA_ID = T1.CUST_CONT_RELA_ID AND T2.CUST_ID = T1.CUST_ID</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PREFER_CHANNEL_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">PREFER_CHANNEL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CONT_RELA_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CUST_CONT_RELA_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PERFER_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">PERFER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PREFER_CHANNEL_NAME" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">PREFER_CHANNEL_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIOR" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">PRIOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CHANNEL_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CHANNEL_CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CHANNEL_CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CHANNEL_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CHANNEL_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CHANNEL_DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_CREATE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CHANNEL_CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_DONE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CHANNEL_DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_EFFECTIVE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CHANNEL_EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_EXPIRE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">CHANNEL_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CHANNEL_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CHANNEL_REMARKS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CHANNEL_REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_MED_TYPE_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">CONT_MED_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POSTAL_CODE" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">POSTAL_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">ADDRESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">ADDRESS_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ADDRESS_DETAIL" maxlength="512" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">ADDRESS_DETAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMAIL_ADDRESS" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">EMAIL_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAX_NUMBER" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">FAX_NUMBER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NUMBER" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">CONT_NUMBER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_NO_DISTURBING" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">IS_NO_DISTURBING</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRIORITY" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="BIGINT">PRIORITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTECT_EFF_DATE" maxlength="10" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">PROTECT_EFF_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROTECT_EXP_DATE" maxlength="10" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">PROTECT_EXP_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">MEDIUM_STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">MEDIUM_CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">MEDIUM_CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">MEDIUM_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">MEDIUM_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="BIGINT">MEDIUM_DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_CREATE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">MEDIUM_CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_DONE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">MEDIUM_DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_EFFECTIVE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">MEDIUM_EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_EXPIRE_DATE" maxlength="19" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATETIME">MEDIUM_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">MEDIUM_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MEDIUM_REMARKS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR">MEDIUM_REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CONT_MED_TYPE_NAME" maxlength="128" datatype="String" type="COL" />
+      <attr floatlength="0" name="UP_CONT_MED_TYPE_ID" maxlength="12" datatype="Long" type="COL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

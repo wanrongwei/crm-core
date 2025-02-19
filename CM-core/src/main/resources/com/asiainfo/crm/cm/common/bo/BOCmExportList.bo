@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmExportList" mainattr="EXPORT_ID">
+    <mapingenty type="table">{CM_EXPORT_LIST}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="EXPORT_ID" maxlength="16" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">EXPORT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TABLE_INFO" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TABLE_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILE_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FILE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_FILE_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FTP_FILE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COLUMN_TITLES" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COLUMN_TITLES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONDITION_STR" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONDITION_STR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="2" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

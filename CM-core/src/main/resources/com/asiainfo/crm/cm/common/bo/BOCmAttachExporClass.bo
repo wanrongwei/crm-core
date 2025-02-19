@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmAttachExporClass" mainattr="ATTACH_CLASS_ID">
+    <mapingenty type="table">CM_ATTACH_EXPOR_CLASS</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ATTACH_CLASS_ID" maxlength="22" datatype="Long" type="PK" remark="附件编号">
+        <mapingcol datatype="NUMBER">ATTACH_CLASS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METH_CODE" maxlength="22" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">METH_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNCTION_NAME" maxlength="50" datatype="String" type="COL" remark="业务对象编号">
+        <mapingcol datatype="VARCHAR2">FUNCTION_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNCTION_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FUNCTION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLASS_NAME" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CLASS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METH_NAME" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">METH_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILE_MODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FILE_MODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FTP_CODE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FTP_CODE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

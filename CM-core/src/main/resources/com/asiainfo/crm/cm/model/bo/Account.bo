@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="Account" mainattr="ACCT_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="ACCT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="REL_CUST_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="REL_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="REL_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_ALIAS_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_STATUS" maxlength="6" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_STATUS_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_PASSWORD" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="6" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_LEVEL_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_VALUE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="URGE_STOP_FLAG" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="URGE_STOP_FLAG_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_CYCLE_FLAG" maxlength="6" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="BILL_CYCLE_FLAG_DESC" maxlength="256" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="STATE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="OP_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="ORG_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="DONE_CODE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="REGION_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="REMARKS" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_PAY_METHOD_TEXT" maxlength="40" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_BEHALF_PHONE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="INSTALLMENT_FLAG" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="FIRST_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="LAST_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_CERT_CODE" maxlength="256" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOLnCustParty" mainattr="PARTY_ID">
+    <mapingenty type="query">SELECT b.PARTY_ID,b.CONT_NAME,b.CONT_ID, b.CONT_ADDRESS,b.HOME_TEL, b.OFFICE_TEL, b.CONT_MOBILE ,b.CONT_DESC ,b.CONT_EMAIL ,b.POST_CODE, b.POST_ADDRESS, b.CONT_FAX,c.cust_cert_type CERT_TYPE,c.cust_cert_code CERT_CODE,c.GENDER CONT_GENDER FROM {cm_party} a,{cm_party_contact} b,{cm_indiv_customer} c WHERE a.party_id=b.party_id AND a.party_id=c.party_id</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PARTY_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_ADDRESS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOME_TEL" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">HOME_TEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OFFICE_TEL" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OFFICE_TEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_MOBILE" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_MOBILE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_DESC" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_EMAIL" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CODE" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_ADDRESS" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">POST_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_FAX" maxlength="60" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_FAX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CERT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERT_CODE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CERT_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_GENDER" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CONT_GENDER</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

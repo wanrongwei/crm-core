@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGsChanInfo" mainattr="SCHOOL_ID">
+    <mapingenty type="table">CM_GS_CHAN_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SCHOOL_ID" maxlength="15" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SCHOOL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_ID" maxlength="12" datatype="Long" type="PK" remark="营业厅编码">
+        <mapingcol datatype="NUMBER">SALE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_NAME" maxlength="50" datatype="String" type="COL" remark="填写营业厅名称，包含我公司营业厅和竞争对手营业厅的唯一标识">
+        <mapingcol datatype="VARCHAR2">SALE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_TYPE_ID" maxlength="2" datatype="Integer" type="COL" remark="1:移动
+2:电信
+3:联通">
+        <mapingcol datatype="NUMBER">SALE_TYPE_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_TYPE" maxlength="2" datatype="Integer" type="COL" remark="1:自办
+2:自建他营-外包型
+3:自建他营-合作营业厅
+4:特许经营店">
+        <mapingcol datatype="NUMBER">SALE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPER_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">OPER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_STS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">AUDIT_STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AUDIT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_NOTE" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AUDIT_NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="10" datatype="String" type="COL" remark="校园所属地市编号">
+        <mapingcol datatype="VARCHAR2">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="10" datatype="String" type="COL" remark="校园所属区县编号">
+        <mapingcol datatype="VARCHAR2">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALE_STATION_TYPE" maxlength="2" datatype="Integer" type="COL" remark="营业厅位置类型 1 校内 2 校外">
+        <mapingcol datatype="NUMBER">SALE_STATION_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

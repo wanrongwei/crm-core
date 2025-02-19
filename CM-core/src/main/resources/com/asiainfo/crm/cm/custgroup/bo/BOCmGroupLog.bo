@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupLog" mainattr="LOG_ID">
+    <mapingenty type="table">{CM_GROUP_LOG}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="LOG_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">LOG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_CREATOR" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">LOG_CREATOR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATOR_OBJECT_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OPERATOR_OBJECT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EVENT_CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">EVENT_CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_TYPE" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">LOG_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_EVENT_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_EVENT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_LEVEL" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">LOG_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO1" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_INFO1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO2" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_INFO2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO3" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_INFO3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO4" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_INFO4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO5" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_INFO5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO6" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">LOG_INFO6</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCH_DEAL_ID" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">BATCH_DEAL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LOG_INFO_INDEX" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">LOG_INFO_INDEX</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

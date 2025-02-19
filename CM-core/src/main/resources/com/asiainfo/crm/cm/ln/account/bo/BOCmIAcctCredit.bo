@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmIAcctCredit" mainattr="SO_NBR">
+    <mapingenty type="table">CM_I_ACCT_CREDIT</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SO_NBR" maxlength="15" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SO_NBR</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SID" maxlength="9" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">SID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_CODE" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">BUSI_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="4" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="4" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">SERV_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMMIT_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">COMMIT_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_FIELD" maxlength="64" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">UP_FIELD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARK" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">UP_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_CREDIT" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">BUSI_CREDIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREDIT_LEVEL</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

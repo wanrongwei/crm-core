@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupContactQry" mainattr="CONT_ID">
+    <mapingenty type="query">SELECT A.CONT_ID,
+       B.CONT_NAME,
+       A.CUST_ID,
+       B.FIRST_NAME,
+       B.MIDDLE_NAME,
+       B.LAST_NAME,
+       B.FIRST_NAME_QRY,
+       B.MIDDLE_NAME_QRY,
+       B.LAST_NAME_QRY,
+       B.CONT_NAME_QRY
+  FROM (SELECT DISTINCT T.CONT_ID, T.CUST_ID
+          FROM {CM_GROUP_CONTACT} T, {CM_GROUP_CONTACT} GC
+         WHERE T.CONT_ID = GC.CONT_ID
+           AND T.STATE = 'U'
+           AND GC.STATE = 'U'
+           AND T.CONT_TYPE = '1'
+           AND GC.CONT_TYPE = '2') A,
+       CM_PARTY_CONTACT B
+ WHERE A.CONT_ID = B.CONT_ID
+</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CONT_ID" maxlength="22" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">CONT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FIRST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FIRST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MIDDLE_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MIDDLE_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_NAME_QRY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CONT_NAME_QRY" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CONT_NAME_QRY</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

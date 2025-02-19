@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BoCmAttachExportHis" mainattr="ATTACH_ID">
+    <mapingenty type="table">{CM_ATTACH_EXPORT_HIS}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ATTACH_ID" maxlength="22" datatype="Long" type="COL" remark="附件编号">
+        <mapingcol datatype="NUMBER">ATTACH_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COL_CODE" maxlength="22" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">COL_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="METH_CODE" maxlength="22" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">METH_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ATTACY_NAME" maxlength="255" datatype="String" type="COL" remark="源文件名称">
+        <mapingcol datatype="VARCHAR2">ATTACY_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILE_NAME" maxlength="255" datatype="String" type="COL" remark="附件文件名称">
+        <mapingcol datatype="VARCHAR2">FILE_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILE_SIZE" maxlength="12" datatype="Long" type="COL" remark="文件大小">
+        <mapingcol datatype="NUMBER">FILE_SIZE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FILE_EXT" maxlength="50" datatype="String" type="COL" remark="文件扩展名称">
+        <mapingcol datatype="VARCHAR2">FILE_EXT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNCTION_NAME" maxlength="50" datatype="String" type="COL" remark="业务对象编号">
+        <mapingcol datatype="VARCHAR2">FUNCTION_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FUNCTION_CODE" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">FUNCTION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REASON" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REASON</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPORT_PARAMETER" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EXPORT_PARAMETER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识
+
+由于平台保存历史记录时需要验证该字段是否为空，如果为空将不能保存，故需要限制该字段不能为空。">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CLEAR_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CLEAR_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID" maxlength="22" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

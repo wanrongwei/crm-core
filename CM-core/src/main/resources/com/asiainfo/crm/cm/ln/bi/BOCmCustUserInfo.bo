@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustUserInfo" mainattr="DATA_ID" remark="客户用户扩展信息">
+    <mapingenty type="table">CM_CUST_USER_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DATA_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">DATA_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">USER_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">USER_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_TOPLEVEL_USER" maxlength="2" datatype="Integer" type="COL" remark="1-是集团拍照成员 0-不是集团拍照成员
+">
+        <mapingcol datatype="NUMBER">IS_TOPLEVEL_USER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_KEY_USER" maxlength="2" datatype="Integer" type="COL" remark="1-是，0-不是
+">
+        <mapingcol datatype="NUMBER">IS_KEY_USER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_GROUP_USER" maxlength="2" datatype="Integer" type="COL" remark="1-是，0-不是
+">
+        <mapingcol datatype="NUMBER">IS_GROUP_USER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_FAMILY_USER" maxlength="2" datatype="Integer" type="COL" remark="1-是，0-不是">
+        <mapingcol datatype="NUMBER">IS_FAMILY_USER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_OPEN_GPRS" maxlength="2" datatype="Integer" type="COL" remark="1-是，0-不是">
+        <mapingcol datatype="NUMBER">IS_OPEN_GPRS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_REIN_USER" maxlength="2" datatype="Integer" type="COL" remark="1-是，0-不是">
+        <mapingcol datatype="NUMBER">IS_REIN_USER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LEAVE_WARING" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LEAVE_WARING</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ARPU" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ARPU</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IN_NET_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">IN_NET_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MORNING_CALL_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">MORNING_CALL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AFTERNOON_CALL_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AFTERNOON_CALL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NIGHT_CALL_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NIGHT_CALL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EVENING_CALL_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EVENING_CALL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPROV_DISTANCE_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPROV_DISTANCE_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INTERNATIONAL_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INTERNATIONAL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INPROV_ROAM_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INPROV_ROAM_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OUTPROV_ROAM_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">OUTPROV_ROAM_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="INTERNATIONAL_ROAM_TIME" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">INTERNATIONAL_ROAM_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

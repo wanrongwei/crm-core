@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupOrgDiffer" mainattr="differ_id">
+    <mapingenty type="table">{CM_GROUP_ORG_DIFFER}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="differ_id" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">differ_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="dept_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">dept_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="parent_dept_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">parent_dept_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="import_parent_dept_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">import_parent_dept_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">cust_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="parent_cust_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">parent_cust_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="import_parent_cust_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">import_parent_cust_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_service_id" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">cust_service_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="parent_custserv_id" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">parent_custserv_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="import_parent_custserv_id" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">import_parent_custserv_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="import_source" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="varchar">import_source</mapingcol>
+      </attr>
+      <attr floatlength="0" name="import_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">import_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_alert" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">is_alert</mapingcol>
+      </attr>
+      <attr floatlength="0" name="process_status" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">process_status</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

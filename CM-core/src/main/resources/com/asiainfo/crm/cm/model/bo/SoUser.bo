@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="SoUser" mainattr="USER_ID">
+		<mapingenty type="query">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="USER_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="PROD_CATALOG_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CUST_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="SUB_BILL_ID" maxlength="50" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="FIRST_USE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="AREA_CODE" maxlength="40" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OWE_AMOUNT" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="PASSWORD_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="PASSWORD" maxlength="40" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="USER_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="NOTICE_FLAG" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="IS_OUT_NET" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="AREA_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="BAL_ORG_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CONT_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="RISK_FLAG" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="OP_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="ORG_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="ACTIVE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="EFFECTIVE_DATE_TYPE" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="EXPIRE_DATE_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="COUNTRY_CODE" maxlength="6" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="ADDRESS_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="ADDRESS_DESC" maxlength="200" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CUST_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="CREDIT_LEVEL" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="STATE_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="USER_TYPE_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="NOTICE_FLAG_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="CUST_TYPE_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="RISK_FLAG_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="BRAND_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="BRAND_ID_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_INST_ID" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_TYPE" maxlength="6" datatype="Integer" type="VIRTUAL" />
+			<attr floatlength="0" name="ORDER_NAME" maxlength="200" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_EFFECTIVE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_EXPIRE_DATE" maxlength="7" datatype="DateTime" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_NAME" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OS_STATUS" maxlength="22" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OS_STATUS_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_PLAN_GSM" maxlength="22" datatype="Long" type="VIRTUAL" />
+			<attr floatlength="0" name="CREDIT_LEVEL_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="OFFER_PLAN_GSM_DESC" maxlength="0" datatype="String" type="VIRTUAL" />
+			<attr floatlength="0" name="PAY_FEE_TYPE" maxlength="6" datatype="String" type="VIRTUAL" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

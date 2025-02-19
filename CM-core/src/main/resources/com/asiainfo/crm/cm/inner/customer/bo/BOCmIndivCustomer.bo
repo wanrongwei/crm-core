@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmIndivCustomer" mainattr="CUST_ID">
+    <mapingenty type="table">{CM_INDIV_CUSTOMER}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="cust_id" maxlength="21" datatype="Long" type="PK" remark="个人客户编号
+            客户唯一标识(主键)，来源于系统序列号
+            标明此处的个人客户唯一标识与基础客户的唯一标识是不一样的。
+            ">
+        <mapingcol datatype="bigint">cust_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="party_id" maxlength="21" datatype="Long" type="COL" remark="参与人编号
+            ">
+        <mapingcol datatype="bigint">party_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_service_id" maxlength="50" datatype="String" type="COL" remark="客户服务编号
+            
+            客户服务编号是系统按照一定规则生成的序列号，当客户被创建后告知客户，方便以后客户可以通过提供这个编号直接办理业务等。
+            
+            
+            ----------------Telenor需求概念扩展
+            第三方机构客户唯一编码（例如：CPR NUMBER、KOB NUMBER）">
+        <mapingcol datatype="varchar">cust_service_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="first_name" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">first_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="middle_name" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">middle_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="last_name" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">last_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="first_name_qry" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">first_name_qry</mapingcol>
+      </attr>
+      <attr floatlength="0" name="middle_name_qry" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">middle_name_qry</mapingcol>
+      </attr>
+      <attr floatlength="0" name="last_name_qry" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">last_name_qry</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_name_qry" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">cust_name_qry</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_name" maxlength="255" datatype="String" type="COL" remark="客户名称">
+        <mapingcol datatype="varchar">cust_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="short_name" maxlength="128" datatype="String" type="COL" remark="简称">
+        <mapingcol datatype="varchar">short_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="english_name" maxlength="256" datatype="String" type="COL" remark="英文名称">
+        <mapingcol datatype="varchar">english_name</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_status" maxlength="21" datatype="Long" type="COL" remark="客户状态
+            0 潜在
+            1 在网
+            3 暂停
+            2 离网
+            4 注销
+            
+            SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_STATUS_1‘;
+            ">
+        <mapingcol datatype="bigint">cust_status</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_password" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">cust_password</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_zipcode" maxlength="9" datatype="String" type="COL" remark="邮政编码">
+        <mapingcol datatype="varchar">cust_zipcode</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_address" maxlength="256" datatype="String" type="COL" remark="客户地址">
+        <mapingcol datatype="varchar">cust_address</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_service_level" maxlength="21" datatype="Long" type="COL" remark="telenor未使用该字段
+            
+            客户级别
+            0	普通
+            1	钻石卡
+            2	金卡
+            3	银卡
+            
+            
+            
+            ">
+        <mapingcol datatype="bigint">cust_service_level</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_cert_type" maxlength="21" datatype="Long" type="COL" remark="1：身份证
+            2：护照
+            3：驾驶证
+            4：军官证
+            5：警官证
+            6：社会保险号
+            7：其他
+            
+            
+            
+            SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_CERT_TYPE_1&apos;;">
+        <mapingcol datatype="bigint">cust_cert_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_cert_code" maxlength="50" datatype="String" type="COL" remark="证件号码">
+        <mapingcol datatype="varchar">cust_cert_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_cert_address" maxlength="256" datatype="String" type="COL" remark="证件地址">
+        <mapingcol datatype="varchar">cust_cert_address</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_cert_effdate" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">cust_cert_effdate</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_cert_expire" maxlength="20" datatype="DateTime" type="COL" remark="证件有效期">
+        <mapingcol datatype="datetime">cust_cert_expire</mapingcol>
+      </attr>
+      <attr floatlength="0" name="indiv_cust_type" maxlength="2" datatype="String" type="COL" remark="客户物理表中客户角色区分
+            1：客户
+            2：使用者
+            3:   员工
+            ">
+        <mapingcol datatype="varchar">indiv_cust_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_language" maxlength="25" datatype="String" type="COL" remark="1.丹麦语
+            2.匈牙利语
+            3.英语">
+        <mapingcol datatype="varchar">cust_language</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_vip" maxlength="21" datatype="Long" type="COL" remark="是否大客户
+            
+            0：否
+            1：是">
+        <mapingcol datatype="bigint">is_vip</mapingcol>
+      </attr>
+      <attr floatlength="0" name="credit_level" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="varchar">credit_level</mapingcol>
+      </attr>
+      <attr floatlength="0" name="credit_value" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">credit_value</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_revisable" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">is_revisable</mapingcol>
+      </attr>
+      <attr floatlength="0" name="gender" maxlength="21" datatype="Long" type="COL" remark="客户性别
+            1	男
+            2	女
+            0	未知
+            
+            SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GENDER&apos;;">
+        <mapingcol datatype="bigint">gender</mapingcol>
+      </attr>
+      <attr floatlength="0" name="lunar" maxlength="21" datatype="Long" type="COL" remark="telenor未使用
+            生日类别
+            0：阳历（缺省）
+            1：阴历">
+        <mapingcol datatype="bigint">lunar</mapingcol>
+      </attr>
+      <attr floatlength="0" name="birthday" maxlength="20" datatype="DateTime" type="COL" remark="出生日期">
+        <mapingcol datatype="datetime">birthday</mapingcol>
+      </attr>
+      <attr floatlength="0" name="birth_place" maxlength="27" datatype="String" type="COL" remark="出生地">
+        <mapingcol datatype="varchar">birth_place</mapingcol>
+      </attr>
+      <attr floatlength="0" name="occupation" maxlength="21" datatype="Long" type="COL" remark="所属行业
+            1：未知
+            2：其他
+            3：个体户/私营业主
+            4：机关干部
+            5：教师/医生/技术人员
+            6：工人/一般职业
+            7：司机
+            8：中高级企业管理人员
+            9：业务员/销售员/推销员
+            10：学生
+            11：全职家庭主妇
+            12：离退休在家
+            13：公务员
+            14：社会名流
+            15：无业
+            16：自由职业者
+            
+            SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_INDIV_CUST_OCCUPATION&apos;;">
+        <mapingcol datatype="bigint">occupation</mapingcol>
+      </attr>
+      <attr floatlength="0" name="real_name_flag" maxlength="21" datatype="Long" type="COL" remark="实名标志：
+            0	否
+            1	是
+            
+            
+            SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_CUST_REAL_NAME_FLAG’;">
+        <mapingcol datatype="bigint">real_name_flag</mapingcol>
+      </attr>
+      <attr floatlength="0" name="religion" maxlength="255" datatype="String" type="COL" remark="宗教信仰">
+        <mapingcol datatype="varchar">religion</mapingcol>
+      </attr>
+      <attr floatlength="0" name="national_type" maxlength="21" datatype="Long" type="COL" remark="民族  CM_NATIONAL_TYPE
+            10	汉族	       
+            11	蒙古族       
+            12	鄂温克族     
+            13	鄂伦春族	   
+            14	达斡尔族	   
+            15	赫哲族	     
+            16	朝鲜族	     
+            17	满族	       
+            18	纳西族	     
+            19	藏族         
+            20	僳僳族	     
+            21	彝族	       
+            22	普米族       
+            23	白族	       
+            24	独龙族	     
+            25	怒族	       
+            26	阿昌族	     
+            27	景颇族	     
+            28	德昂族	     
+            29	佤族	       
+            30	拉祜族	     
+            31	布朗族	     
+            32	基诺族	     
+            33	傣族	       
+            34	哈尼族	     
+            35	门巴族	     
+            36	珞巴族	     
+            37	塔吉克族	   
+            38	柯尔克孜族	 
+            39	哈萨克族	   
+            40	乌孜别克族	 
+            41	塔塔尔族	   
+            42	俄罗斯族	   
+            43	锡伯族	     
+            44	维吾尔族	   
+            45	裕固族	     
+            46	土族	       
+            47	撒拉族	     
+            48	保安族	     
+            49	东乡族	     
+  ">
+        <mapingcol datatype="bigint">national_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="family_info" maxlength="255" datatype="String" type="COL" remark="子女状况">
+        <mapingcol datatype="varchar">family_info</mapingcol>
+      </attr>
+      <attr floatlength="0" name="politics_face" maxlength="21" datatype="Long" type="COL" remark="政治面貌   CM_POLITICS_FACE
+            0：党员
+            1：团员
+            2：群众
+            3：其他">
+        <mapingcol datatype="bigint">politics_face</mapingcol>
+      </attr>
+      <attr floatlength="0" name="education_level" maxlength="21" datatype="Long" type="COL" remark="学历  CM_CUST_EDUCATION_LEVEL
+            
+            0	初中以下
+            1	初中
+            2	高中
+            3	中专、技校
+            4	大专
+            5	本科
+            6	硕士
+            7	博士
+            8	其他
+            ">
+        <mapingcol datatype="bigint">education_level</mapingcol>
+      </attr>
+      <attr floatlength="0" name="income_level" maxlength="21" datatype="Long" type="COL" remark="收入  CM_INCOME_LEVEL
+            
+            1	0-3万             
+            10	200万-300万     
+            11	300万-400万     
+            12	400万-500万     
+            13	500万-1000万    
+            14	1000万-2000万   
+            15	2000万-3000万   
+            16	3000万-4000万   
+            17	4000万-5000万   
+            18	5000万-1亿      
+            19	1亿-5亿         
+            2	3万-5万           
+            20	5亿-10亿        
+            21	10亿-50亿       
+            22	50亿以上        
+            3	5万-8万           
+            4	8万-10万          
+            5	10万-20万         
+            6	20万-50万         
+            7	50万-80万         
+            8	80万-100万        
+            9	100万-200万       
+            ">
+        <mapingcol datatype="bigint">income_level</mapingcol>
+      </attr>
+      <attr floatlength="0" name="character_desc" maxlength="256" datatype="String" type="COL" remark="性格描述">
+        <mapingcol datatype="varchar">character_desc</mapingcol>
+      </attr>
+      <attr floatlength="0" name="job_position" maxlength="40" datatype="String" type="COL" remark="职位   CMX_POSITION
+            
+            1	未知
+            2	职员
+            3	科长
+            4	经理
+            ">
+        <mapingcol datatype="varchar">job_position</mapingcol>
+      </attr>
+      <attr floatlength="0" name="job_company" maxlength="255" datatype="String" type="COL" remark="工作单位">
+        <mapingcol datatype="varchar">job_company</mapingcol>
+      </attr>
+      <attr floatlength="0" name="marry_status" maxlength="21" datatype="Long" type="COL" remark="婚姻状况   CM_INDIV_CUST_MARRY_STATUS
+            0	未知
+            1	已婚
+            2	未婚
+            ">
+        <mapingcol datatype="bigint">marry_status</mapingcol>
+      </attr>
+      <attr floatlength="0" name="hobby" maxlength="255" datatype="String" type="COL" remark="个人爱好">
+        <mapingcol datatype="varchar">hobby</mapingcol>
+      </attr>
+      <attr floatlength="0" name="physiological_state" maxlength="21" datatype="Long" type="COL" remark="0代表正常人
+            1代表眼盲人士
+            2代表耳聋人士,
+            3代表眼盲、耳聋
+            ">
+        <mapingcol datatype="bigint">physiological_state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="anonymous_flag" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">anonymous_flag</mapingcol>
+      </attr>
+      <attr floatlength="0" name="nationality" maxlength="10" datatype="String" type="COL" remark="国家">
+        <mapingcol datatype="varchar">nationality</mapingcol>
+      </attr>
+      <attr floatlength="0" name="province_id" maxlength="10" datatype="String" type="COL" remark="省份">
+        <mapingcol datatype="varchar">province_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="city_id" maxlength="10" datatype="String" type="COL" remark="地市">
+        <mapingcol datatype="varchar">city_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="county_id" maxlength="10" datatype="String" type="COL" remark="区县">
+        <mapingcol datatype="varchar">county_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL" remark="记录状态
+            
+            U:有效 E:无效">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="4000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

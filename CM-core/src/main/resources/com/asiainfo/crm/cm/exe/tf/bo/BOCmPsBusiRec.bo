@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmPsBusiRec" mainattr="RECORD_ID">
+    <mapingenty type="table">CM_PS_BUSI_REC</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="RECORD_ID" maxlength="12" datatype="Long" type="PK" remark="记录编号">
+        <mapingcol datatype="NUMBER">RECORD_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_OBJECT_TYPE" maxlength="255" datatype="String" type="COL" remark="关联对象类型。
+如：客户、账户、参与人等。">
+        <mapingcol datatype="VARCHAR2">REL_OBJECT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_OBJECT_ID" maxlength="14" datatype="Long" type="COL" remark="关联对象编号.
+根据具体的类型存储对应的编号，如客户编号、账户编号、参与人编号等。">
+        <mapingcol datatype="NUMBER">REL_OBJECT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSINESS_ID" maxlength="12" datatype="Long" type="COL" remark="业务编号。
+来自BS_OPERATION主键BUSINESS_ID。">
+        <mapingcol datatype="NUMBER">BUSINESS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识
+
+由于平台保存历史记录时需要验证该字段是否为空，如果为空将不能保存，故需要限制该字段不能为空。">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REL_OBJECT_DETAIL" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REL_OBJECT_DETAIL</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupContactBinding" mainattr="rel_id">
+    <mapingenty type="table">{CM_GROUP_CONTACT_BINDING}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="rel_id" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">rel_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cust_id" maxlength="21" datatype="Long" type="COL" remark="客户编号
+            
+            所有类型客户的客户编号是唯一的。">
+        <mapingcol datatype="bigint">cust_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="cont_id" maxlength="21" datatype="Long" type="COL" remark="联系人ID">
+        <mapingcol datatype="bigint">cont_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="binding_event" maxlength="21" datatype="Long" type="COL" remark="绑定事件">
+        <mapingcol datatype="bigint">binding_event</mapingcol>
+      </attr>
+      <attr floatlength="0" name="is_notify" maxlength="21" datatype="Long" type="COL" remark="是否接受通知
+            0：否
+            1：是
+            ">
+        <mapingcol datatype="bigint">is_notify</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL" remark="记录状态
+            
+            U:有效 E:无效">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext1" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext2" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext3" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext3</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext4" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext4</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext5" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext5</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext6" maxlength="100" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext6</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

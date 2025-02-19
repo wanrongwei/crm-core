@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmSceneMarketing" mainattr="DATA_ID">
+    <mapingenty type="table">CM_SCENE_MARKETING</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="DATA_ID" maxlength="12" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">DATA_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_ARPU" maxlength="30" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">LAST_MON_ARPU</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_MOU" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_MOU</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_CALL_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_CALL_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_ROAMING_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_ROAMING_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_SM_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_SM_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THREE_MON_VOICE_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">THREE_MON_VOICE_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THREE_MON_SM_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">THREE_MON_SM_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_SM_FEE_NUM" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_SM_FEE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_GPRS_FLUX" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_GPRS_FLUX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_FEE_FLUX" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_FEE_FLUX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_WLAN_FLUX" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_WLAN_FLUX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_SM_NUM" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_SM_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THREE_MON_SM_NUM" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">THREE_MON_SM_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_CALL_TIME" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_CALL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THREE_MON_CALL_TIME" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">THREE_MON_CALL_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="THREE_MON_GPRS_FLUX" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">THREE_MON_GPRS_FLUX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_GPRS_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_GPRS_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LAST_MON_WLAN_FEE" maxlength="10" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LAST_MON_WLAN_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_VEST_DEPARTEMENT" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">CREATE_VEST_DEPARTEMENT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

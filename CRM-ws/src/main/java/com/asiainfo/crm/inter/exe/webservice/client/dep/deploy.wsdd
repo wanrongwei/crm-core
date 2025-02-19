@@ -1,0 +1,251 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from AppleDEPService WSDL service -->
+
+  <service name="AppleDEPSYNCPort" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://soa.ailk.telenor.com/wsdl/soa"/>
+      <parameter name="wsdlServiceElement" value="AppleDEPService"/>
+      <parameter name="schemaUnqualified" value="http://soa.ailk.telenor.com/wsdl/busi,http://soa.ailk.telenor.com/schema/soa/common,http://soa.ailk.telenor.com/wsdl/soa"/>
+      <parameter name="wsdlServicePort" value="AppleDEPSYNCPort"/>
+      <parameter name="className" value="com.asiainfo.crm.inter.exe.webservice.client.dep.AppleDEPPortBindingImpl"/>
+      <parameter name="wsdlPortType" value="AppleDEP"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="bulkEnrollDevices" qname="bulkEnrollDevices" returnQName="retNS:bulkEnrollDevicesResponse" xmlns:retNS="http://soa.ailk.telenor.com/wsdl/soa" returnType="rtns:bulkEnrollDevicesResponse" xmlns:rtns="http://soa.ailk.telenor.com/wsdl/busi" soapAction="" >
+        <parameter qname="pns:bulkEnrollDevicesRequest" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:bulkEnrollDevicesRequest" xmlns:tns="http://soa.ailk.telenor.com/wsdl/busi"/>
+      </operation>
+      <operation name="checkTransactionStatus" qname="checkTransactionStatus" returnQName="retNS:checkTransactionStatusResponse" xmlns:retNS="http://soa.ailk.telenor.com/wsdl/soa" returnType="rtns:checkTransactionStatusResponse" xmlns:rtns="http://soa.ailk.telenor.com/wsdl/busi" soapAction="" >
+        <parameter qname="pns:checkTransactionStatusRequest" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:checkTransactionStatusRequest" xmlns:tns="http://soa.ailk.telenor.com/wsdl/busi"/>
+      </operation>
+      <operation name="showOrderDetails" qname="showOrderDetails" returnQName="retNS:showOrderDetailsResponse" xmlns:retNS="http://soa.ailk.telenor.com/wsdl/soa" returnType="rtns:showOrderDetailsResponse" xmlns:rtns="http://soa.ailk.telenor.com/wsdl/busi" soapAction="" >
+        <parameter qname="pns:showOrderDetailsRequest" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:showOrderDetailsRequest" xmlns:tns="http://soa.ailk.telenor.com/wsdl/busi"/>
+      </operation>
+      <parameter name="allowedMethods" value="bulkEnrollDevices showOrderDetails checkTransactionStatus"/>
+
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:checkTransactionStatusResponseBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.CheckTransactionStatusResponseBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:bulkEnrollDevicesResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.BulkEnrollDevicesResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:OrdersCheck"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.OrdersCheck"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:bulkEnrollDevicesRequestBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.BulkEnrollDevicesRequestBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:bulkEnrollDevicesResponseBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.BulkEnrollDevicesResponseBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:DeliveriesCheck"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.DeliveriesCheck"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:RequestContext"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.RequestContext"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:CheckTransactionErrorResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.CheckTransactionErrorResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:DeliveriesShow"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.DeliveriesShow"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:EnrollDeviceErrorResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.EnrollDeviceErrorResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:DevicesShow"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.DevicesShow"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:showOrderDetailsResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.ShowOrderDetailsResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:showOrderDetailsRequestBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.ShowOrderDetailsRequestBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:checkTransactionStatusRequest"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.CheckTransactionStatusRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:Deliveries"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.Deliveries"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:checkTransactionStatusResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.CheckTransactionStatusResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:ShowOrderErrorResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.ShowOrderErrorResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:Devices"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.Devices"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:OrdersShow"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.OrdersShow"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:DevicesCheck"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.DevicesCheck"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:EnrollDevicesResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.EnrollDevicesResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:Orders"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.Orders"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:checkTransactionStatusRequestBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.CheckTransactionStatusRequestBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:showOrderDetailsResponseBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.ShowOrderDetailsResponseBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:AttrInfo"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.AttrInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:bulkEnrollDevicesRequest"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.BulkEnrollDevicesRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/wsdl/busi"
+        qname="ns:showOrderDetailsRequest"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.dep.ShowOrderDetailsRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

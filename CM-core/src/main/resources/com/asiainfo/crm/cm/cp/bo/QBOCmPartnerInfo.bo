@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="QBOCmPartnerInfo" mainattr="ID">
+    <mapingenty type="query">select to_char(d.partner_id) as id, to_char(d.state_name) as name, d.partner_type_dtl,d.partner_type,d.status_type,a.type_desc
+  from cm_partner_info          d,
+       cm_partner_busi_info     x,
+       cm_PARTNER_BUSI_TYPE_DTL a
+ where d.partner_id = x.partner_id
+   and x.type_id = a.type_id
+   and x.type_dtl_id = a.type_dtl_id</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ID" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NAME" maxlength="80" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_TYPE_DTL" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_TYPE_DTL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PARTNER_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PARTNER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATUS_TYPE" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STATUS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TYPE_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TYPE_DESC</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

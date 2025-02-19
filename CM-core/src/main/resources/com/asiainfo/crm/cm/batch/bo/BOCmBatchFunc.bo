@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmBatchFunc" mainattr="CONFIG_ID">
+    <mapingenty type="table">CM_BATCH_FUNC</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="CONFIG_ID" maxlength="12" datatype="Long" type="PK" remark="功能点编号
+
+取自Sequence：CM_BATCH_FUNC$SEQ">
+        <mapingcol datatype="NUMBER">CONFIG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BATCH_NAME" maxlength="200" datatype="String" type="COL" remark="功能点名称">
+        <mapingcol datatype="VARCHAR2">BATCH_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEAL_SERVICE" maxlength="500" datatype="String" type="COL" remark="批量处理服务">
+        <mapingcol datatype="VARCHAR2">DEAL_SERVICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEAL_FUNC" maxlength="500" datatype="String" type="COL" remark="批量处理方法">
+        <mapingcol datatype="VARCHAR2">DEAL_FUNC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="状态">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

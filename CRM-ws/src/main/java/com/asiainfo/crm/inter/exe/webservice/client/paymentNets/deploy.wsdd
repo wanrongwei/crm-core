@@ -1,0 +1,81 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from NetsService WSDL service -->
+
+  <service name="NetsService" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://soa.ailk.telenor.com/wsdl/soa"/>
+      <parameter name="wsdlServiceElement" value="NetsService"/>
+      <parameter name="schemaQualified" value="http://soa.ailk.telenor.com/wsdl/soa"/>
+      <parameter name="schemaUnqualified" value="http://soa.ailk.telenor.com/schema/soa/busi,http://soa.ailk.telenor.com/schema/soa/common"/>
+      <parameter name="wsdlServicePort" value="NetsService"/>
+      <parameter name="className" value="com.asiainfo.crm.inter.exe.webservice.client.paymentNets.NetsServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="NetsServiceSoapPort"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="checkBankAccount" qname="checkBankAccount" soapAction="" >
+        <parameter qname="pns:RequestHeader" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:RequestHeader" xmlns:tns="http://soa.ailk.telenor.com/schema/soa/common" inHeader="true" outHeader="true"/>
+        <parameter qname="pns:checkBankAccountRequest" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:checkBankAccountRequest" xmlns:tns="http://soa.ailk.telenor.com/schema/soa/busi"/>
+        <parameter qname="pns:ResponseHeader" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:ResponseHeader" xmlns:tns="http://soa.ailk.telenor.com/schema/soa/common" mode="OUT" inHeader="true" outHeader="true"/>
+        <parameter qname="pns:checkBankAccountResponse" xmlns:pns="http://soa.ailk.telenor.com/wsdl/soa" type="tns:checkBankAccountResponse" xmlns:tns="http://soa.ailk.telenor.com/schema/soa/busi" mode="OUT"/>
+      </operation>
+      <parameter name="allowedMethods" value="checkBankAccount"/>
+
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/schema/soa/common"
+        qname="ns:ResponseHeader"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.paymentNets.ResponseHeader"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/schema/soa/common"
+        qname="ns:RequestHeader"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.paymentNets.RequestHeader"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/schema/soa/busi"
+        qname="ns:checkBankAccountResponseBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.paymentNets.CheckBankAccountResponseBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/schema/soa/busi"
+        qname="ns:checkBankAccountRequestBody"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.paymentNets.CheckBankAccountRequestBody"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/schema/soa/busi"
+        qname="ns:checkBankAccountResponse"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.paymentNets.CheckBankAccountResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://soa.ailk.telenor.com/schema/soa/busi"
+        qname="ns:checkBankAccountRequest"
+        type="java:com.asiainfo.crm.inter.exe.webservice.client.paymentNets.CheckBankAccountRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

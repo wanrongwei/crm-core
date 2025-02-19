@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOIdentification" mainattr="iden_id">
+    <mapingenty type="table">{CM_IDENTIFICATION}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="iden_id" maxlength="21" datatype="Long" type="PK" remark="识别信息主键">
+        <mapingcol datatype="bigint">iden_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="party_id" maxlength="21" datatype="Long" type="COL" remark="参与人编号                          表示一个参与人的唯一标识，由系统生成的全局唯一的序列号。">
+        <mapingcol datatype="bigint">party_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="iden_type" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">iden_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="iden_sub_type" maxlength="21" datatype="Long" type="COL" remark="In case of Personal ID (documentType=&apos;I&apos;)              ’0’ – permanent before 2000             ’1’ – permanent             ’2’ – gentilitial             ’3’ – refugee             ’4’ – immigrant             ’5’ – settled             In case of a Driving license (documentType = ’V’)               ’1’ – vehicle driver license             ’2’ – driver license             ’3’ – international license             In case of passport (documentType = ’U’)               ’1’ – service passport             ’2’ – seaman service passport             ’3’ – personal passport">
+        <mapingcol datatype="bigint">iden_sub_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="iden_nr" maxlength="128" datatype="String" type="COL" remark="识别号码">
+        <mapingcol datatype="varchar">iden_nr</mapingcol>
+      </attr>
+      <attr floatlength="0" name="iden_address" maxlength="512" datatype="String" type="COL" remark="识别信息地址">
+        <mapingcol datatype="varchar">iden_address</mapingcol>
+      </attr>
+      <attr floatlength="0" name="issuer_authority" maxlength="128" datatype="String" type="COL" remark="证件发行机构">
+        <mapingcol datatype="varchar">issuer_authority</mapingcol>
+      </attr>
+      <attr floatlength="0" name="iden_eff_date" maxlength="20" datatype="DateTime" type="COL" remark="识别信息签发时间">
+        <mapingcol datatype="datetime">iden_eff_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="iden_exp_date" maxlength="20" datatype="DateTime" type="COL" remark="识别信息失效时间">
+        <mapingcol datatype="datetime">iden_exp_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="status" maxlength="3" datatype="String" type="COL" remark="识别信息状态(在用，挂失，补办)">
+        <mapingcol datatype="varchar">status</mapingcol>
+      </attr>
+      <attr floatlength="0" name="status_date" maxlength="20" datatype="DateTime" type="COL" remark="状态变更时间">
+        <mapingcol datatype="datetime">status_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL" remark="记录状态                          U:有效 E:无效">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTION" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

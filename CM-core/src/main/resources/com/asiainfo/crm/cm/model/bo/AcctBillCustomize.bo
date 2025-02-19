@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+	<sysbo datasource="party" name="AcctBillCustomize" mainattr="CUSTOMIZE_ID">
+		<mapingenty type="custom">custom</mapingenty>
+		<datafilter />
+		<attrlist>
+			<attr floatlength="0" name="CUSTOMIZE_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="定制标识" />
+			<attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="VIRTUAL" remark="账户编号" />
+			<attr floatlength="0" name="CUST_ID" maxlength="14" datatype="Long" type="VIRTUAL" remark="关联客户编号" />
+			<attr floatlength="0" name="USER_ID" maxlength="14" datatype="Long" type="VIRTUAL" remark="用户标识" />
+			<attr floatlength="0" name="BILL_PATTERN" maxlength="2" datatype="Integer" type="VIRTUAL" remark="帐单格式" />
+			<attr floatlength="0" name="BILL_TYPE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="帐单类型" />
+			<attr floatlength="0" name="BILL_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" remark="帐单类型" />
+			<attr floatlength="0" name="MAIL_TYPE" maxlength="10" datatype="String" type="VIRTUAL" remark="帐单投递方式" />
+			<attr floatlength="0" name="MAIL_TYPE_DESC" maxlength="256" datatype="String" type="VIRTUAL" remark="帐单投递方式" />
+			<attr floatlength="0" name="RECIPIENTS" maxlength="60" datatype="String" type="VIRTUAL" remark="收件人" />
+			<attr floatlength="0" name="MAIL_DATE" maxlength="2" datatype="Integer" type="VIRTUAL" remark="寄送日期为 1—31，表示当月的几号寄送" />
+			<attr floatlength="0" name="CONT_FAX" maxlength="20" datatype="String" type="VIRTUAL" remark="传真" />
+			<attr floatlength="0" name="CONT_MOBILE" maxlength="20" datatype="String" type="VIRTUAL" remark="联系人移动电话" />
+			<attr floatlength="0" name="CONT_EMAIL" maxlength="100" datatype="String" type="VIRTUAL" remark="Email" />
+			<attr floatlength="0" name="CONT_ADDRESS" maxlength="256" datatype="String" type="VIRTUAL" remark="联系人地址" />
+			<attr floatlength="0" name="CONT_ZIPCODE" maxlength="6" datatype="String" type="VIRTUAL" remark="邮政编码" />
+			<attr floatlength="0" name="MAIL_PROJECTS" maxlength="20" datatype="String" type="VIRTUAL" remark="发送项目" />
+			<attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="VIRTUAL" remark="记录状态" />
+			<attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员" />
+			<attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="创建操作员组织" />
+			<attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理操作员" />
+			<attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理组织单元" />
+			<attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="VIRTUAL" remark="当前业务受理编号" />
+			<attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="创建日期" />
+			<attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="当前业务受理日期" />
+			<attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户生效日期" />
+			<attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" remark="客户失效日期" />
+			<attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="VIRTUAL" remark="管理区域标识" />
+			<attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="VIRTUAL" remark="备注" />
+		</attrlist>
+		<relationlist />
+		<oplist />
+	</sysbo>
+</sysbolist>

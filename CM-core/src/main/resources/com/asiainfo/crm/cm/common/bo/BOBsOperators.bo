@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOBsOperators" mainattr="operators_id">
+    <mapingenty type="table">BS_OPERATORS</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="OPERATORS_ID" maxlength="21" datatype="Long" type="PK" remark="运营商编号">
+        <mapingcol datatype="bigint">OPERATORS_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="operators_code" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="varchar">operators_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATORS_NAME" maxlength="200" datatype="String" type="COL" remark="运营商名称">
+        <mapingcol datatype="varchar">OPERATORS_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATORS_TYPE" maxlength="100" datatype="String" type="COL" remark="运营商类型">
+        <mapingcol datatype="varchar">OPERATORS_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPERATORS_GROUP" maxlength="100" datatype="String" type="COL" remark="运营商分组">
+        <mapingcol datatype="varchar">OPERATORS_GROUP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="1000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="varchar">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="2" datatype="String" type="COL" remark="状态,U：正常,E：删除">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

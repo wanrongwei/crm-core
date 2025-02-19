@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupSchoolInfo" mainattr="SCHOOL_ID">
+    <mapingenty type="table">CM_GROUP_SCHOOL_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="SCHOOL_ID" maxlength="15" datatype="Long" type="PK">
+        <mapingcol datatype="NUMBER">SCHOOL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_CODE" maxlength="4" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">REGION_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_CODE" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">COUNTY_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCHOOL_NAME" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SCHOOL_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PSCHOOL_ID" maxlength="15" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">PSCHOOL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_ID" maxlength="14" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">GROUP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCHOOL_PROPERTY" maxlength="2" datatype="Integer" type="COL" remark="1：本科
+2：大专
+3：中等专业学校
+4：职业高中
+5：技工学校">
+        <mapingcol datatype="NUMBER">SCHOOL_PROPERTY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MASTER_DEPT" maxlength="2" datatype="Integer" type="COL" remark="1：国家教育部
+2：省教厅
+3：市教育局
+4：区教育局">
+        <mapingcol datatype="NUMBER">MASTER_DEPT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCHOOL_TYPE" maxlength="2" datatype="Integer" type="COL" remark="1：A(万人以上)
+2：B(5千--1万)
+3：C(2千--5千)
+4：D(2千以下)">
+        <mapingcol datatype="NUMBER">SCHOOL_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STUDEND_SUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">STUDEND_SUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_SUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CMCC_SUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CU_SUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CU_SUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_SUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">CT_SUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RECRUIT_SUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">RECRUIT_SUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TEACHER_SUM" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">TEACHER_SUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCHOOL_ADDRESS" maxlength="128" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SCHOOL_ADDRESS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SCHOOL_WAP" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">SCHOOL_WAP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="YKT" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">YKT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_WLAN" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CMCC_WLAN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CMCC_WIRE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CMCC_WIRE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_WLAN" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CT_WLAN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CT_WIRE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CT_WIRE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CU_WLAN" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CU_WLAN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CU_WIRE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">CU_WIRE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OPER_TYPE" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">OPER_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_STS" maxlength="2" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">AUDIT_STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_ID" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">AUDIT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_NOTE" maxlength="256" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">AUDIT_NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LONGITUDE" maxlength="8" datatype="Long" type="COL" remark="经度">
+        <mapingcol datatype="NUMBER">LONGITUDE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LATITUDE" maxlength="8" datatype="Long" type="COL" remark="纬度">
+        <mapingcol datatype="NUMBER">LATITUDE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

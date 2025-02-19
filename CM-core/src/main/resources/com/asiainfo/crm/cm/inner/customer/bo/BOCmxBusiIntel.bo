@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="BOCmxBusiIntel" mainattr="BASECALL_FEE">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="CUST_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BRAND_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="RES_TYPE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="BIRTHDAY" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="OFFER_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="FACTORY_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OCCUPATION" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="INDIV_CUST_TYPE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="IMEI" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="SCORE_SUM_REDUCE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="BASECALL_FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="TOLL_FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ROAM_FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="NEWBUSI_FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ELSE_FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="TOTAL_FEE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="NEWBUSI_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="NEWBUSI_INFO" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="OP_TIME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="START_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="END_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="USER_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="REGION_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

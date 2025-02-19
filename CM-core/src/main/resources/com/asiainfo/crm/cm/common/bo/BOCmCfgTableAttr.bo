@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCfgTableAttr" mainattr="ATTR_CODE">
+    <mapingenty type="query">SELECT A.ATTR_CODE,
+       A.TITLE,
+       A.ATTR_DESC,
+       A.EDIT_TYPE,
+       A.DATA_TYPE,
+       A.LENGTH,
+       A.DECIMAL_NUM,
+       A.DEFAULT_VALUE,
+       A.COL_SPAN,
+       A.REMARKS,
+       A.IS_MUST,
+       A.URL,
+       A.IDX,
+       A.STATE,
+       B.TABLE_NAME
+  FROM CM_CFG_ATTR_DEFINE A, CM_CFG_TABLE_ATTR B
+ WHERE A.ATTR_CODE = B.ATTR_CODE</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="ATTR_CODE" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">ATTR_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TITLE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">TITLE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ATTR_DESC" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">ATTR_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EDIT_TYPE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">EDIT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DATA_TYPE" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DATA_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="LENGTH" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">LENGTH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DECIMAL_NUM" maxlength="22" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">DECIMAL_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DEFAULT_VALUE" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">DEFAULT_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COL_SPAN" maxlength="6" datatype="Integer" type="COL">
+        <mapingcol datatype="NUMBER">COL_SPAN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_MUST" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="CHAR">IS_MUST</mapingcol>
+      </attr>
+      <attr floatlength="0" name="URL" maxlength="255" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">URL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IDX" maxlength="8" datatype="Long" type="COL">
+        <mapingcol datatype="NUMBER">IDX</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TABLE_NAME" maxlength="50" datatype="String" type="PK">
+        <mapingcol datatype="VARCHAR2">TABLE_NAME</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

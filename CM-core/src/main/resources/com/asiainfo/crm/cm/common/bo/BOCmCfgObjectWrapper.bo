@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCfgObjectWrapper" mainattr="OBJECT_NAME">
+    <mapingenty type="table">CM_CFG_OBJECT_WRAPPER</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="OBJECT_NAME" maxlength="255" datatype="String" type="PK" remark="对象名称（对象的全路径：包名+类名）">
+        <mapingcol datatype="VARCHAR2">OBJECT_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OBJ_TYPE" maxlength="2" datatype="Integer" type="COL" remark="对象类型:
+1、DataContainer；
+2、普通JavaBean。">
+        <mapingcol datatype="NUMBER">OBJ_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ATTR_NAME" maxlength="128" datatype="String" type="PK" remark="属性名称
+需要做显示值转换的属性名称">
+        <mapingcol datatype="VARCHAR2">ATTR_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ATTR_GETTER" maxlength="128" datatype="String" type="COL" remark="值属性获取方法
+对于DataContainer默认取get(attrName)，可以不配置。其他类型必须要配置该属性。">
+        <mapingcol datatype="VARCHAR2">ATTR_GETTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_NAME" maxlength="128" datatype="String" type="COL" remark="显示属性名称">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_SETTER" maxlength="128" datatype="String" type="COL" remark="显示属性设置方法
+对于DataContainer使用set(attrName, attrValue)，可以不配置，其他类型必须要配置该属性。">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_SETTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_SERVICE" maxlength="256" datatype="String" type="COL" remark="显示属性获取服务名称
+对于常见的几类可以使用简称，简称如下：
+static：静态数据表对应com.ai.common.util.StaticDataUtil。
+district：行政区域信息表com.asiainfo.crm.common.util.BsCommonDistrictUtil；
+specialListType：特殊名单类型配置表com.asiainfo.crm.cm.common.util.CmCfgSpecListTypeUtil；
+">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_SERVICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_GETTER" maxlength="128" datatype="String" type="COL" remark="显示属性获取方法名称
+对于静态数据是
+static：静态数据表对应getStaticData(String codeType, String codeValue)。
+district：行政区域信息表getCommonDistrictById(long districtId)；
+specialListType：特殊名单类型配置表getCfgSpecListType(int typeId)；
+其他情况必须指定调用的方法。">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_GETTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_VALUE" maxlength="128" datatype="String" type="COL" remark="显示属性值属性名称">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_VALUE_GETTER" maxlength="128" datatype="String" type="COL" remark="显示属性值属性名称">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_VALUE_GETTER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_PARAM_DATATYPE" maxlength="255" datatype="String" type="COL" remark="显示属性获取服务参数列表，参数之间使用逗号隔开，">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_PARAM_DATATYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DISP_ATTR_PARAM" maxlength="255" datatype="String" type="COL" remark="显示属性获取服务参数列表，参数之间使用逗号隔开，对于常量直接写其值，对于需要使用到当前值属性值则使用占位符$ATTR_VALUE$。
+如：
+1、静态数据：CM_CERT_TYPE,$ATTR_VALUE$；
+2、行政区域：$ATTR_VALUE$；
+3、特殊名单类型：$ATTR_VALUE$。
+
+默认如果不配置则使用格式$ATTR_VALUE$。">
+        <mapingcol datatype="VARCHAR2">DISP_ATTR_PARAM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

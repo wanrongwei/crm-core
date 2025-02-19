@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmPartyPermission" mainattr="rel_id">
+    <mapingenty type="table">{CM_PARTY_PERMISSION}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="rel_id" maxlength="21" datatype="Long" type="PK" remark="唯一性标识">
+        <mapingcol datatype="bigint">rel_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="party_id" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">party_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="permisson_type" maxlength="21" datatype="Long" type="COL" remark="1.Legal contact media permission             2.Commercial contact permission             3.Marketing contact permission             4.Location data permission。             5.Traffic usage data permission             6.Third party products &amp; services marketing permission             7.Content usage data permission             8.Contacting employees permission">
+        <mapingcol datatype="bigint">permisson_type</mapingcol>
+      </attr>
+      <attr floatlength="0" name="permission_value" maxlength="20" datatype="String" type="COL">
+        <mapingcol datatype="varchar">permission_value</mapingcol>
+      </attr>
+      <attr floatlength="0" name="state" maxlength="3" datatype="String" type="COL" remark="记录状态                          U:有效 E:无效">
+        <mapingcol datatype="varchar">state</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_op_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="bigint">create_op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_org_id" maxlength="21" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="bigint">create_org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="op_id" maxlength="21" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="bigint">op_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="org_id" maxlength="21" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="bigint">org_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_code" maxlength="21" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="bigint">done_code</mapingcol>
+      </attr>
+      <attr floatlength="0" name="create_date" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="datetime">create_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="done_date" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="datetime">done_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="effective_date" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="datetime">effective_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="expire_date" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="datetime">expire_date</mapingcol>
+      </attr>
+      <attr floatlength="0" name="region_id" maxlength="6" datatype="String" type="COL" remark="管理区域标识                          由于平台保存历史记录时需要验证该字段是否为空，如果为空将不能保存，故需要限制该字段不能为空。">
+        <mapingcol datatype="varchar">region_id</mapingcol>
+      </attr>
+      <attr floatlength="0" name="remarks" maxlength="4000" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="varchar">remarks</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REFRESH_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACTION" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

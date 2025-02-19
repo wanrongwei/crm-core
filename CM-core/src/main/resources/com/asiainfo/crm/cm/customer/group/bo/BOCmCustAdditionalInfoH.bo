@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmCustAdditionalInfoH" mainattr="CUST_INFO_ID">
+    <mapingenty type="table">{CM_CUST_ADDITIONAL_INFO_H}</mapingenty>
+    <datafilter />
+    <attrlist>
+     <attr floatlength="0" name="CUST_INFO_ID" maxlength="21" datatype="Long" type="PK">
+        <mapingcol datatype="bigint">CUST_INFO_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE" maxlength="4000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">NOTE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTE_AUTO_POPUP" maxlength="1" datatype="String" type="COL">
+        <mapingcol datatype="varchar">NOTE_AUTO_POPUP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext1" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext1</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext2" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext2</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ext3" maxlength="2000" datatype="String" type="COL">
+        <mapingcol datatype="varchar">ext3</mapingcol>
+      </attr>
+	   <attr floatlength="0" name="OP_ID" maxlength="6" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+	   <attr floatlength="0" name="ORG_ID" maxlength="2000" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+	   <attr floatlength="0" name="CREATE_DATE" maxlength="2000" datatype="DateTime" type="COL">
+        <mapingcol datatype="Date">CREATE_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

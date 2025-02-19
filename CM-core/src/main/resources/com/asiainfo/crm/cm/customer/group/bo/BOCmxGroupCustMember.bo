@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxGroupCustMember" mainattr="CUST_ID">
+    <mapingenty type="table">{CMX_GROUP_CUSTOMER}</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="IS_VPMN" maxlength="21" datatype="Long" type="COL" remark="1£ºÊÇ
+0£º²»ÊÇ">
+        <mapingcol datatype="bigint">IS_VPMN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="21" datatype="Long" type="PK" remark="¿Í»§±àºÅ
+
+ËùÓÐÀàÐÍ¿Í»§µÄ¿Í»§±àºÅÊÇÎ¨Ò»µÄ¡£">
+        <mapingcol datatype="bigint">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="USER_NUM" maxlength="21" datatype="Long" type="COL" remark="ÒÆ¶¯ÓÃ»§Êý">
+        <mapingcol datatype="bigint">USER_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMEMEBERDAY" maxlength="20" datatype="DateTime" type="COL" remark="¼¯ÍÅ¼ÍÄîÈÕ">
+        <mapingcol datatype="datetime">REMEMEBERDAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_SCALE" maxlength="21" datatype="Long" type="COL" remark="ÆóÒµ¹æÄ£(Ô±¹¤Êý)">
+        <mapingcol datatype="bigint">ENT_SCALE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUDGET" maxlength="21" datatype="Long" type="COL" remark="Í¨ÐÅÔ¤Ëã">
+        <mapingcol datatype="bigint">BUDGET</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WIRELESS_NUM" maxlength="21" datatype="Long" type="COL" remark="Ð¡ÁéÍ¨ÊýÄ¿">
+        <mapingcol datatype="bigint">WIRELESS_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UNION_NUM" maxlength="21" datatype="Long" type="COL" remark="ÁªÍ¨ÊÖ»úÊýÄ¿">
+        <mapingcol datatype="bigint">UNION_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="MOBILE_NUM" maxlength="21" datatype="Long" type="COL" remark="ÒÆ¶¯ÊÖ»úÊýÄ¿">
+        <mapingcol datatype="bigint">MOBILE_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ENT_FUND" maxlength="21" datatype="Long" type="COL" remark="×¢²á×Ê½ð">
+        <mapingcol datatype="bigint">ENT_FUND</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TURNOVER" maxlength="21" datatype="Long" type="COL" remark="ÄêÓªÒµ¶î">
+        <mapingcol datatype="bigint">TURNOVER</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROFIT" maxlength="21" datatype="Long" type="COL" remark="ÄêÀûÈó">
+        <mapingcol datatype="bigint">PROFIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SALES_CONTEXT" maxlength="64" datatype="String" type="COL" remark="¾­Óª·¶Î§
+
+1	¿ç¹ú¼¯ÍÅ
+2	¿çÊ¡¼¯ÍÅ
+3	¿çÊÐ¼¯ÍÅ
+4	±¾µØ¼¯ÍÅ
+7	ÆäËü">
+        <mapingcol datatype="varchar">SALES_CONTEXT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PROD_DESC" maxlength="200" datatype="String" type="COL" remark="Éú²ú²úÆ·ËµÃ÷">
+        <mapingcol datatype="varchar">PROD_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPENSE_TYPE" maxlength="21" datatype="Long" type="COL" remark="±¨Ïú·½Ê½
+
+1	·½Ê½Ò»">
+        <mapingcol datatype="bigint">EXPENSE_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OTH_USE_DTL" maxlength="255" datatype="String" type="COL" remark="ÆäËûÍ¨ÐÅ²úÆ·µÄÊ¹ÓÃÇé¿ö">
+        <mapingcol datatype="varchar">OTH_USE_DTL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="FAVOR_BUSI" maxlength="500" datatype="String" type="COL" remark="×î¸ÐÐËÈ¤µÄÒÆ¶¯ÒµÎñ">
+        <mapingcol datatype="varchar">FAVOR_BUSI</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HOPE_DISCOUNT" maxlength="500" datatype="String" type="COL" remark="×îÏ£ÍûµÄÓÅ»Ý·½Ê½">
+        <mapingcol datatype="varchar">HOPE_DISCOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SING_OVERLAY" maxlength="500" datatype="String" type="COL" remark="ÒÆ¶¯ÐÅºÅ¸²¸ÇÇé¿ö">
+        <mapingcol datatype="varchar">SING_OVERLAY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EMP_AVG_FEE" maxlength="21" datatype="Long" type="COL" remark="Ô±¹¤Æ½¾ù»°·Ñ">
+        <mapingcol datatype="bigint">EMP_AVG_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WRITE_OFF_NUM" maxlength="21" datatype="Long" type="COL" remark="±¨Ïú»°·ÑÈËÊý">
+        <mapingcol datatype="bigint">WRITE_OFF_NUM</mapingcol>
+      </attr>
+      <attr floatlength="0" name="WRITE_OFF_AMOUNT" maxlength="21" datatype="Long" type="COL" remark="»°·Ñ±¨Ïú½ð¶î">
+        <mapingcol datatype="bigint">WRITE_OFF_AMOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COMPETER_INFO" maxlength="200" datatype="String" type="COL" remark="¾ºÕù¶ÔÊÖÐÅÏ¢">
+        <mapingcol datatype="varchar">COMPETER_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="¼ÇÂ¼×´Ì¬
+
+U:ÓÐÐ§ E:ÎÞÐ§">
+        <mapingcol datatype="varchar">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="21" datatype="Long" type="COL" remark="´´½¨²Ù×÷Ô±">
+        <mapingcol datatype="bigint">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="21" datatype="Long" type="COL" remark="´´½¨²Ù×÷Ô±×éÖ¯">
+        <mapingcol datatype="bigint">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="21" datatype="Long" type="COL" remark="²Ù×÷Ô±">
+        <mapingcol datatype="bigint">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="21" datatype="Long" type="COL" remark="×éÖ¯µ¥Ôª">
+        <mapingcol datatype="bigint">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="21" datatype="Long" type="COL" remark="µ±Ç°ÒµÎñÊÜÀí±àºÅ">
+        <mapingcol datatype="bigint">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="´´½¨ÈÕÆÚ">
+        <mapingcol datatype="datetime">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="µ±Ç°ÒµÎñÊÜÀíÈÕÆÚ">
+        <mapingcol datatype="datetime">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="¿Í»§ÉúÐ§ÈÕÆÚ">
+        <mapingcol datatype="datetime">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="¿Í»§Ê§Ð§ÈÕÆÚ">
+        <mapingcol datatype="datetime">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="¹ÜÀíÇøÓò±êÊ¶">
+        <mapingcol datatype="varchar">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="±¸×¢">
+        <mapingcol datatype="varchar">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERVICE_LEVEL" maxlength="21" datatype="Long" type="COL" remark="·þÎñµÈ¼¶
+
+1	½ðÅÆ¼¶
+2	ÒøÅÆ¼¶
+3	Í­ÅÆ¼¶
+4	±ê×¼¼¶">
+        <mapingcol datatype="bigint">SERVICE_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECT_TYPE" maxlength="21" datatype="Long" type="COL" remark="ÐÐÒµ/Õþ²ßÓ°ÏìÁ¦
+0 ÎÞ
+5 ÏØ¡¢ÇøÖØµãÐÐÒµ
+10 ÊÐÖØµãÐÐÒµ
+20 Ê¡ÖØµãÐÐÒµ">
+        <mapingcol datatype="bigint">EFFECT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="RANKING_TYPE" maxlength="21" datatype="Long" type="COL" remark="ÊÕÈë/ÀûË°ÅÅÃû
+0 ÎÞ
+10 ÊÐ°ÙÇ¿
+20 Ê¡°ÙÇ¿">
+        <mapingcol datatype="bigint">RANKING_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_NETWORK" maxlength="21" datatype="Long" type="COL" remark="¾ÖÓòÍø
+0 ÎÞ
+1 ÓÐ">
+        <mapingcol datatype="bigint">IS_NETWORK</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_OA" maxlength="21" datatype="Long" type="COL" remark="OA
+0 ÎÞ
+1 ÓÐ">
+        <mapingcol datatype="bigint">IS_OA</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_WEBSITE" maxlength="21" datatype="Long" type="COL" remark="¹«Ë¾ÍøÕ¾
+0 ÎÞ
+1 ÓÐ">
+        <mapingcol datatype="bigint">IS_WEBSITE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_EMAIL" maxlength="21" datatype="Long" type="COL" remark="ÆóÒµÓÊÏä
+0 ÎÞ
+1 ÓÐ">
+        <mapingcol datatype="bigint">IS_EMAIL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_ERP" maxlength="21" datatype="Long" type="COL" remark="ERP(CRM)
+0 ÎÞ
+1 ÓÐ">
+        <mapingcol datatype="bigint">IS_ERP</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IS_SWITCH" maxlength="21" datatype="Long" type="COL" remark="½»»»»ú
+0 ÎÞ
+1 ÓÐ">
+        <mapingcol datatype="bigint">IS_SWITCH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CREDIT_LEVEL" maxlength="21" datatype="Long" type="COL" remark="¼¯ÍÅ¿Í»§ÐÅÓÃ¶È
+1 Ô¤¸¶·Ñ¼¯ÍÅ¿Í»§
+2 ºó¸¶·Ñ¼¯ÍÅ¿Í»§ÐÅÓÃ
+3 ºó¸¶·Ñ¼¯ÍÅ¿Í»§ÐÅÓÃ
+4 ºó¸¶·Ñ¼¯ÍÅ¿Í»§ÐÅÓÃ">
+        <mapingcol datatype="bigint">GROUP_CREDIT_LEVEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SEC_VOCATION" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">SEC_VOCATION</mapingcol>
+      </attr>
+      <attr floatlength="0" name="IMP_VOCATION_INFO" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">IMP_VOCATION_INFO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRP_ORG_CODE" maxlength="200" datatype="String" type="COL" remark="1	·¨ÈËµ¥Î»_»ú¹Ø·¨ÈË
+10	²úÒµ¾ÛÀà¿Í»§
+11	ÆäËü¾ÛÀà¿Í»§
+12	²úÒµ»î¶¯µ¥Î»
+2	·¨ÈËµ¥Î»_ÆóÒµ·¨ÈË
+3	·¨ÈËµ¥Î»_ÊÂÒµµ¥Î»·¨ÈË
+4	·¨ÈËµ¥Î»_Éç»áÍÅÌå·¨ÈË
+5	ÆäËü·¨ÈË
+6	¸öÌå¾­Óª»§
+7	ÌïÔ°¾ÛÀà¿Í»§
+8	Ð£Ô°¾ÛÀà¿Í»§
+9	ÀÏÏç¾ÛÀà¿Í»§">
+        <mapingcol datatype="varchar">GRP_ORG_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_CHANNEL" maxlength="50" datatype="String" type="COL" remark="1	¿Í»§¾­Àí
+2	10086ÈÈÏß
+3	µç»°¿Í»§¾­Àí
+4	ÓªÒµÌü
+5	´úÀíÉÌ">
+        <mapingcol datatype="varchar">SERV_CHANNEL</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SPEC_WAY_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">SPEC_WAY_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GRP_ORG_TYPE" maxlength="50" datatype="String" type="COL">
+        <mapingcol datatype="varchar">GRP_ORG_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HEAD_OFFICE" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="varchar">HEAD_OFFICE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_PROVINCE" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">POST_PROVINCE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="POST_CITY" maxlength="10" datatype="String" type="COL">
+        <mapingcol datatype="varchar">POST_CITY</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAX_ID" maxlength="40" datatype="String" type="COL">
+        <mapingcol datatype="varchar">TAX_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="HAS_PHOTO" maxlength="21" datatype="Long" type="COL" remark="0	·ñ
+1	ÊÇ">
+        <mapingcol datatype="bigint">HAS_PHOTO</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CERTIFICATE_FILE_PATH" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="varchar">CERTIFICATE_FILE_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_PROTOCOL_PATH" maxlength="200" datatype="String" type="COL">
+        <mapingcol datatype="varchar">SERV_PROTOCOL_PATH</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_BEGIN_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">SERV_BEGIN_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="SERV_END_TIME" maxlength="20" datatype="DateTime" type="COL">
+        <mapingcol datatype="datetime">SERV_END_TIME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="TAX_FLAG" maxlength="21" datatype="Long" type="COL">
+        <mapingcol datatype="bigint">TAX_FLAG</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

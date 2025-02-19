@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmGroupAuditInfo" mainattr="AUDIT_ID">
+    <mapingenty type="table">CM_AUDIT_INFO</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="AUDIT_ID" maxlength="14" datatype="Long" type="PK" remark="编码">
+        <mapingcol datatype="NUMBER">AUDIT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_TYPE" maxlength="2" datatype="Integer" type="COL" remark="类型：
+
+1   关键人申请
+2   加分项申请
+3  特殊信誉等级申请
+4  指定危险信誉等级
+5  第三方认定加分">
+        <mapingcol datatype="NUMBER">AUDIT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_DATE" maxlength="20" datatype="DateTime" type="COL" remark="申请时间">
+        <mapingcol datatype="DATE">APPLY_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OLD_VALUE" maxlength="100" datatype="String" type="COL" remark="原级别">
+        <mapingcol datatype="VARCHAR2">OLD_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NEW_VALUE" maxlength="100" datatype="String" type="COL" remark="申请级别（加分数、缴费期）">
+        <mapingcol datatype="VARCHAR2">NEW_VALUE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_OP_ID" maxlength="8" datatype="Long" type="COL" remark="申请人">
+        <mapingcol datatype="NUMBER">APPLY_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="当前业务受理组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="APPLY_DESC" maxlength="1024" datatype="String" type="COL" remark="提交申请描述 ">
+        <mapingcol datatype="VARCHAR2">APPLY_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_STS" maxlength="2" datatype="Integer" type="COL" remark="审批状态">
+        <mapingcol datatype="NUMBER">AUDIT_STS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_DESC" maxlength="1024" datatype="String" type="COL" remark="审批描述">
+        <mapingcol datatype="VARCHAR2">AUDIT_DESC</mapingcol>
+      </attr>
+      <attr floatlength="0" name="AUDIT_OP_ID" maxlength="8" datatype="Long" type="COL" remark="审核人员ID">
+        <mapingcol datatype="NUMBER">AUDIT_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_ID" maxlength="12" datatype="Long" type="COL" remark="客户编号">
+        <mapingcol datatype="NUMBER">CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUST_CONT_ID" maxlength="12" datatype="Long" type="COL" remark="关键人编码">
+        <mapingcol datatype="NUMBER">CUST_CONT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OLD_AUDIT_ID" maxlength="14" datatype="Long" type="COL" remark="上级审核编码">
+        <mapingcol datatype="NUMBER">OLD_AUDIT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REQ_COIN" maxlength="8" datatype="Long" type="COL" remark="加分数">
+        <mapingcol datatype="NUMBER">REQ_COIN</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CITY_ID" maxlength="10" datatype="String" type="COL" remark="地市">
+        <mapingcol datatype="VARCHAR2">CITY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="COUNTY_ID" maxlength="10" datatype="String" type="COL" remark="区县">
+        <mapingcol datatype="VARCHAR2">COUNTY_ID</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxGroupPrepayProvision" mainattr="PROVISION_ID">
+    <mapingenty type="table">CMX_GROUP_PREPAY_PROVISION</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="PROVISION_ID" maxlength="12" datatype="Long" type="PK" remark="序列号">
+        <mapingcol datatype="NUMBER">PROVISION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_CUST_ID" maxlength="12" datatype="Long" type="COL" remark="集团编号">
+        <mapingcol datatype="NUMBER">GROUP_CUST_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_NAME" maxlength="255" datatype="String" type="COL" remark="集团名称">
+        <mapingcol datatype="VARCHAR2">GROUP_NAME</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_REGION_ID" maxlength="6" datatype="String" type="COL" remark="集团归属地市">
+        <mapingcol datatype="VARCHAR2">GROUP_REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="GROUP_COUNTY_ID" maxlength="6" datatype="String" type="COL" remark="集团归属区县">
+        <mapingcol datatype="VARCHAR2">GROUP_COUNTY_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="UP_FEE" maxlength="14" datatype="Long" type="COL" remark="灵活上限额度,多次申请后，当年额度在累加，审批时，这个额度跟业务默认额度比较会有不同的领导审批">
+        <mapingcol datatype="NUMBER">UP_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUR_FEE" maxlength="14" datatype="Long" type="COL" remark="当前可用额度">
+        <mapingcol datatype="NUMBER">CUR_FEE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CUR_DISCOUNT" maxlength="10" datatype="Long" type="COL" remark="折扣">
+        <mapingcol datatype="NUMBER">CUR_DISCOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_CODE" maxlength="20" datatype="String" type="COL" remark="业务代码
+100001  缴费卡类业务
+100002  自助预付费转充业务
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CM_GROUP_PREPAY_BUSI_CODE&apos;;">
+        <mapingcol datatype="VARCHAR2">BUSI_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PRO_STATUS" maxlength="2" datatype="Integer" type="COL" remark="工单状态
+0  初始
+1  审批通过
+2  拒绝
+3  暂停
+
+SELECT T.* FROM BASE.BS_STATIC_DATA T WHERE T.CODE_TYPE = &apos;CMX_GROUP_PREPAY_PROVISION_STATUS&apos;;">
+        <mapingcol datatype="NUMBER">PRO_STATUS</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="客户失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REGION_ID" maxlength="6" datatype="String" type="COL" remark="管理区域标识">
+        <mapingcol datatype="VARCHAR2">REGION_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="NOTES" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">NOTES</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BEG_DATE" maxlength="20" datatype="DateTime" type="COL" remark="开始日期">
+        <mapingcol datatype="DATE">BEG_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="END_DATE" maxlength="20" datatype="DateTime" type="COL" remark="结束日期">
+        <mapingcol datatype="DATE">END_DATE</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

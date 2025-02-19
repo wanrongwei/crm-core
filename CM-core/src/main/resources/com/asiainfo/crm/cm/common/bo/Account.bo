@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="base" name="Account" mainattr="ACCT_ID">
+    <mapingenty type="custom">custom</mapingenty>
+    <attrlist>
+      <attr floatlength="0" name="ACCT_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CUST_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_NAME" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_STATUS" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_PASSWORD" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_LEVEL" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_VALUE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="URGE_STOP_FLAG" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="STATE" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="OP_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="ORG_ID" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="DONE_CODE" maxlength="20" datatype="Long" type="VIRTUAL" />
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="VIRTUAL" />
+      <attr floatlength="0" name="REGION_ID" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="REMARKS" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_TYPE_DISPLAY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_STATUS_DISPLAY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="CREDIT_LEVEL_DISPLAY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="URGE_STOP_FLAG_DISPLAY" maxlength="20" datatype="String" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_SUB_TYPE" maxlength="20" datatype="Integer" type="VIRTUAL" />
+      <attr floatlength="0" name="ACCT_BEHALF_PHONE" maxlength="20" datatype="String" type="VIRTUAL" />
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>

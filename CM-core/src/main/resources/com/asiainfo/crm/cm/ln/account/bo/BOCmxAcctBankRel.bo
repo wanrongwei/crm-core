@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysbolist>
+  <sysbo datasource="party" name="BOCmxAcctBankRel" mainattr="REL_ID">
+    <mapingenty type="table">CMX_ACCT_BANK_REL</mapingenty>
+    <datafilter />
+    <attrlist>
+      <attr floatlength="0" name="REL_ID" maxlength="12" datatype="Long" type="PK" remark="主键标识">
+        <mapingcol datatype="NUMBER">REL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCT_ID" maxlength="14" datatype="Long" type="COL" remark="账户编号">
+        <mapingcol datatype="NUMBER">ACCT_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BILL_ID" maxlength="30" datatype="String" type="COL" remark="手机号码">
+        <mapingcol datatype="VARCHAR2">BILL_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANK_CODE" maxlength="50" datatype="String" type="COL" remark="银行编号">
+        <mapingcol datatype="VARCHAR2">BANK_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANK_ACCOUNT_TYPE" maxlength="2" datatype="Integer" type="COL" remark="卡类型： 0 贷记卡 1 准贷记卡 2 借记卡 ">
+        <mapingcol datatype="NUMBER">BANK_ACCOUNT_TYPE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BANK_ACCOUNT" maxlength="30" datatype="String" type="COL" remark="银行账户">
+        <mapingcol datatype="VARCHAR2">BANK_ACCOUNT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACCOUNT_EXPIRE_DATE" maxlength="8" datatype="String" type="COL" remark="银行账户失效时间（YYMM）">
+        <mapingcol datatype="VARCHAR2">ACCOUNT_EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PAY_METHOD" maxlength="2" datatype="Integer" type="COL" remark="支付方式：2 信用卡代扣">
+        <mapingcol datatype="NUMBER">PAY_METHOD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="BUSI_CODE" maxlength="12" datatype="Long" type="COL" remark="业务操作编码
+支付方式为信用卡代扣，BUSI_CODE
+可填写：
+2330001003  信用卡代扣申请(8021415)
+2330001004  信用卡担保入网(4047208)
+其中 浦发银行签约的类型为2330001003 	信用卡代扣申请
+">
+        <mapingcol datatype="NUMBER">BUSI_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ID_CARD" maxlength="20" datatype="String" type="COL" remark="身份证号：信用卡代扣时必须输入">
+        <mapingcol datatype="VARCHAR2">ID_CARD</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREDIT" maxlength="60" datatype="String" type="COL" remark="信用额度（调用银行接口返回的数据）">
+        <mapingcol datatype="VARCHAR2">CREDIT</mapingcol>
+      </attr>
+      <attr floatlength="0" name="PF_SEQ" maxlength="30" datatype="String" type="COL" remark="浦发银行签约流水">
+        <mapingcol datatype="VARCHAR2">PF_SEQ</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ACTIONDATE" maxlength="10" datatype="String" type="COL" remark="平台下发的操作请求日期	YYYYMMDD,对帐时间以此为准">
+        <mapingcol datatype="VARCHAR2">ACTIONDATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="STATE" maxlength="3" datatype="String" type="COL" remark="记录状态
+
+U:有效 E:无效">
+        <mapingcol datatype="VARCHAR2">STATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_OP_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员">
+        <mapingcol datatype="NUMBER">CREATE_OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_ORG_ID" maxlength="12" datatype="Long" type="COL" remark="创建操作员组织">
+        <mapingcol datatype="NUMBER">CREATE_ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="OP_ID" maxlength="12" datatype="Long" type="COL" remark="操作员">
+        <mapingcol datatype="NUMBER">OP_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="ORG_ID" maxlength="12" datatype="Long" type="COL" remark="组织单元">
+        <mapingcol datatype="NUMBER">ORG_ID</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_CODE" maxlength="12" datatype="Long" type="COL" remark="当前业务受理编号">
+        <mapingcol datatype="NUMBER">DONE_CODE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="CREATE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="创建日期">
+        <mapingcol datatype="DATE">CREATE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="DONE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="当前业务受理日期">
+        <mapingcol datatype="DATE">DONE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EFFECTIVE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="生效日期">
+        <mapingcol datatype="DATE">EFFECTIVE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="EXPIRE_DATE" maxlength="20" datatype="DateTime" type="COL" remark="失效日期">
+        <mapingcol datatype="DATE">EXPIRE_DATE</mapingcol>
+      </attr>
+      <attr floatlength="0" name="REMARKS" maxlength="255" datatype="String" type="COL" remark="备注">
+        <mapingcol datatype="VARCHAR2">REMARKS</mapingcol>
+      </attr>
+    </attrlist>
+    <relationlist />
+    <oplist />
+  </sysbo>
+</sysbolist>
